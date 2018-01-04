@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zi Gao</title>
+	<link rel="icon" href="./src/logo.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat:400,500,600" rel="stylesheet">
+	<script src='./javascript_files/script.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src='./javascript_files/transit.js'></script>
+	<script src='./javascript_files/imagesLoaded.js'></script>
+</head>
+
+<body>
+	<div id="loading_screen">
+	</div>
+    <div id="nav_bar">
+		<h3 id="title_text">
+			ZiGao.io
+		</h3>
+		<img id="menu_icon" src="./src/menu_icon.png">
+		<img id="home_icon" src="./src/logo.png">
+	</div>
+	<div class="section" id="nav_page">
+		<div class="selection">
+			<img class="selection_icon" src="./src/home_icon.png">
+			<h2 class="selection_text">
+				HOME
+			</h2>
+		</div>
+		<div class="selection">
+			<img class="selection_icon" src="./src/projects_icon.png">
+			<h2 class="selection_text">
+				PROJECTS
+			</h2>
+		</div>
+		<div class="selection">
+			<img class="selection_icon" src="./src/about_icon.png">
+			<h2 class="selection_text">
+				ABOUT
+			</h2>
+		</div>
+		<div class="selection">
+			<img class="selection_icon" src="./src/blog_icon.png">
+			<h2 class="selection_text">
+				BLOG
+			</h2>
+		</div>
+		<div class="selection">
+			<img class="selection_icon" id="resume_icon" src="./src/resume_icon.png">
+			<h2 class="selection_text">
+				RESUME
+			</h2>
+		</div>
+		<div class="connect_bar">
+			<img class="social_media" src="./src/email_icon_black.png" id="email">
+			<img class="social_media" src="./src/linkedin_icon_black.png" id="linkedin">
+			<img class="social_media" src="./src/facebook_icon_black.png" id="facebook">
+			<img class="social_media" src="./src/instagram_icon_black.png" id="instagram">
+			<img class="social_media" src="./src/github_icon_black.png" id="github">
+		</div>
+	</div>
+    <div class="section" id="home_page">
+    </div>
+    <div class="section" id="project_page">
+	</div>
+	<div class="section" id="about_page">
+	</div>
+	<div class="section" id="blog_and_notes_page">
+	</div>
+	<div class="section" id="resume_page">
+	</div>
+	<div id="bottom_nav">
+	</div>
+	<script>
+		$("#email").on(
+			{
+				mouseenter: function () {
+					$(this).attr("src", "./src/email_icon_white.png");
+				},
+				mouseleave: function () {
+					$(this).attr("src", "./src/email_icon_black.png");
+				}
+		});
+		$("#linkedin").on(
+			{
+				mouseenter: function () {
+					$(this).attr("src", "./src/linkedin_icon_white.png");
+				},
+				mouseleave: function () {
+					$(this).attr("src", "./src/linkedin_icon_black.png");
+				}
+		});
+		$("#facebook").on(
+			{
+				mouseenter: function () {
+					$(this).attr("src", "./src/facebook_icon_white.png");
+				},
+				mouseleave: function () {
+					$(this).attr("src", "./src/facebook_icon_black.png");
+				}
+		});
+		$("#instagram").on(
+			{
+				mouseenter: function () {
+					$(this).attr("src", "./src/instagram_icon_white.png");
+				},
+				mouseleave: function () {
+					$(this).attr("src", "./src/instagram_icon_black.png");
+				}
+		});
+		$("#github").on(
+			{
+				mouseenter: function () {
+					$(this).attr("src", "./src/github_icon_white.png");
+				},
+				mouseleave: function () {
+					$(this).attr("src", "./src/github_icon_black.png");
+				}
+		});
+	</script>
+	
+</body>
+
+</html>
