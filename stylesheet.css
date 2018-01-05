@@ -12,21 +12,34 @@ body, html{
 
 
 /* For the nav bar at the top */
+#nav_bar{
+    background-color: transparent;
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+}
+
 
 #menu_icon{
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     top: 30px;
     left: 45px;
 }
 
 #title_text{
     font-family: "Bungee", sans-serif;
-    font-size: 40px;
-    text-align: center;
-    margin: 9px;
+    font-size: 30px;
+    margin: 11px;
     font-weight: 400;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    left: -50%;
+    color: rgb(255, 253, 255);
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-duration: 1.5s;
 }
 
 #home_icon{
@@ -34,7 +47,7 @@ body, html{
     width: 50px;
     height: 50px;
     right: 45px;
-    top: 35px;
+    top: 25px;
 }
 
 
@@ -48,51 +61,174 @@ body, html{
 
 /* For the nav menu */
 #nav_page{
-
+    position: absolute;
+    background-color: white;
+    left: -100%;
+    width: 100%;
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-duration: 1.5s;
+    opacity: 0;
 }
-
 
 
 .selection{
-    width: 19.7%;
+    width: 19.75%;
     overflow: hidden;
-    margin: none;
+    margin-top: 200px;
     padding: none;
     display: inline-block;
+    -webkit-transition-duration: 0.75s; /* Safari */
+    transition-duration: 0.75s;
 }
+
+.selection_vertical{
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+
+
+#project_section:hover{
+    background-color: rgb(145, 205, 180);
+    border-radius: 5px;
+}
+#blog_section:hover{
+    background-color: rgb(255, 215, 195);
+    border-radius: 5px;
+}
+#resume_section:hover{
+    background-color: rgb(210, 220, 255);
+    border-radius: 5px;
+}
+#home_section:hover{
+    background-color: rgb(50, 55, 135);
+    border-radius: 5px;
+}
+#about_section:hover{
+    background-color:  rgb(225, 90, 100);
+    border-radius: 5px;
+}
+
 
 .selection_text{
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 30px;
     text-align: center;
-    padding-bottom: 180px;
+    padding-bottom: 80px;
 }
 
 .selection_icon{
     width: 20%;
     margin: auto;
     display: block;
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 25px;
 }
 
 .connect_bar{
     margin: auto;
     display: block;
-    width: 342px; 
+    width: 366px; 
+    padding-bottom: 500px;
+    padding-top: 100px;
 }
 
 .social_media{
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     margin: 20px 20px;
 }
 
 #email{
-    height: 20px;
+    height: 25px;
 }
 
 #resume_icon{
-    width: 17%;
+    width: 15%;
 }
+
+@media screen and (max-width: 1295px) {
+    .selection{
+        width: 19.675%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .selection_text{
+        font-size: 20px;
+    }
+    .selection{
+        width: 19.6%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .selection_text{
+        font-size: 30px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        margin-top: 0px;
+        text-align: left;
+        display: table;
+        clear: right;
+    }
+    .selection_icon{
+        display: block;
+        float: left;
+        margin: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        width: 40px;
+        padding-right: 20px;
+    }
+    .selection{
+        width: 100%;
+        display: block;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    #resume_icon{
+        width: 35px;
+        padding-right: 25px;
+    }
+    #home_section{
+        margin-top: 120px;
+    }
+    .wrapper{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: table;
+        margin: auto;
+    }
+    #menu_icon{
+        left: 5px;
+    }
+    #home_icon{
+        right: 5px;
+    }
+    .connect_bar{
+        padding-top: 50px;
+    }
+}
+
+
+
+
+/*Home page stuff*/
+#home_page{
+    background-color: rgb(12, 13, 14);
+    width: 100%;
+    height: 800px;
+    display: block;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
