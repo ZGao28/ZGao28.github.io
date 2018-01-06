@@ -110,6 +110,36 @@
 	<div id="bottom_nav">
 	</div>
 	<script>
+		$( document ).ready(function(){
+			$( "#name" ).animate({
+				opacity: 1,
+				marginTop: 180,
+			  }, 1500, function() {
+				// Animation complete.
+				$( "#welcome" ).animate({
+					fontSize: 17,
+				}, 1200, function() {
+				// Animation complete.
+					$( "#n1" ).animate({
+						opacity: 1,
+					}, 3000);
+					$( "#n2" ).animate({
+						opacity: 1,
+					}, 3000);
+					$( "#menu_icon" ).animate({
+						opacity: 1,
+					}, 3000);
+					$( "#home_icon" ).animate({
+						opacity: 1,
+					}, 3000);
+					$( ".chevron_container" ).animate({
+						opacity: 1,
+					}, 3000);
+				});
+			  }
+			);
+		});
+
 		$("#email").on(
 			{
 				mouseenter: function () {
@@ -118,7 +148,8 @@
 				mouseleave: function () {
 					$(this).attr("src", "./src/email_icon_black.png");
 				}
-			});
+			}
+		);
 		$("#linkedin").on(
 			{
 				mouseenter: function () {
@@ -127,7 +158,8 @@
 				mouseleave: function () {
 					$(this).attr("src", "./src/linkedin_icon_black.png");
 				}
-			});
+			}
+		);
 		$("#facebook").on(
 			{
 				mouseenter: function () {
@@ -136,7 +168,8 @@
 				mouseleave: function () {
 					$(this).attr("src", "./src/facebook_icon_black.png");
 				}
-			});
+			}
+		);
 		$("#instagram").on(
 			{
 				mouseenter: function () {
@@ -145,7 +178,8 @@
 				mouseleave: function () {
 					$(this).attr("src", "./src/instagram_icon_black.png");
 				}
-			});
+			}
+		);
 		$("#github").on(
 			{
 				mouseenter: function () {
@@ -154,7 +188,8 @@
 				mouseleave: function () {
 					$(this).attr("src", "./src/github_icon_black.png");
 				}
-			});
+			}
+		);
 		$("#menu_icon").on(
 			{
 				mouseenter: function () {
@@ -171,7 +206,8 @@
 						$(this).attr("src", "./src/close_icon_black.png");
 					}
 				}
-			});
+			}
+		);
 		$("#home_icon").on(
 			{
 				mouseenter: function () {
@@ -188,7 +224,28 @@
 						$(this).attr("src", "./src/logo_black.png");
 					}
 				}
-			});
+			}
+		);
+		$("#n1").on(
+			{
+				mouseenter: function () {
+					$(this).html("PROJECTS &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; PROJECTS");
+				}
+			}
+		);
+		$("#n2").on(
+			{
+				mouseenter: function () {
+					$(this).html("PROJECTS &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; PROJECTS");
+				}
+			}
+		);
 	</script>
 	
 </body>
