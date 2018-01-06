@@ -6,6 +6,21 @@ body, html{
 
 
 
+#loading_screen{
+    height: 3000px;
+    width: 100%;
+    background-color: white;
+    display: none;
+}
+
+#loading_gif{
+    display: block;
+    margin: auto;
+    padding-top: 150px;
+    display: none;
+    width: 300px;
+}
+
 
 
 
@@ -14,9 +29,9 @@ body, html{
 /* For the nav bar at the top */
 #nav_bar{
     background-color: transparent;
-    z-index: 1000;
     position: absolute;
     left: 50%;
+    z-index: 10;
 }
 
 
@@ -40,6 +55,7 @@ body, html{
     color: rgb(255, 253, 255);
     -webkit-transition-duration: 1.5s; /* Safari */
     transition-duration: 1.5s;
+    display: none;
 }
 
 #home_icon{
@@ -67,7 +83,7 @@ body, html{
     width: 100%;
     -webkit-transition-duration: 1.5s; /* Safari */
     transition-duration: 1.5s;
-    opacity: 0;
+    opacity: 0.7;
 }
 
 
@@ -131,13 +147,25 @@ body, html{
     display: block;
     width: 366px; 
     padding-bottom: 500px;
-    padding-top: 100px;
+    margin-top: 30px;
 }
 
 .social_media{
     height: 30px;
     width: 30px;
-    margin: 20px 20px;
+    margin: 0px 20px;
+}
+
+#connect_text{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding-top: 75px;
+    padding-bottom: 5px;
+    border-bottom: 0.5px solid black;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: table;
+    margin: auto;
 }
 
 #email{
@@ -154,12 +182,189 @@ body, html{
     }
 }
 
+
+
+
+
+
+
+/*Home page stuff*/
+#home_page{
+    background-color: rgb(8, 13, 16);
+    width: 100%;
+    height: 800px;
+    display: block;
+    border: 2px solid black;
+}
+
+#welcome{
+    color: rgb(255, 253, 255);
+    font-family: "Raleway", sans-serif;
+    font-size: 17px; 
+    margin-top: 20px;
+    padding-top: 0px;  
+    text-align: center;
+    letter-spacing: 20px;
+    padding-bottom: 160px;
+}
+
+#name{
+    color: rgb(255, 253, 255);
+    font-family: "Montserrat", sans-serif;
+    font-size: 165px; 
+    margin-top: 180px;
+    padding-top: 0px;  
+    text-align: center;
+    letter-spacing: 20px;
+    margin-bottom: 0px;
+}
+
+
+.bigletter{
+    font-size: 175px;
+}
+
+#home_connect{
+    margin-top: 250px;
+}
+
+
+
+/* Cool Scroll Down Animation*/
+.chevron_container {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: auto;
+    margin-top: -40px;
+}
+  
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+  
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+  
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+  
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+}
+  
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+  
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+  
+@keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+  
+.text {
+    display: block;
+    margin-top: 80px;
+    margin-left: -30px;
+    font-family: "Raleway", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .5;
+    animation: pulse 2s linear alternate infinite;
+}
+  
+@keyframes pulse {
+    to {
+      opacity: 1;
+    }
+}
+
+#n1{
+    position: absolute;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+    font-size: 17px;
+    color: rgb(255, 253, 255);
+    letter-spacing: 6px;
+    margin-left: -30px;
+}
+
+#n2{
+    position: absolute;
+    right: -25px;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+    font-size: 17px;
+    color: rgb(255, 253, 255);
+    letter-spacing: 6px;
+}
+
 @media screen and (max-width: 1100px) {
     .selection_text{
         font-size: 20px;
     }
     .selection{
         width: 19.6%;
+    }
+    #n1{
+        display: none;
+    }
+    #n2{
+        display: none;
+    }
+    #name{
+        font-size: 130px;
+    }
+    .bigletter{
+        font-size: 140px;
+    }
+    #welcome{
+        font-size: 15px;
+        letter-spacing: 15px;
     }
 }
 
@@ -189,6 +394,7 @@ body, html{
         display: block;
         margin-bottom: 0px;
         margin-top: 0px;
+        padding-bottom: 0px;
     }
     #resume_icon{
         width: 35px;
@@ -203,6 +409,9 @@ body, html{
         display: table;
         margin: auto;
     }
+    #resume_section{
+        margin-bottom: 0px;
+    }
     #menu_icon{
         left: 5px;
     }
@@ -210,25 +419,42 @@ body, html{
         right: 5px;
     }
     .connect_bar{
-        padding-top: 50px;
+        padding-top: 20px;
+        margin-top: 0px;
+    }
+    #connect_text{
+        padding-top: 0px;
+        margin-top: 20px;
+    }
+    #name{
+        font-size: 100px;
+    }
+    .bigletter{
+        font-size: 105px;
     }
 }
 
-
-
-
-/*Home page stuff*/
-#home_page{
-    background-color: rgb(12, 13, 14);
-    width: 100%;
-    height: 800px;
-    display: block;
-    border: 2px solid black;
+@media screen and (max-width: 490px) {
+    #welcome{
+        padding-bottom: 60px;
+    }
+    #name{
+        margin-top: 120px;
+    }
 }
 
-
-
-
-
-
-
+@media screen and (max-height: 725px){
+    .selection_text{
+        font-size: 20px;
+    }
+    .selection_icon{
+        width: 28px;
+    }
+    .wrapper{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #connect_text{
+        margin-top: 35px;
+    }
+}
