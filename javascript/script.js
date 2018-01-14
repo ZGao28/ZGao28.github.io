@@ -54,6 +54,8 @@ var state = 0;
 var in_transition = false;
 var normal_scroll = true;
 var oldy;
+
+
 function scrollfunc(s, b){
     if (b == true){
       normal_scroll = false;
@@ -97,14 +99,14 @@ function scrollfunc(s, b){
           state++;
           $("#home_page").css("display", "none");
           $("#project_page").css("display", "block");
+          $("#menu_icon").attr("src", "./src/menu_icon_black.png");
+          $("#home_icon").attr("src", "./src/logo_black.png");
           loadprojects();
         } else if (state == 1) {
           state++;
           in_transition = true;
           $("#project_page").css("display", "none");
           $("#about_page").css("display", "block");
-          $("#menu_icon").attr("src", "./src/menu_icon_black.png");
-          $("#home_icon").attr("src", "./src/logo_black.png");
           loadabout();
         } else if (state == 2) {
           state++;
@@ -118,6 +120,8 @@ function scrollfunc(s, b){
           $("#blog_page").css("display", "none");
           $("#resume_page").css("display", "block");
           loadresume();
+          $("#menu_icon").attr("src", "./src/menu_icon_white.png");
+          $("#home_icon").attr("src", "./src/logo_white.png");
         }
       } else if (s == -2) {
         if (state == 1) {
@@ -126,13 +130,13 @@ function scrollfunc(s, b){
           $("#home_page").css("display", "block");
           $("#project_page").css("display", "none");
           loadhome();
+          $("#menu_icon").attr("src", "./src/menu_icon_white.png");
+          $("#home_icon").attr("src", "./src/logo_white.png");
         } else if (state == 2) {
           state--;
           in_transition = true;
           $("#about_page").css("display", "none");
           $("#project_page").css("display", "block");
-          $("#menu_icon").attr("src", "./src/menu_icon_white.png");
-          $("#home_icon").attr("src", "./src/logo_white.png");
           loadprojects();
         } else if (state == 3) {
           state--;
@@ -146,6 +150,8 @@ function scrollfunc(s, b){
           $("#resume_page").css("display", "none");
           $("#blog_page").css("display", "block");
           loadblog();
+          $("#menu_icon").attr("src", "./src/menu_icon_black.png");
+          $("#home_icon").attr("src", "./src/logo_black.png");
         }
       } else if (s == 0) {
         $("#home_page").css("display", "block");
@@ -340,4 +346,11 @@ function loadresume(){
     }, 800);
     }
   );
+}
+
+function closemodal(){
+  $(".modal").animate({
+    height: "0%",
+    width: "0%"
+  }, 1000);
 }

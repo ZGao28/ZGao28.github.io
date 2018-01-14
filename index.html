@@ -72,11 +72,16 @@
 				CONNECT
 			</h6>
 			<div class="connect_bar">
-				<img class="social_media" src="./src/email_icon_black.png" id="email">
-				<img class="social_media" src="./src/linkedin_icon_black.png" id="linkedin">
-				<img class="social_media" src="./src/facebook_icon_black.png" id="facebook">
-				<img class="social_media" src="./src/instagram_icon_black.png" id="instagram">
-				<img class="social_media" src="./src/github_icon_black.png" id="github">
+				<img class="social_media" onclick="javascript:location.href='mailto:someone@example.com?Subject=Hello%20again'" 
+				src="./src/email_icon_black.png" id="email">
+				<img class="social_media" onclick="javascript:location.href='https://www.linkedin.com/in/zigao'" 
+				src="./src/linkedin_icon_black.png" id="linkedin">
+				<img class="social_media" onclick="javascript:location.href='https://www.facebook.com/zi.gao.14'"
+				src="./src/facebook_icon_black.png" id="facebook">
+				<img class="social_media" onclick="javascript:location.href='https://www.instagram.com/zi_gaoo/'"
+				src="./src/instagram_icon_black.png" id="instagram">
+				<img class="social_media" onclick="javascript:location.href='https://www.github.com/zgao28'"
+				src="./src/github_icon_black.png" id="github">
 			</div>
 		</div>
 	</div>
@@ -99,7 +104,82 @@
 				<div class="chevron"></div>
 				<span class="text">Scroll down</span>
 		</div>
-    </div>
+	</div>
+	<!--
+	<div class="modal">
+		<img onclick="closemodal()" id="close_modal" src="./src/close_icon_black.png">
+		<img class="modal_image" src="./src/lynqup_logo.png">
+		<h1 class="modal_name">
+			LynqUp
+		</h1>
+		<p class="summary">
+			LynqUp is a new social media platform with a goal to simplify the way we connect. 
+		</p>
+		<h3 class="subtitle">
+				<i class="em em-bulb"></i>
+				<br>
+				<br>
+			About 
+		</h3>
+		<p class="sub_descrip">
+			LynqUp promotes in-person social interactions. Our goal is to drastically increase the amount of time 
+			people spend together in real life, as opposed to over a technical medium like Facebook or SnapChat. 
+			It is apparent that our society has shifted away from enjoying each other's company in person, but
+			a lot of the time this is because it is much more convenient to connect online. There is also the fact that
+			companies gamify social interactions and also induces high dopamine levels, actions that are hard to acheive 
+			in real life interactions. 
+			
+			<br>
+			<br>
+			LynqUp is aiming to remedy all these problems by making it easier for people to meet up and hang out together, 
+			all while gamifying the interaction process and making it as fun and exciting as possible. 
+			There will be a mobile application as well as a web application that runs in browsers for pc use. 
+			LynqUp is currently a startup project run by a team of software engineering students at the University of Ottawa. 
+			Unfortunately due to the nature of this project I am unable to release any specifics, but if you are interested in joining
+			the LynqUp team, want to sponsor us, or just want to find out more about this amazing platform feel 
+			free to contact me!  
+		</p>
+		<h3 class="subtitle">
+			<i class="em em-computer"></i>
+			<br>
+			<br>
+			Technologies Used 
+		</h3>
+		<p class="sub_descrip">
+			Web Stack: React.js, Node.js, Express, MySQL
+			<br>
+			<br>
+			Mobile Stack: React Native, TBD
+		</p>
+		<h3 class="subtitle">
+				<i class="em em-male-technologist"></i>
+				<br>
+				<br>
+			Team Members
+		</h3>
+		<p class="sub_descrip">
+			Zi Gao
+			<br>
+			<br>
+			Anthony Aoun
+			<br>
+			<br>
+			Marc Frame
+			<br>
+			<br>
+			Owen Anderson
+			<br>
+			<br>
+			Elliot Barbeau
+			<br>
+			<br>
+			Simon Gaudert
+			<br>
+			<br>
+			Cindy Huang
+		</p>
+	</div>
+-->
     <div class="section" id="project_page">
 		<h2 onclick="scrollfunc(-1, true)" class="n" id="n3">
 			&mdash; ABOUT
@@ -116,7 +196,7 @@
 			These were projects were completed for either: fun, work, school or a startup venture! 
 			<br>
 			<br>
-			* Most of these projects are publicly shared on my GitHub *
+			&mdash; Most of these projects are publicly shared on my <a target="_blank" href="https://www.github.com/zgao28">GitHub</a> &mdash;
 		</p>
 		<div class="page_content">
 			<h2 class="project_type">
@@ -503,21 +583,13 @@
 				}
 			}
 		);
-		$("#home_icon").on(
+		$("#close_modal").on(
 			{
 				mouseenter: function () {
-					if ($(this).attr("src") == './src/logo_black.png') {
-						$(this).attr("src", "./src/logo_white.png");
-					} else {
-						$(this).attr("src", "./src/logo_black.png");
-					}
+					$(this).attr("src", "./src/close_gif.gif");
 				},
 				mouseleave: function () {
-					if ($(this).attr("src") == './src/logo_black.png') {
-						$(this).attr("src", "./src/logo_white.png");
-					} else {
-						$(this).attr("src", "./src/logo_black.png");
-					}
+					$(this).attr("src", "./src/close_icon_black.png");
 				}
 			}
 		);
