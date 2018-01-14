@@ -1,13 +1,12 @@
 body, html{
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
 
 #loading_screen{
-    height: 3000px;
     width: 100%;
     background-color: white;
     display: none;
@@ -22,7 +21,11 @@ body, html{
 }
 
 
-
+.section{
+    margin: 0px;
+    padding: 0px;
+    width: 100.5%;
+}
 
 
 
@@ -31,7 +34,7 @@ body, html{
     background-color: transparent;
     position: absolute;
     left: 50%;
-    z-index: 10;
+    z-index: 11;
 }
 
 
@@ -77,6 +80,19 @@ body, html{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* For the nav menu */
 #nav_page{
     position: absolute;
@@ -85,7 +101,7 @@ body, html{
     width: 100%;
     -webkit-transition-duration: 1.5s; /* Safari */
     transition-duration: 1.5s;
-    opacity: 0.7;
+    z-index: 10;
 }
 
 
@@ -148,7 +164,6 @@ body, html{
     margin: auto;
     display: block;
     width: 366px; 
-    padding-bottom: 500px;
     margin-top: 30px;
 }
 
@@ -178,11 +193,23 @@ body, html{
     width: 15%;
 }
 
-@media screen and (max-width: 1295px) {
-    .selection{
-        width: 19.675%;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,24 +219,22 @@ body, html{
 
 /*Home page stuff*/
 #home_page{
-    background-color: rgb(8, 13, 16);
-    width: 100%;
-    height: 800px;
+    background-color: rgb(14, 16, 20);
     display: block;
     border: 2px solid black;
-    -webkit-transition-duration: 1.5s; /* Safari */
-    transition-duration: 1.5s;
+    position: relative;
 }
 
 #welcome{
     color: rgb(255, 253, 255);
     font-family: "Raleway", sans-serif;
-    font-size: 0px; 
+    font-size: 17px; 
     margin-top: 20px;
     padding-top: 0px;  
     text-align: center;
-    letter-spacing: 20px;
+    letter-spacing: 0px;
     padding-bottom: 160px;
+    opacity: 0;
 }
 
 #name{
@@ -235,7 +260,7 @@ body, html{
 
 
 
-/* Cool Scroll Down Animation*/
+/* Cool Scroll Down Chevron*/
 .chevron_container {
     width: 24px;
     height: 24px;
@@ -321,7 +346,7 @@ body, html{
     }
 }
 
-#n1{
+.n{
     position: absolute;
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
@@ -332,13 +357,15 @@ body, html{
     font-size: 17px;
     color: rgb(255, 253, 255);
     letter-spacing: 6px;
-    margin-left: -30px;
+    margin-left: -20px;
     opacity: 0;
+    z-index: 5;
+    margin-top: 620px;
 }
 
-#n2{
+.nn{
     position: absolute;
-    right: -25px;
+    right: -10px;
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     -o-transform: rotate(270deg);
@@ -349,7 +376,568 @@ body, html{
     color: rgb(255, 253, 255);
     letter-spacing: 6px;
     opacity: 0;
+    z-index: 5;
+    margin-top: 620px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*project page stuff*/
+
+#project_page{
+    background-color: rgb(14, 16, 20);
+    position: relative;
+    display: none;
+}
+
+#project_heading{
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 75px;
+    letter-spacing: 22px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: rgb(145, 205, 180);
+}
+
+#project_intro{
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-top: 0px;
+    color: rgb(145, 205, 180);
+    padding-bottom: 50px;
+}
+
+.project_pic{
+    width: 180px;
+    display: block;
+    padding: 0px;
+    margin: auto;
+}
+
+.project_type{
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    letter-spacing: 5px;
+    padding-top: 0px;
+    color: rgb(22, 175, 114);
+    padding-bottom: 25px;
+}
+
+.project_name{
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+    padding-top: 0px;
+    color: rgb(225, 90, 100);
+    padding-bottom: 5px;
+}
+
+
+
+.project_pic_grid{
+    width: 50%;
+    display: block;
+    padding: 0px;
+    margin: auto;
+}
+
+.grid_project{
+    float: left;
+    padding: 10px 5%;
+    width: 22%;
+}
+
+#project_grid{
+    display: none;
+}
+
+.project_name_grid{
+    margin-top: 15px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding-top: 0px;
+    color: rgb(225, 90, 100);
+    padding-bottom: 5px;
+}
+
+.project{
+    float: left;
+    padding: 10px 60px;
+}
+
+#project_container{
+    display: table;
+    margin: auto;
+}
+
+
+.chevron_green::before {
+	border-style: solid;
+	border-width: 0.5em 0.5em 0 0;
+	content: '';
+	display: inline-block;
+	height: 2em;
+	left: 0.15em;
+	position: relative;
+	top: 80px;
+	transform: rotate(-45deg);
+	vertical-align: top;
+    width: 2em;
+    color: rgb(25, 175, 115);
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+
+.chevron_green.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+
+.chevron_green.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron_green:hover::before{
+    color: rgb(225, 90, 100);
+}
+
+.bull{
+    text-align: center;
+    float: left;
+    color: rgb(25, 175, 115);
+    font-size: 23px;
+    padding: 40px 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#indicators{
+    display: table;
+    margin: auto;
+    margin-top: -50px;
+}
+
+
+#n3, #n4{
+    margin-top: 650px;
+}
+
+#n4{
+    right: 10px;
+}
+
+#n3{
+    margin-left: 0px;
+}
+
+
+.nn:hover, .n:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*about page stuff */
+#about_page{
+    width: 100%;
+    background: whitesmoke;
+    position: relative;
+    overflow-y: auto;
+    display: none;
+}
+
+#about_heading{
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 75px;
+    letter-spacing: 22px;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    margin-bottom: 0px;
+    color: rgb(225, 90, 100);   
+}
+
+.rotating_table{
+    float: left;
+    width: 20%;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+
+#about_paragraph{
+    width: 38%;
+    padding: 10px 1%;
+    margin: 0px;
+    float: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16.5px;
+    letter-spacing: 2px;
+    color: rgb(75, 10, 15);   
+}
+
+#liked_things{
+    margin-left: 10%;
+}
+
+.hobby_title{
+    text-align: center;
+    margin-top: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-bottom: 40px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(190, 50, 60);   
+}
+
+
+.hobby_pic{
+    width: 15%;
+    float: left;
+    padding-right: 10px;
+}
+
+.hobby{
+    margin-top: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    color: rgb(190, 50, 60);   
+}
+
+.hobby_container{
+    padding: 15px 20px;
+}
+
+#do_things{
+    margin-left: 4%;
+}
+
+#n5, #n6{
+    color: rgb(75, 10, 15);
+    margin-top: 650px;
+}
+
+#n5{
+    margin-left: 0px;
+}
+
+#n6{
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Blog Stuff */
+#blog_page{
+    background-color:whitesmoke;
+    position: relative;
+    overflow-y: auto;
+    display: none;
+}
+
+#blog_heading{
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 75px;
+    letter-spacing: 22px;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    margin-bottom: 0px;
+    color: #472E40;
+    opacity: 0.95;
+    z-index: 5;
+}
+#blog_wrapper{
+    margin-left: 9%;
+}
+.extra_name{
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    letter-spacing: 10px;
+    margin-bottom: 0px;
+    color: #472E40;
+}
+
+.extra_wrapper{
+    display: block;
+    position: relative;
+    background-color: transparent;
+    opacity: 0.95;
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+    padding-right: 2%;
+    z-index: 5;
+}
+
+.extra_description{
+    margin-top: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    color: #472E40;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.btn {
+    display: block;
+    padding: 10px 0px;
+    color: #472E40;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    width: 350px;
+    border-radius: 3px;
+    background-color: rgb(240, 235, 235); 
+    opacity: 0.7;
+    border: 2px solid #472E40;
+    -webkit-transition-duration: 1.2s; /* Safari */
+    transition-duration: 1.2s;
+    clear: left;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: rgba(70, 45, 65, 0.8);
+    color: rgb(255, 225, 210); 
+    cursor: pointer;
+}
+
+#writing_image{
+    width: 40%;
+    margin: auto;
+    display: block;
+    opacity: 0.95;
+    padding-bottom: 50px;
+}
+
+.triangle{
+    position: absolute;
+    border-bottom: 800px solid rgb(255, 225, 210);
+    border-left: 1400px solid transparent;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+
+
+#n7, #n8{
+    color: rgb(14, 16, 20);
+    margin-top: 650px;
+}
+
+#n7{
+    margin-left: 0px;
+}
+#n8{
+    right: 5px;
+}
+
+#second_container{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*resume page stuff*/
+#resume_page{
+    background-color: rgb(210, 220, 255);
+    margin: 0px;
+    overflow-y: auto;
+    display: none;
+}
+
+#resume_heading{
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 75px;
+    letter-spacing: 22px;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    margin-bottom: 0px;
+    color: #472E40;
+    opacity: 0.95;
+}
+
+#resume_box{
+    width: 70%;
+    height: 600px;
+    padding-bottom: 40px;
+    display: block;
+    margin: auto;
+}
+
+#thanks{
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding-top: 40px;
+    color: #472E40;
+    opacity: 0.95;
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1395px) {
+    .hobby_title{
+        font-size: 18px;
+    }
+    .hobby{
+        font-size: 15px;
+    }
+}
+
+
+/* responsiveness stuff*/
+@media screen and (max-width: 1295px) {
+    .selection{
+        width: 19.675%;
+    }
+    .project_pic{
+        width: 120px;
+    }
+    .project{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .chevron_green::before{
+        top: 40px;
+    }
+    .hobby_title{
+        font-size: 15px;
+    }
+    .hobby{
+        font-size: 13px;
+    }
+}
+
 
 @media screen and (max-width: 1100px) {
     .selection_text{
@@ -358,14 +946,15 @@ body, html{
     .selection{
         width: 19.6%;
     }
-    #n1{
+    .n{
         display: none;
     }
-    #n2{
+    .nn{
         display: none;
     }
     #name{
         font-size: 130px;
+        margin-top: 0px;
     }
     .bigletter{
         font-size: 140px;
@@ -373,6 +962,29 @@ body, html{
     #welcome{
         font-size: 15px;
         letter-spacing: 15px;
+    }
+    #project_intro{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    #project_heading{
+        font-size: 50px;
+        letter-spacing: 15px;
+    }
+
+    .rotating_table{
+        display: none;
+    }
+
+    #about_paragraph{
+        width: 80%;
+        padding-left: 9%;
+        text-align: center;
+    }
+
+    #about_heading{
+        padding-top: 80px;
     }
 }
 
@@ -440,6 +1052,58 @@ body, html{
     .bigletter{
         font-size: 105px;
     }
+
+    .hobby_title{
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+    .hobby{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media screen and (max-width: 950px){
+    .extra_wrapper{
+        width: 80%;
+        margin-left: 9%;
+    }
+    #second_container{
+        display: block;
+    }
+    #first_container{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 780px){
+    #project_grid{
+        display: table;
+    }
+    #project_container{
+        display: none;
+    }
+    .bull{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 680px) {
+    #project_intro{
+        font-size: 9px;
+        letter-spacing: 0px;
+    }
+    #project_heading{
+        padding-top: 70px; 
+    }
+    .project_name_grid{
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 490px) {
@@ -448,6 +1112,13 @@ body, html{
     }
     #name{
         margin-top: 120px;
+    }
+    .project_name_grid{
+        font-size: 7.5px;
+    }
+    .btn{
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 

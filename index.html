@@ -2,12 +2,13 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" charset='utf-8' content="width=device-width, initial-scale=1.0">
 	<title>Zi Gao</title>
 	<link rel="icon" href="./src/logo_black.png" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="./stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Bungee|Montserrat:400,500,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<script src='./javascript/script.js'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src='./javascript/transit.js'></script>
@@ -23,11 +24,11 @@
 			ZiGao.io
 		</h3>
 		<img id="menu_icon" onclick="extendMenu()" src="./src/menu_icon_white.png">
-		<img id="home_icon" src="./src/logo_white.png">
+		<img id="home_icon" onclick="scrollfunc(0, true)" src="./src/logo_white.png">
 	</div>
 	<div class="section" id="nav_page">
 		<div id="nav_page_container" class="container">
-			<div id="home_section" class="selection">
+			<div onclick="scrollfunc(0, true)" id="home_section" class="selection">
 				<div class="wrapper">
 					<img class="selection_icon" src="./src/home_icon.png">
 					<h2 class="selection_text">
@@ -35,7 +36,7 @@
 					</h2>
 				</div>
 			</div>
-			<div id="project_section" class="selection">
+			<div onclick="scrollfunc(1, true)" id="project_section" class="selection">
 				<div class="wrapper">
 					<img class="selection_icon" src="./src/projects_icon.png">
 					<h2 class="selection_text">
@@ -43,7 +44,7 @@
 					</h2>
 				</div>
 			</div>
-			<div id="about_section" class="selection">
+			<div onclick="scrollfunc(2, true)" id="about_section" class="selection">
 				<div class="wrapper">
 					<img class="selection_icon" src="./src/about_icon.png">
 					<h2 class="selection_text">
@@ -51,15 +52,15 @@
 					</h2>
 				</div>
 			</div>
-			<div id="blog_section" class="selection">
+			<div onclick="scrollfunc(3, true)" id="blog_section" class="selection">
 				<div class="wrapper">
 					<img class="selection_icon" src="./src/blog_icon.png">
 					<h2 class="selection_text">
-						BLOG
+						EXTRAS
 					</h2>
 				</div>
 			</div>
-			<div id="resume_section" class="selection">
+			<div onclick="scrollfunc(4, true)" id="resume_section" class="selection">
 				<div class="wrapper">
 					<img class="selection_icon" id="resume_icon" src="./src/resume_icon.png">
 					<h2 class="selection_text">
@@ -80,18 +81,18 @@
 		</div>
 	</div>
     <div class="section" id="home_page">
+		<h2 onclick="scrollfunc(-1, true)" class="n" id="n1">
+			&mdash; PROJECTS
+		</h2>
+		<h2 onclick="scrollfunc(-1, true)" class="nn" id="n2">
+			&mdash; PROJECTS
+		</h2>
 		<h1 id="name">
 			<span class="bigletter">Z</span>I <span class="bigletter">G</span>AO
 		</h1>
 		<h4 id="welcome">
 			&mdash; Welcome To My Website &mdash;
 		</h4>
-		<h2 id="n1">
-			&mdash; PROJECTS
-		</h2>
-		<h2 id="n2">
-			&mdash; PROJECTS
-		</h2>
 		<div class="chevron_container" onclick='pageScroll(0)'>
 				<div class="chevron"></div>
 				<div class="chevron"></div>
@@ -100,44 +101,334 @@
 		</div>
     </div>
     <div class="section" id="project_page">
+		<h2 onclick="scrollfunc(-1, true)" class="n" id="n3">
+			&mdash; ABOUT
+		</h2>
+		<h2 onclick="scrollfunc(-1, true)" class="nn" id="n4">
+			&mdash; ABOUT
+		</h2>
+		<h1 id="project_heading">
+			PROJECTS
+		</h1>
+		<p id="project_intro">
+			Here are some projects I've worked on - some are finished and some are in progress. 
+			<br>
+			These were projects were completed for either: fun, work, school or a startup venture! 
+			<br>
+			<br>
+			* Most of these projects are publicly shared on my GitHub *
+		</p>
+		<div class="page_content">
+			<h2 class="project_type">
+				MAJOR PROJECTS
+			</h2>
+			<div id="project_grid">
+				<div class="grid_row">
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							LYNQUP
+						</h4>
+					</div>
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							TUTORZONE
+						</h4>
+					</div>
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							ZIGAO.IO
+						</h4>
+					</div>
+				</div>
+				<div class="grid_row">
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							SCHOOL BASED
+						</h4>
+					</div>
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							ARDUINO BASED
+						</h4>
+					</div>
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							VIRTUAL FIGHTERZ
+						</h4>
+					</div>
+				</div>
+				<div style="padding-bottom: 100px;"class="grid_row">
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							READR
+						</h4>
+					</div>
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							ZYM-STRAP
+						</h4>
+					</div>
+					<div class="grid_project">
+						<img src="./src/lynqup_logo.png" class="project_pic_grid">
+						<h4 class="project_name_grid">
+							SOCCERBUDS
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page_content">
+			<div id="project_container">
+				<span class="chevron_green left project"></span>
+				<div class="project">
+					<img src="./src/lynqup_logo.png" class="project_pic">
+					<h4 class="project_name">
+						LYNQUP
+					</h4>
+				</div>
+				<div class="project">
+					<img src="./src/lynqup_logo.png" class="project_pic">
+					<h4 class="project_name">
+						LYNQUP
+					</h4>
+				</div>
+				<div class="project">
+					<img src="./src/lynqup_logo.png" class="project_pic">
+					<h4 class="project_name">
+						LYNQUP
+					</h4>
+				</div>
+				<span class="chevron_green right project"></span>
+			</div>
+			
+			<div id="indicators">
+				<p class="bull" id="p1">
+					&#9632;
+				</p>
+				<p class="bull" id="p2">
+					&#9632;
+				</p>
+				<p class="bull" id="p3">
+					&#9632;
+				</p>
+			</div>
+		</div>
 	</div>
 	<div class="section" id="about_page">
+		<h2 onclick="scrollfunc(-1, true)" class="n" id="n5">
+				&mdash; EXTRAS
+			</h2>
+			<h2 onclick="scrollfunc(-1, true)" class="nn" id="n6">
+				&mdash; EXTRAS
+		</h2>
+		<h1 id="about_heading">
+			ABOUT
+		</h1>
+		<div class="content">
+			<div class="rotating_table" id="liked_things">
+				<h3 class="hobby_title">
+					Stuff I Like
+				</h3>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Tech Gadgets
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Classical Music
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						All Food
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Anime
+					</h6>
+				</div>
+			</div>
+			<p id="about_paragraph">
+				Hey there <i class="em em-wave"></i> ! 
+				My name is Zi, and I am currently a first year software engineering student at the University of Ottawa.
+				<br>
+				<br>
+				I love to explore unique ideas<i class="em em-bulb"></i>. 
+				By constantly learning new technologies and working on different projects, 
+				I aim to improve the lives of people around the <i class="em em-earth_americas"></i> . 
+				I also have a keen interest in UI and UX design, 
+				and am always excited to build products with elegant and engaging user experiences. 
+				<br>
+				<br>
+				If you want to <i class="em em-speech_balloon"></i> a business, startup, or general project idea, 
+				or if you have any inquiries about my qualifications and past work, feel free to connect with me! 
+				I am always willing to meet over a cup of <i class="em em-coffee"></i> !
+				<br>
+				<br> My favourite quote:
+				<br>
+				<br> "Those who are crazy enough to think that they can change the world are the ones who do."
+				<br>
+				<br> - Steve Jobs
+			</p>
+			<div class="rotating_table" id="do_things">
+				<h3 class="hobby_title">
+					Things I Do
+				</h3>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Consume Coffee
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Program Code
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Design Websites
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<img src="./src/projects_icon.png" class="hobby_pic">
+					<h6 class="hobby">
+						Write Creative Pieces
+					</h6>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="section" id="blog_and_notes_page">
+	<div class="section" id="blog_page">
+		<h2 onclick="scrollfunc(-1, true)" class="n" id="n7">
+			&mdash; RESUME
+		</h2>
+		<h2 onclick="scrollfunc(-1, true)" class="nn" id="n8">
+			&mdash; RESUME
+		</h2>
+		<div class="triangle">
+		</div>
+		<h1 id="blog_heading">
+			EXTRAS
+		</h1>
+		<div id="first_container">
+			<div class="extra_wrapper" id="blog_wrapper">
+				<h2 class="extra_name">
+					BLOG
+				</h2>
+				<p class="extra_description">
+					I like to write stuff from time to time and I'd like to share that somewhere. A blog is probably the best place. It'll feature
+					a variety of things from super short stories to show reviews to random subject rants. Currently building it, but it should
+					be fun! The button below will bring you there when it's done!
+				</p>
+				<button class="btn" onclick="javascript:location.href='https://soccerbuds.typeform.com/to/dZVjGI'" id='blog_button'>
+					ENTER BLOG SITE
+				</button>
+				<button class="btn" onclick="javascript:location.href='https://soccerbuds.typeform.com/to/dZVjGI'" id='notes_button'>
+					ENTER NOTES SITE
+				</button>
+			</div>
+			<div class="extra_wrapper" id="notes_wrapper">
+				<img id="writing_image" src="./src/blog_icon.png">
+				<h2 class="extra_name">
+					NOTES
+				</h2>
+				<p class="extra_description">
+					A lot of my friends and fellow students have requested this so I'm putting an effort into making a site for my High School
+					and University notes. I'm also thinking of starting an educational YouTube channel soon, probably covering subjects like
+					programming and stuff - it'll serve as a good review for me.
+				</p>
+			</div>
+		</div>
+		<div id="second_container">
+			<div class="extra_wrapper" id="blog_wrapper">
+				<div class="extra_wrapper" id="notes_wrapper">
+					<h2 class="extra_name">
+						NOTES
+					</h2>
+					<p class="extra_description">
+						A lot of my friends and fellow students have requested this so I'm putting an effort into making a site for my High School
+						and University notes. I'm also thinking of starting an educational YouTube channel soon, probably covering subjects
+						like programming and stuff - it'll serve as a good review for me.
+					</p>
+					<img id="writing_image" src="./src/blog_icon.png">
+				</div>
+				<h2 class="extra_name">
+					BLOG
+				</h2>
+				<p class="extra_description">
+					I like to write stuff from time to time and I'd like to share that somewhere. A blog is probably the best place. It'll feature
+					a variety of things from super short stories to show reviews to random subject rants. Currently building it, but it should
+					be fun! The button below will bring you there when it's done!
+				</p>
+				<button class="btn" onclick="javascript:location.href='https://soccerbuds.typeform.com/to/dZVjGI'" id='blog_button'>
+					ENTER BLOG SITE
+				</button>
+				<button class="btn" onclick="javascript:location.href='https://soccerbuds.typeform.com/to/dZVjGI'" id='notes_button'>
+					ENTER NOTES SITE
+				</button>
+			</div>
+		</div>
 	</div>
 	<div class="section" id="resume_page">
+		<h1 id="resume_heading">
+			RESUME
+		</h1>
+		<iframe id="resume_box" src="https://e.issuu.com/embed.html#32290378/57360904" frameborder="0" allowfullscreen></iframe>
+		<a class="btn" href="./src/zi_gao_resume.pdf" download="zi_gao_resume">
+			DOWNLOAD RESUME
+		</a>
+		<h3 id="thanks">
+			BIG THANKS TO <b>CINDY HUANG</b> FOR THE CRISP ARTWORK AND DESIGN ADVICE
+			<br>
+			&mdash;
+		</h1>
 	</div>
 	<div id="bottom_nav">
 	</div>
+	
+
+
+
 	<script>
 		$( document ).ready(function(){
-			$( "#name" ).animate({
-				opacity: 1,
-				marginTop: 180,
-			  }, 1500, function() {
-				// Animation complete.
-				$( "#welcome" ).animate({
-					fontSize: 17,
-				}, 1200, function() {
-				// Animation complete.
-					$( "#n1" ).animate({
-						opacity: 1,
-					}, 3000);
-					$( "#n2" ).animate({
-						opacity: 1,
-					}, 3000);
-					$( "#menu_icon" ).animate({
-						opacity: 1,
-					}, 3000);
-					$( "#home_icon" ).animate({
-						opacity: 1,
-					}, 3000);
-					$( ".chevron_container" ).animate({
-						opacity: 1,
-					}, 3000);
-				});
-			  }
-			);
+			if ((screen.height-100) < $(window).innerHeight()){
+				$(".section").css("min-height", String($(window).innerHeight()).concat("px"));
+			} else {
+				$(".section").css("min-height", String((screen.height)).concat("px"));
+			}
+			$(window).bind('mousewheel DOMMouseScroll', function(e){
+				if ($("#menu_icon").attr("src") != "./src/close_icon_black.png" && $("#menu_icon").attr("src") != "./src/close_gif.gif"){
+					if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+						scrollfunc(-2, false);
+					}
+					else {
+						scrollfunc(-1, false);
+					}
+				}
+			});
+			if (window.innerWidth <= 750){
+				$("#welcome").text("Welcome To My Website");
+			} else {
+				$("#welcome").html("&mdash; Welcome To My Website &mdash;");
+			}
+			loadhome();
 		});
 
 		$("#email").on(
@@ -197,6 +488,8 @@
 						$(this).attr("src", "./src/menu_gif_white.gif");
 					} else if ($(this).attr("src") == './src/close_icon_black.png'){
 						$(this).attr("src", "./src/close_gif.gif");
+					} else {
+						$(this).attr("src", "./src/menu_gif.gif");
 					}
 				},
 				mouseleave: function () {
@@ -204,6 +497,8 @@
 						$(this).attr("src", "./src/menu_icon_white.png");
 					} else if ($(this).attr("src") == './src/close_gif.gif'){
 						$(this).attr("src", "./src/close_icon_black.png");
+					} else {
+						$(this).attr("src", "./src/menu_icon_black.png");
 					}
 				}
 			}
@@ -243,6 +538,66 @@
 				},
 				mouseleave: function () {
 					$(this).html("&mdash; PROJECTS");
+				}
+			}
+		);
+		$("#n3").on(
+			{
+				mouseenter: function () {
+					$(this).html("ABOUT &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; ABOUT");
+				}
+			}
+		);
+		$("#n4").on(
+			{
+				mouseenter: function () {
+					$(this).html("ABOUT &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; ABOUT");
+				}
+			}
+		);
+		$("#n5").on(
+			{
+				mouseenter: function () {
+					$(this).html("EXTRAS &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; EXTRAS");
+				}
+			}
+		);
+		$("#n6").on(
+			{
+				mouseenter: function () {
+					$(this).html("EXTRAS &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; EXTRAS");
+				}
+			}
+		);
+		$("#n7").on(
+			{
+				mouseenter: function () {
+					$(this).html("RESUME &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; RESUME");
+				}
+			}
+		);
+		$("#n8").on(
+			{
+				mouseenter: function () {
+					$(this).html("RESUME &mdash;");
+				},
+				mouseleave: function () {
+					$(this).html("&mdash; RESUME");
 				}
 			}
 		);
