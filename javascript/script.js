@@ -91,8 +91,7 @@ function scrollfunc(s, b){
         normal_scroll = false;
       }
     }
-
-    if (in_transition == false && normal_scroll==false) {
+    if (in_transition == false && normal_scroll==false && $(".modal").css("display")=="none") {
       if (s == -1) {
         if (state == 0) {
           in_transition = true;
@@ -351,6 +350,19 @@ function loadresume(){
 function closemodal(){
   $(".modal").animate({
     height: "0%",
-    width: "0%"
-  }, 1000);
+  }, 500, function(){
+    $(".modal").css("display", "none");
+  });
+  $("#close_modal").css("display", "none");
+  $("#project_page").css("display", "block");
+  loadprojects();
+}
+
+function openmodal(s){
+  $(".modal").animate({
+    height: "100%",
+  }, 500);
+  $("#project_page").css("display", "none");
+  $(".modal").css("display", "block");
+  $("#close_modal").css("display", "block");
 }
