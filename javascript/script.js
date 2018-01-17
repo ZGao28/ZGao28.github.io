@@ -134,6 +134,8 @@ function loadhome() {
   $("#welcome").css("letterSpacing", "0px");
   $(".nf").css("opacity", "0");
   $(".social_media_white").css("width", "0px");
+  $(".circle").css("opacity", "0");
+  $(".circle").css("background-color", "white");
   if (backgroundState != 0) {
     $("#background_div").animate(
       {
@@ -147,6 +149,7 @@ function loadhome() {
       },
       1200,
       function() {
+        backgroundState = 0;
         $("#name").animate(
           {
             opacity: 1,
@@ -168,7 +171,9 @@ function loadhome() {
               800,
               function() {
                 resize();
-                backgroundState = 0;
+                $(".circle").animate({
+                  opacity: 1
+                }, 1000);
                 // Animation complete.
                 $(".n").animate(
                   {
@@ -226,6 +231,9 @@ function loadhome() {
           800,
           function() {
             resize();
+            $(".circle").animate({
+              opacity: 1
+            }, 1000);
             // Animation complete.
             $(".n").animate(
               {
@@ -279,6 +287,8 @@ function loadprojects() {
   $("#project_intro").css("opacity", "0");
   $(".page_content").css("opacity", "0");
   $(".nf").css("opacity", "0");
+  $(".circle").css("opacity", "0");
+  $(".circle").css("background-color", "rgb(30, 20, 80)");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -292,6 +302,7 @@ function loadprojects() {
       },
       1200,
       function() {
+        backgroundState = 1;
         $("#project_heading").animate(
           {
             opacity: 1,
@@ -307,6 +318,9 @@ function loadprojects() {
               },
               300,
               function() {
+                $(".circle").animate({
+                  opacity: 1
+                }, 1000);
                 $(".nf").animate(
                   {
                     opacity: 1
@@ -319,7 +333,6 @@ function loadprojects() {
                   500,
                   function() {
                     $("#project_page").css("overflow", "auto");
-                    backgroundState = 1;
                   }
                 );
               }
@@ -344,6 +357,9 @@ function loadprojects() {
           },
           300,
           function() {
+            $(".circle").animate({
+              opacity: 1
+            }, 1000);
             $(".nf").animate(
               {
                 opacity: 1
@@ -373,6 +389,8 @@ function loadabout() {
   $("#about_paragraph").css("opacity", "0");
   $(".rotating_table").css("opacity", "0");
   $(".nf").css("opacity", "0");
+  $(".circle").css("opacity", "0");
+  $(".circle").css("background-color", "rgb(30, 20, 80)");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -386,6 +404,7 @@ function loadabout() {
       },
       1200,
       function() {
+        backgroundState = 1;
         $("#about_heading").animate(
           {
             opacity: 1,
@@ -393,6 +412,9 @@ function loadabout() {
           },
           1000,
           function() {
+            $(".circle").animate({
+              opacity: 1
+            }, 1000);
             // Animation complete.
             resize();
             $("#about_paragraph").animate(
@@ -413,7 +435,6 @@ function loadabout() {
                   500,
                   function() {
                     $("#about_page").css("overflow", "auto");
-                    backgroundState = 1;
                   }
                 );
               }
@@ -438,6 +459,9 @@ function loadabout() {
           },
           300,
           function() {
+            $(".circle").animate({
+              opacity: 1
+            }, 1000);
             $(".nf").animate(
               {
                 opacity: 1
@@ -466,6 +490,8 @@ function loadblog() {
   $("#blog_heading").css("padding-top", "0px");
   $(".extra_wrapper").css("opacity", "0");
   $(".nf").css("opacity", "0");
+  $(".circle").css("opacity", "0");
+  $(".circle").css("background-color", "rgb(30, 20, 80)");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -479,6 +505,7 @@ function loadblog() {
       },
       1200,
       function() {
+        backgroundState = 1; 
         $("#blog_heading").animate(
           {
             opacity: 1,
@@ -486,6 +513,9 @@ function loadblog() {
           },
           1000,
           function() {
+            $(".circle").animate({
+              opacity: 1
+            }, 1000);
             // Animation complete.
             resize();
             $(".nf").animate(
@@ -499,7 +529,6 @@ function loadblog() {
               800,
               function() {
                 $("#blog_page").css("overflow", "auto");
-                backgroundState = 1;
               }
             );
           }
@@ -514,6 +543,9 @@ function loadblog() {
       },
       1000,
       function() {
+        $(".circle").animate({
+          opacity: 1
+        }, 1000);
         // Animation complete.
         resize();
         $(".nf").animate(
@@ -541,6 +573,8 @@ function loadresume() {
   $("#resume_heading").css("padding-top", "0px");
   $("#resume_box").css("opacity", "0");
   $("#thanks").css("opacity", "0");
+  $(".circle").css("opacity", "0");
+  $(".circle").css("background-color", "rgb(30, 20, 80)");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -554,6 +588,7 @@ function loadresume() {
       },
       1200,
       function() {
+        backgroundState = 1;
         $("#resume_heading").animate(
           {
             opacity: 1,
@@ -561,6 +596,9 @@ function loadresume() {
           },
           1000,
           function() {
+            $(".circle").animate({
+              opacity: 1
+            }, 1000);
             resize();
             // Animation complete.
             $("#resume_box").animate(
@@ -576,7 +614,6 @@ function loadresume() {
               500,
               function() {
                 $("#resume_page").css("overflow", "auto");
-                backgroundState = 1;
               }
             );
           }
@@ -593,6 +630,9 @@ function loadresume() {
       function() {
         resize();
         // Animation complete.
+        $(".circle").animate({
+          opacity: 1
+        }, 1000);
         $("#resume_box").animate(
           {
             opacity: 1
@@ -689,7 +729,7 @@ function openmodal(s) {
       "A Neural Network That Reads Things"
     );
     $("#about_des").html(
-      "Since everyone is getting on the machine learning hype train I thought I would too. My goal with this project is to build from scratch using TensorFlow, a neural network that can read text in multiple languages. I hope for it to also be able to read graphs, equations, even emojis. The final product will include an interface where the user can upload or take a picture of text, and ReadR will convert that picture into selectable text. An additional thing I want to eventually add is for ReadR to actually read aloud the text! <br><br> Originally I came up with the idea of this side project in Fall 2017 and started playing around with things then. I have since realized that some features of this project are currently way above my skill level so I've put this project on hold for now. Currently it able to decipher numbers well and characters occasionally. I am definitely coming back to this project soon, and I am currently taking machine learning courses on Coursera. While there are probably many versions of my project already out there and many APIs I could use, I'm doing everything from scratch myself as this project mostly for learning as AI and neural nets have always been a subject of fascination for me."
+      "Since everyone is getting on the machine learning hype train I thought I would too. My goal with this project is to build from scratch using TensorFlow, a neural network that can read text in multiple languages. I hope for it to also be able to read graphs, equations, even emojis. The final product will include an interface where the user can upload or take a picture of text, and ReadR will convert that picture into selectable text. An additional thing I want to eventually add is for ReadR to actually read aloud the text! <br><br> Originally I came up with the idea of this side project in Fall 2017 and started playing around with things then. I have since realized that some features of this project are currently way above my skill level so I've put this project on hold for now. Currently it is able to decipher numbers well and characters occasionally. I am definitely coming back to this project soon, and I am currently taking machine learning courses on Coursera. While there are probably many versions of my project already out there and many APIs I could use, I'm doing everything from scratch myself as this project mostly for learning as AI and neural nets have always been a subject of fascination for me."
     );
     $("#tech_des").html(
       "Python, TensorFlow"
@@ -810,9 +850,9 @@ function updatecarousel(direction){
     $("#project_name_1").text("TUTORZONE");
     $("#project_name_2").text("LYNQUP");
     $("#project_name_3").text("ZIGAO.IO");
-    $("#p1").css("color", "black");
-    $("#p2").css("color", "rgb(190, 50, 60)");
-    $("#p3").css("color", "rgb(190, 50, 60)");
+    $("#p1").css("color", "#507DBC");
+    $("#p2").css("color", "rgb(40, 20, 80)");
+    $("#p3").css("color", "rgb(40, 20, 80)");
   } else if (carouselState==1){
     $("#project_pic_1").attr("src", "./src/readr_logo.png");
     $("#project_pic_2").attr("src", "./src/virtual_logo.png");
@@ -823,9 +863,9 @@ function updatecarousel(direction){
     $("#project_name_1").text("READR");
     $("#project_name_2").text("V.FIGHTERZ");
     $("#project_name_3").text("SOCCERBUDS");
-    $("#p2").css("color", "black");
-    $("#p3").css("color", "rgb(190, 50, 60)");
-    $("#p1").css("color", "rgb(190, 50, 60)");
+    $("#p2").css("color", "#507DBC");
+    $("#p3").css("color", "rgb(40, 20, 80)");
+    $("#p1").css("color", "rgb(40, 20, 80)");
   } else if (carouselState==2){
     $("#project_pic_1").attr("src", "./src/arduino_logo.png");
     $("#project_pic_2").attr("src", "./src/school_logo.png");
@@ -836,13 +876,89 @@ function updatecarousel(direction){
     $("#project_name_1").text("ARDUINO");
     $("#project_name_2").text("SCHOOL");
     $("#project_name_3").text("MISC.");
-    $("#p3").css("color", "black");
-    $("#p2").css("color", "rgb(190, 50, 60)");
-    $("#p1").css("color", "rgb(190, 50, 60)");
+    $("#p3").css("color", "#507DBC");
+    $("#p2").css("color", "rgb(40, 20, 80)");
+    $("#p1").css("color", "rgb(40, 20, 80)");
+  }
+}
+  
+function initCircles(){
+  var s = Math.random()*20+10;
+  var circle1 = {
+    height: s,
+    width: s,
+    ypos: Math.random()*window.screen.height,
+    xpos: Math.random()*window.screen.width,
+    xvel: Math.random()*3,
+    yvel: Math.random()*3
+  }
+  s = Math.random()*20+10;
+  var circle2 = {
+    height: s,
+    width: s,
+    ypos: Math.random()*window.screen.height,
+    xpos: Math.random()*window.screen.width,
+    xvel: Math.random()*3,
+    yvel: Math.random()*3
+  }
+  s = Math.random()*20+10;
+  var circle3 = {
+    height: s,
+    width: s,
+    ypos: Math.random()*window.screen.height,
+    xpos: Math.random()*window.screen.width,
+    xvel: Math.random()*3,
+    yvel: Math.random()*3
+  }
+  s = Math.random()*20+10;
+  var circle4 = {
+    height: s,
+    width: s,
+    ypos: Math.random()*window.screen.height,
+    xpos: Math.random()*window.screen.width,
+    xvel: Math.random()*3,
+    yvel: Math.random()*3
+  }
+  s = Math.random()*20+10;
+  var circle5 = {
+    height: s,
+    width: s,
+    ypos: Math.random()*window.screen.height,
+    xpos: Math.random()*window.screen.width,
+    xvel: Math.random()*3,
+    yvel: Math.random()*3
+  }
+  s = Math.random()*20+10;
+  var circle6 = {
+    height: s,
+    width: s,
+    ypos: Math.random()*window.screen.height,
+    xpos: Math.random()*window.screen.width,
+    xvel: Math.random()*3,
+    yvel: Math.random()*3
+  }
+  var circles = [circle1, circle2, circle3, circle4, circle5, circle6];
+  for (i = 1; i < 7; i++){
+    $("#circle".concat(String(i))).css("height", String(circles[i-1].height).concat("px"));
+    $("#circle".concat(String(i))).css("width", String(circles[i-1].width).concat("px"));
+    $("#circle".concat(String(i))).css("bottom", String(circles[i-1].ypos).concat("px"));
+    $("#circle".concat(String(i))).css("left", String(circles[i-1].xpos).concat("px"));
   }
 
+  var animate = setInterval(function(){
+    for (i = 0; i < 6; i++){
+      circles[i].ypos += 1;
+      if (circles[i].ypos >= window.screen.height){
+        circles[i].ypos = 0+40;
+      } else if (circles[i].ypos <= 0){
+        circles[i].ypos= window.screen.height-40;
+        circles[i].xpos= Math.random()*window.screen.width-300;
+      }
+      $("#circle".concat(String(i+1))).css("bottom", String(circles[i].ypos).concat("px"));
+      $("#circle".concat(String(i+1))).css("left", String(circles[i].xpos).concat("px"));
+    }
+  }, 10);
 }
-
 
 
 

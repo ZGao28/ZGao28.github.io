@@ -251,7 +251,7 @@ body, html{
 #home_page{
     background-color: transparent;
     display: block;
-    border: 0.5px solid black;
+    border: 0.5px solid transparent;
     position: relative;
 }
 
@@ -339,7 +339,6 @@ body, html{
 
 
 
-
 /*project page stuff*/
 
 #project_page{
@@ -357,7 +356,7 @@ body, html{
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    color: rgb(75, 10, 15); 
+    color: #507DBC;
 }
 
 #project_intro{
@@ -367,7 +366,7 @@ body, html{
     font-size: 15px;
     letter-spacing: 4px;
     padding-top: 0px;
-    color: rgb(75, 10, 15); 
+    color: rgb(20, 10, 50); 
     padding-bottom: 50px;
 }
 
@@ -387,7 +386,7 @@ body, html{
     font-size: 28px;
     letter-spacing: 5px;
     padding-top: 0px;
-    color: rgb(190, 50, 60);
+    color: rgb(30, 20, 80); 
     padding-bottom: 25px;
 }
 
@@ -398,7 +397,7 @@ body, html{
     font-size: 14px;
     letter-spacing: 2px;
     padding-top: 0px;
-    color: rgb(225, 90, 100);
+    color: rgb(30, 20, 80);
     padding-bottom: 5px;
 }
 
@@ -437,7 +436,7 @@ body, html{
     font-size: 13px;
     letter-spacing: 2px;
     padding-top: 0px;
-    color: rgb(190, 50, 60);
+    color: rgb(30, 20, 80);
     padding-bottom: 5px;
 }
 
@@ -465,7 +464,7 @@ body, html{
 	transform: rotate(-45deg);
 	vertical-align: top;
     width: 2em;
-    color: rgb(190, 50, 60);
+    color: rgb(30, 20, 80);
     -webkit-transition-duration: 0.5s; /* Safari */
     transition-duration: 0.5s;
 }
@@ -481,13 +480,13 @@ body, html{
 }
 
 .chevron_green:hover::before{
-    color: rgb(255, 160, 160);
+    color: #507DBC;
 }
 
 .bull{
     text-align: center;
     float: left;
-    color: rgb(190, 50, 60);
+    color: rgb(40, 20, 80); 
     font-size: 23px;
     padding: 40px 20px;
     margin-bottom: 0px;
@@ -503,7 +502,7 @@ body, html{
 
 #n3, #n4{
     margin-top: 650px;
-    color: rgb(75, 10, 15); 
+    color: rgb(20, 10, 50); 
 }
 
 #n4{
@@ -567,7 +566,7 @@ body, html{
     padding-top: 60px;
     padding-bottom: 45px;
     margin-bottom: 0px;
-    color: rgb(75, 10, 15); 
+    color: #507DBC; 
 }
 
 .rotating_table{
@@ -586,7 +585,7 @@ body, html{
     font-family: "Montserrat", sans-serif;
     font-size: 16.5px;
     letter-spacing: 2px;
-    color: rgb(75, 10, 15);   
+    color: rgb(20, 10, 50);   
     text-align: center;
 }
 
@@ -608,7 +607,7 @@ body, html{
     padding-right: 40px;
     padding-top: 0px;
     margin-bottom: 0px;
-    color: rgb(190, 50, 60);   
+    color: rgb(30, 20, 80);   
 }
 
 
@@ -621,7 +620,7 @@ body, html{
     padding-top: 0px;
     font-weight: 500;
     margin-bottom: 0px;
-    color: rgb(190, 50, 60);   
+    color: rgb(30, 20, 80);   
 }
 
 .hobby_container{
@@ -662,6 +661,7 @@ body, html{
 
 .nf:hover{
     font-size: 25px;
+    cursor: pointer;
 }
 
 .nf1{
@@ -669,7 +669,7 @@ body, html{
 }
 
 .nfw{
-    color: rgb(75, 10, 15);
+    color: rgb(20, 10, 50);
 }
 
 
@@ -700,7 +700,7 @@ body, html{
     padding-top: 60px;
     padding-bottom: 45px;
     margin-bottom: 0px;
-    color: #472E40;
+    color: #507DBC; 
     opacity: 0.95;
     z-index: 5;
 }
@@ -714,7 +714,7 @@ body, html{
     font-size: 40px;
     letter-spacing: 10px;
     margin-bottom: 0px;
-    color: #472E40;
+    color: rgb(50, 55, 135); 
 }
 
 .extra_wrapper{
@@ -736,7 +736,7 @@ body, html{
     letter-spacing: 2px;
     padding-top: 20px;
     margin-bottom: 0px;
-    color: #472E40;
+    color: rgb(20, 10, 50);
     text-align: center;
     padding-bottom: 50px;
 }
@@ -750,9 +750,9 @@ body, html{
     text-align: center;
     width: 350px;
     border-radius: 3px;
-    background-color: #462d41cc;
+    background-color: rgb(50, 55, 135);
     opacity: 0.7;
-    border: 2px solid #472E40;
+    border: 2px solid rgb(50, 55, 135);
     -webkit-transition-duration: 1.2s; /* Safari */
     transition-duration: 1.2s;
     clear: left;
@@ -764,7 +764,7 @@ body, html{
 
 .btn:hover{
     background-color: rgb(240, 235, 235); 
-    color: #472E40;
+    color: rgb(50, 55, 135);
     cursor: pointer;
 }
 
@@ -776,7 +776,24 @@ body, html{
     padding-bottom: 50px;
 }
 
-.triangle{
+/*
+.triangle_left{
+    position: absolute;
+    border-bottom: 100% solid rgb(240, 235, 240);
+    border-left: 100% solid transparent;
+    right: 0px;
+    bottom: 0px;
+    z-index: -10;
+}
+.triangle_right{
+    position: absolute;
+    border-bottom: 800px solid rgb(255, 225, 210);
+    border-left: 1400px solid transparent;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+.triangle_up{
     position: absolute;
     border-bottom: 800px solid rgb(255, 225, 210);
     border-left: 1400px solid transparent;
@@ -785,10 +802,10 @@ body, html{
     z-index: 1;
 }
 
-
+*/
 
 #n7, #n8{
-    color: rgb(14, 16, 20);
+    color: rgb(20, 10, 50);
     margin-top: 650px;
 }
 
@@ -808,7 +825,16 @@ body, html{
 
 
 
-
+.circle{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: -2;
+    position: absolute;
+    bottom: 0px;
+}
 
 
 
@@ -838,7 +864,7 @@ body, html{
     padding-top: 60px;
     padding-bottom: 45px;
     margin-bottom: 0px;
-    color: rgb(75, 10, 15);
+    color: #507DBC; 
     opacity: 0.95;
 }
 
@@ -857,7 +883,7 @@ body, html{
     font-size: 25px;
     letter-spacing: 3px;
     padding-top: 40px;
-    color: rgb(75, 10, 15);
+    color: rgb(30, 20, 80);
     opacity: 0.95;
     width: 60%;
     display: block;
