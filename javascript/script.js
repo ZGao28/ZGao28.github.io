@@ -889,8 +889,7 @@ function initCircles(){
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    xvel: Math.random()*3,
-    yvel: Math.random()*3
+    yvel: Math.random()*2+1
   }
   s = Math.random()*20+10;
   var circle2 = {
@@ -898,8 +897,7 @@ function initCircles(){
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    xvel: Math.random()*3,
-    yvel: Math.random()*3
+    yvel: Math.random()*2+1
   }
   s = Math.random()*20+10;
   var circle3 = {
@@ -907,8 +905,7 @@ function initCircles(){
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    xvel: Math.random()*3,
-    yvel: Math.random()*3
+    yvel: Math.random()*2+1
   }
   s = Math.random()*20+10;
   var circle4 = {
@@ -916,8 +913,7 @@ function initCircles(){
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    xvel: Math.random()*3,
-    yvel: Math.random()*3
+    yvel: Math.random()*2+1
   }
   s = Math.random()*20+10;
   var circle5 = {
@@ -925,8 +921,7 @@ function initCircles(){
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    xvel: Math.random()*3,
-    yvel: Math.random()*3
+    yvel: Math.random()*2+1
   }
   s = Math.random()*20+10;
   var circle6 = {
@@ -934,8 +929,7 @@ function initCircles(){
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    xvel: Math.random()*3,
-    yvel: Math.random()*3
+    yvel: Math.random()*2+1
   }
   var circles = [circle1, circle2, circle3, circle4, circle5, circle6];
   for (i = 1; i < 7; i++){
@@ -947,12 +941,13 @@ function initCircles(){
 
   var animate = setInterval(function(){
     for (i = 0; i < 6; i++){
-      circles[i].ypos += 1;
+      circles[i].ypos += circles[i].yvel;
       if (circles[i].ypos >= window.screen.height){
         circles[i].ypos = 0+40;
       } else if (circles[i].ypos <= 0){
         circles[i].ypos= window.screen.height-40;
-        circles[i].xpos= Math.random()*window.screen.width-300;
+        circles[i].xpos= Math.random()*window.screen.width;
+        circles[i].yvel= Math.random()*2+1;
       }
       $("#circle".concat(String(i+1))).css("bottom", String(circles[i].ypos).concat("px"));
       $("#circle".concat(String(i+1))).css("left", String(circles[i].xpos).concat("px"));
