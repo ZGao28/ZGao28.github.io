@@ -259,7 +259,7 @@ body, html{
     color: rgb(255, 253, 255);
     font-family: "Raleway", sans-serif;
     font-size: 17px; 
-    margin-top: 20px;
+    margin-top: 400px;
     padding-top: 0px;  
     text-align: center;
     letter-spacing: 0px;
@@ -275,7 +275,7 @@ body, html{
     padding-top: 0px;  
     opacity: 0;
     text-align: center;
-    letter-spacing: 20px;
+    letter-spacing: 30px;
     margin-bottom: 0px;
 }
 
@@ -303,7 +303,7 @@ body, html{
     margin-left: -20px;
     opacity: 0;
     z-index: 5;
-    margin-top: 620px;
+    margin-top: 600px;
 }
 
 .nn{
@@ -320,14 +320,14 @@ body, html{
     letter-spacing: 6px;
     opacity: 0;
     z-index: 5;
-    margin-top: 620px;
+    margin-top: 600px;
 }
 
 
 
-
-
-
+#name_container_2{
+    display: none;
+}
 
 
 
@@ -501,7 +501,7 @@ body, html{
 
 
 #n3, #n4{
-    margin-top: 650px;
+    margin-top: 620px;
     color: rgb(20, 10, 50); 
 }
 
@@ -564,7 +564,7 @@ body, html{
     font-size: 75px;
     letter-spacing: 22px;
     padding-top: 60px;
-    padding-bottom: 45px;
+    padding-bottom: 65px;
     margin-bottom: 0px;
     color: #507DBC; 
 }
@@ -578,15 +578,14 @@ body, html{
 
 
 #about_paragraph{
-    width: 38%;
-    padding: 10px 0%;
-    margin: 0px;
-    float: left;
+    width: 50%;
     font-family: "Montserrat", sans-serif;
     font-size: 16.5px;
     letter-spacing: 2px;
     color: rgb(20, 10, 50);   
     text-align: center;
+    display: block;
+    margin: auto;
 }
 
 #liked_things{
@@ -634,7 +633,7 @@ body, html{
 
 #n5, #n6{
     color: rgb(75, 10, 15);
-    margin-top: 635px;
+    margin-top: 605px;
 }
 
 #n5{
@@ -806,7 +805,7 @@ body, html{
 
 #n7, #n8{
     color: rgb(20, 10, 50);
-    margin-top: 650px;
+    margin-top: 620px;
 }
 
 #n7{
@@ -837,15 +836,35 @@ body, html{
 }
 
 
+.word {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+}
 
 
 
-
-
-
-
-
-
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+  
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+  
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+  
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
 
 /*resume page stuff*/
@@ -958,6 +977,13 @@ body, html{
     #name{
         font-size: 130px;
         margin-top: 0px;
+        letter-spacing: 20px;
+    }
+    #name_container_2{
+        display: block;
+    }
+    #name_container{
+        display: none;
     }
     .bigletter{
         font-size: 140px;
@@ -965,6 +991,7 @@ body, html{
     #welcome{
         font-size: 15px;
         letter-spacing: 15px;
+        margin-top: 30px;
     }
     #project_intro{
         font-size: 12px;
@@ -982,7 +1009,6 @@ body, html{
 
     #about_paragraph{
         width: 80%;
-        padding-left: 9%;
         text-align: center;
     }
 

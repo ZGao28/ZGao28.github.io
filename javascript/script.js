@@ -30,6 +30,7 @@ function extendMenu(){
 function resize(){
     //alert(window.innerWidth);
     var h = String(window.screen.height).concat("px");
+    $(".word").css("left", String(((window.innerWidth-$(".word").width())/2)-20).concat("px"));
     $("#background_div").css('height', h);
     if (window.innerWidth <= 750){
         $("#welcome").text("Welcome To My Website");
@@ -390,7 +391,7 @@ function loadabout() {
   $(".rotating_table").css("opacity", "0");
   $(".nf").css("opacity", "0");
   $(".circle").css("opacity", "0");
-  $(".circle").css("background-color", "rgb(30, 20, 80)");
+  $(".circle").css("background-color", "#507DBC");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -491,7 +492,7 @@ function loadblog() {
   $(".extra_wrapper").css("opacity", "0");
   $(".nf").css("opacity", "0");
   $(".circle").css("opacity", "0");
-  $(".circle").css("background-color", "rgb(30, 20, 80)");
+  $(".circle").css("background-color", "rgb(50, 55, 135)");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -883,53 +884,53 @@ function updatecarousel(direction){
 }
   
 function initCircles(){
-  var s = Math.random()*20+10;
+  var s = Math.random()*15+5;
   var circle1 = {
     height: s,
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    yvel: Math.random()*2+1
+    yvel: Math.random()*1+0.5
   }
-  s = Math.random()*20+10;
+  s = Math.random()*15+10;
   var circle2 = {
     height: s,
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    yvel: Math.random()*2+1
+    yvel: Math.random()*1+0.5
   }
-  s = Math.random()*20+10;
+  s = Math.random()*15+10;
   var circle3 = {
     height: s,
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    yvel: Math.random()*2+1
+    yvel: Math.random()*1+0.5
   }
-  s = Math.random()*20+10;
+  s = Math.random()*15+10;
   var circle4 = {
     height: s,
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    yvel: Math.random()*2+1
+    yvel: Math.random()*1+0.5
   }
-  s = Math.random()*20+10;
+  s = Math.random()*15+10;
   var circle5 = {
     height: s,
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    yvel: Math.random()*2+1
+    yvel: Math.random()*1+0.5
   }
-  s = Math.random()*20+10;
+  s = Math.random()*15+10;
   var circle6 = {
     height: s,
     width: s,
     ypos: Math.random()*window.screen.height,
     xpos: Math.random()*window.screen.width,
-    yvel: Math.random()*2+1
+    yvel: Math.random()*1+0.5
   }
   var circles = [circle1, circle2, circle3, circle4, circle5, circle6];
   for (i = 1; i < 7; i++){
@@ -944,20 +945,16 @@ function initCircles(){
       circles[i].ypos += circles[i].yvel;
       if (circles[i].ypos >= window.screen.height){
         circles[i].ypos = 0+40;
+        circles[i].xpos= Math.random()*window.screen.width;
+        circles[i].yvel= Math.random()*1+0.5;
       } else if (circles[i].ypos <= 0){
         circles[i].ypos= window.screen.height-40;
-        circles[i].xpos= Math.random()*window.screen.width;
-        circles[i].yvel= Math.random()*2+1;
       }
       $("#circle".concat(String(i+1))).css("bottom", String(circles[i].ypos).concat("px"));
       $("#circle".concat(String(i+1))).css("left", String(circles[i].xpos).concat("px"));
     }
   }, 10);
 }
-
-
-
-
 
 
 
