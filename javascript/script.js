@@ -128,13 +128,12 @@ function scrollfunc(s, b){
 var backgroundState = 1;
 
 function loadhome() {
-  $(window).scrollTop(0);
-  $("#home_page").css("overflow", "hidden");
   $("#name").css("opacity", "0");
   $("#name").css("margin-top", "80px");
   $("#welcome").css("opacity", "0");
   $("#welcome").css("letterSpacing", "0px");
-
+  $(".nf").css("opacity", "0");
+  $(".social_media_white").css("width", "0px");
   if (backgroundState != 0) {
     $("#background_div").animate(
       {
@@ -151,11 +150,16 @@ function loadhome() {
         $("#name").animate(
           {
             opacity: 1,
-            marginTop: 180
+            marginTop: 150
           },
           1000,
           function() {
             // Animation complete.
+            $(".social_media_white").animate(
+              {
+                width: 30
+              }, 800
+            );
             $("#welcome").animate(
               {
                 opacity: 1,
@@ -164,7 +168,6 @@ function loadhome() {
               800,
               function() {
                 resize();
-                $("#home_page").css("overflow", "auto");
                 backgroundState = 0;
                 // Animation complete.
                 $(".n").animate(
@@ -191,6 +194,10 @@ function loadhome() {
                   },
                   2000,
                 );
+                $(".nf").animate(
+                  {
+                    opacity: 1
+                  }, 1000);
               }
             );
           }
@@ -205,6 +212,11 @@ function loadhome() {
       },
       1000,
       function() {
+        $(".social_media_white").animate(
+          {
+            width: 30
+          }, 800
+        );
         // Animation complete.
         $("#welcome").animate(
           {
@@ -239,6 +251,10 @@ function loadhome() {
               },
               2000
             );
+            $(".nf").animate(
+              {
+                opacity: 1
+              }, 1000);
             $(".chevron_container").animate(
               {
                 opacity: 1
@@ -256,13 +272,13 @@ function loadhome() {
 }
 
 function loadprojects() {
-  $(window).scrollTop(0);
+  $(document).scrollTop(0);
   $("#project_page").css("overflow", "hidden");
   $("#project_heading").css("opacity", "0");
   $("#project_heading").css("padding-top", "0px");
   $("#project_intro").css("opacity", "0");
   $(".page_content").css("opacity", "0");
-
+  $(".nf").css("opacity", "0");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -291,6 +307,10 @@ function loadprojects() {
               },
               300,
               function() {
+                $(".nf").animate(
+                  {
+                    opacity: 1
+                  }, 1000);
                 // Animation complete.
                 $(".page_content").animate(
                   {
@@ -324,6 +344,10 @@ function loadprojects() {
           },
           300,
           function() {
+            $(".nf").animate(
+              {
+                opacity: 1
+              }, 1000);
             // Animation complete.
             $(".page_content").animate(
               {
@@ -342,12 +366,13 @@ function loadprojects() {
 }
 
 function loadabout() {
-  $(window).scrollTop(0);
+  $(document).scrollTop(0);
   $("#about_page").css("overflow", "hidden");
   $("#about_heading").css("opacity", "0");
   $("#about_heading").css("padding-top", "0px");
   $("#about_paragraph").css("opacity", "0");
   $(".rotating_table").css("opacity", "0");
+  $(".nf").css("opacity", "0");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -376,6 +401,10 @@ function loadabout() {
               },
               300,
               function() {
+                $(".nf").animate(
+                  {
+                    opacity: 1
+                  }, 1000);
                 // Animation complete.
                 $(".rotating_table").animate(
                   {
@@ -409,6 +438,10 @@ function loadabout() {
           },
           300,
           function() {
+            $(".nf").animate(
+              {
+                opacity: 1
+              }, 1000);
             // Animation complete.
             $(".rotating_table").animate(
               {
@@ -427,11 +460,12 @@ function loadabout() {
 }
 
 function loadblog() {
-  $(window).scrollTop(0);
+  $(document).scrollTop(0);
   $("#blog_page").css("overflow", "hidden");
   $("#blog_heading").css("opacity", "0");
   $("#blog_heading").css("padding-top", "0px");
   $(".extra_wrapper").css("opacity", "0");
+  $(".nf").css("opacity", "0");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -454,6 +488,10 @@ function loadblog() {
           function() {
             // Animation complete.
             resize();
+            $(".nf").animate(
+              {
+                opacity: 1
+              }, 1000);
             $(".extra_wrapper").animate(
               {
                 opacity: 1
@@ -478,6 +516,10 @@ function loadblog() {
       function() {
         // Animation complete.
         resize();
+        $(".nf").animate(
+          {
+            opacity: 1
+          }, 1000);
         $(".extra_wrapper").animate(
           {
             opacity: 1
@@ -493,7 +535,7 @@ function loadblog() {
 }
 
 function loadresume() {
-  $(window).scrollTop(0);
+  $(document).scrollTop(0);
   $("#resume_page").css("overflow", "hidden");
   $("#resume_heading").css("opacity", "0");
   $("#resume_heading").css("padding-top", "0px");

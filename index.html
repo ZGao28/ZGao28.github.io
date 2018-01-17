@@ -100,6 +100,24 @@
 		<h4 id="welcome">
 			&mdash; Welcome To My Website &mdash;
 		</h4>
+		<div class="connect_bar_white">
+			<img class="social_media_white" onclick="javascript:location.href='mailto:someone@example.com?Subject=Hello%20again'" 
+			src="./src/email_icon_white.gif">
+			<img class="social_media_white" onclick="javascript:location.href='https://www.linkedin.com/in/zigao'" 
+			src="./src/linkedin_icon_white.png">
+			<img class="social_media_white" onclick="javascript:location.href='https://www.facebook.com/zi.gao.14'"
+			src="./src/fb_icon_white.png">
+			<img class="social_media_white" onclick="javascript:location.href='https://www.instagram.com/zi_gaoo/'"
+			src="./src/ig_icon_white.png">
+			<img class="social_media_white" onclick="javascript:location.href='https://www.github.com/zgao28'"
+			src="./src/github_icon_white.png">
+		</div>
+		<h3 onclick="scrollfunc(4, true)" class="nf nf1">
+			<i class="em em-arrow_up"></i> RESUME <i class="em em-arrow_up"></i>
+		</h3>
+		<h3 onclick="scrollfunc(1, true)" class="nf">
+			<i class="em em-arrow_down"></i> PROJECTS <i class="em em-arrow_down"></i>
+		</h3>
 	</div>
 	<div class="modal">
 		<img onclick="closemodal()" id="close_modal" src="./src/close_icon_black.png">
@@ -262,6 +280,12 @@
 				</p>
 			</div>
 		</div>
+		<h3 onclick="scrollfunc(0, true)" class="nf nf1 nfw">
+			<i class="em em-arrow_up"></i> HOME <i class="em em-arrow_up"></i>
+		</h3>
+		<h3 onclick="scrollfunc(2, true)" class="nf nfw">
+			<i class="em em-arrow_down"></i> ABOUT <i class="em em-arrow_down"></i>
+		</h3>
 	</div>
 	<div class="section" id="about_page">
 		<h2 onclick="scrollfunc(1, true)" class="n" id="n5">
@@ -348,6 +372,12 @@
 				</div>
 			</div>
 		</div>
+		<h3 onclick="scrollfunc(1, true)" style="padding-top: 60px" class="nf nf1 nfw">
+			<i class="em em-arrow_up"></i> PROJECTS <i class="em em-arrow_up"></i>
+		</h3>
+		<h3 onclick="scrollfunc(3, true)" class="nf nfw">
+			<i class="em em-arrow_down"></i> EXTRA <i class="em em-arrow_down"></i>
+		</h3>
 	</div>
 	<div class="section" id="blog_page">
 		<h2 onclick="scrollfunc(2, true)" class="n" id="n7">
@@ -417,6 +447,12 @@
 				</button>
 			</div>
 		</div>
+		<h3 onclick="scrollfunc(2, true)" style="padding-top: 60px" class="nf nf1 nfw">
+			<i class="em em-arrow_up"></i> ABOUT <i class="em em-arrow_up"></i>
+		</h3>
+		<h3 onclick="scrollfunc(4, true)" class="nf nfw">
+			<i class="em em-arrow_down"></i> RESUME <i class="em em-arrow_down"></i>
+		</h3>
 	</div>
 	<div class="section" id="resume_page">
 		<h1 id="resume_heading">
@@ -435,13 +471,9 @@
 	</div>
 	<div id="bottom_nav">
 	</div>
-	-->
-
-
 
 	<script>
 		$( document ).ready(function(){
-			$(window).scrollTop(0);
 			if ((screen.height-100) < $(window).innerHeight()){
 				$(".section").css("min-height", String($(window).innerHeight()).concat("px"));
 			} else {
@@ -465,56 +497,6 @@
 			loadhome();
 		});
 
-		$("#email").on(
-			{
-				mouseenter: function () {
-					$(this).attr("src", "./src/email_icon_white.png");
-				},
-				mouseleave: function () {
-					$(this).attr("src", "./src/email_icon_black.png");
-				}
-			}
-		);
-		$("#linkedin").on(
-			{
-				mouseenter: function () {
-					$(this).attr("src", "./src/linkedin_icon_white.png");
-				},
-				mouseleave: function () {
-					$(this).attr("src", "./src/linkedin_icon_black.png");
-				}
-			}
-		);
-		$("#facebook").on(
-			{
-				mouseenter: function () {
-					$(this).attr("src", "./src/facebook_icon_white.png");
-				},
-				mouseleave: function () {
-					$(this).attr("src", "./src/facebook_icon_black.png");
-				}
-			}
-		);
-		$("#instagram").on(
-			{
-				mouseenter: function () {
-					$(this).attr("src", "./src/instagram_icon_white.png");
-				},
-				mouseleave: function () {
-					$(this).attr("src", "./src/instagram_icon_black.png");
-				}
-			}
-		);
-		$("#github").on(
-			{
-				mouseenter: function () {
-					$(this).attr("src", "./src/github_icon_white.png");
-				},
-				mouseleave: function () {
-					$(this).attr("src", "./src/github_icon_black.png");
-				}
-			}
-		);
 		$("#menu_icon").on(
 			{
 				mouseenter: function () {
