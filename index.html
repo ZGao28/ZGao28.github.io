@@ -15,13 +15,12 @@
 	<script src='./javascript/imagesLoaded.js'></script>
 </head>
 
-<body onresize="resize()">
-<!--	
+<body onresize="resize()">	
+	
 	<div id="background_div">	
 	</div>
 	<div id="background_div2">	
 	</div>
--->
     <div id="nav_bar">
 		<h3 id="title_text">
 			ZIGAO.IO
@@ -89,10 +88,10 @@
 		</div>
 	</div>
     <div class="section" id="home_page">
-		<h2 onclick="scrollfunc(-1, true)" class="n" id="n1">
-			&mdash; PROJECTS
+		<h2 onclick="scrollfunc(4, true)" class="n" id="n1">
+			RESUME &mdash;
 		</h2>
-		<h2 onclick="scrollfunc(-1, true)" class="nn" id="n2">
+		<h2 onclick="scrollfunc(1, true)" class="nn" id="n2">
 			&mdash; PROJECTS
 		</h2>
 		<h1 id="name">
@@ -101,12 +100,6 @@
 		<h4 id="welcome">
 			&mdash; Welcome To My Website &mdash;
 		</h4>
-		<div class="chevron_container" onclick='pageScroll(0)'>
-				<div class="chevron"></div>
-				<div class="chevron"></div>
-				<div class="chevron"></div>
-				<span class="text">Scroll down</span>
-		</div>
 	</div>
 	<div class="modal">
 		<img onclick="closemodal()" id="close_modal" src="./src/close_icon_black.png">
@@ -149,10 +142,10 @@
 		</p>
 	</div>
     <div class="section" id="project_page">
-		<h2 onclick="scrollfunc(-1, true)" class="n" id="n3">
-			&mdash; ABOUT
+		<h2 onclick="scrollfunc(0, true)" class="n" id="n3">
+			HOME &mdash;
 		</h2>
-		<h2 onclick="scrollfunc(-1, true)" class="nn" id="n4">
+		<h2 onclick="scrollfunc(2, true)" class="nn" id="n4">
 			&mdash; ABOUT
 		</h2>
 		<h1 id="project_heading">
@@ -271,10 +264,10 @@
 		</div>
 	</div>
 	<div class="section" id="about_page">
-		<h2 onclick="scrollfunc(-1, true)" class="n" id="n5">
-				&mdash; EXTRAS
+		<h2 onclick="scrollfunc(1, true)" class="n" id="n5">
+				PROJECT &mdash; 
 			</h2>
-			<h2 onclick="scrollfunc(-1, true)" class="nn" id="n6">
+			<h2 onclick="scrollfunc(3, true)" class="nn" id="n6">
 				&mdash; EXTRAS
 		</h2>
 		<h1 id="about_heading">
@@ -357,10 +350,10 @@
 		</div>
 	</div>
 	<div class="section" id="blog_page">
-		<h2 onclick="scrollfunc(-1, true)" class="n" id="n7">
-			&mdash; RESUME
+		<h2 onclick="scrollfunc(2, true)" class="n" id="n7">
+			ABOUT &mdash; 
 		</h2>
-		<h2 onclick="scrollfunc(-1, true)" class="nn" id="n8">
+		<h2 onclick="scrollfunc(4, true)" class="nn" id="n8">
 			&mdash; RESUME
 		</h2>
 		<h1 id="blog_heading">
@@ -376,10 +369,10 @@
 					a variety of things from super short stories to show reviews to random subject rants. Currently building it, but it should
 					be fun! The button below will bring you there when it's done!
 				</p>
-				<button class="btn" onclick="javascript:location.href='https://soccerbuds.typeform.com/to/dZVjGI'" id='blog_button'>
+				<button class="btn" onclick="javascript:location.href='./blog.html'" id='blog_button'>
 					ENTER BLOG SITE
 				</button>
-				<button class="btn" onclick="javascript:location.href='https://soccerbuds.typeform.com/to/dZVjGI'" id='notes_button'>
+				<button class="btn" onclick="javascript:location.href='./notes.html'" id='notes_button'>
 					ENTER NOTES SITE
 				</button>
 			</div>
@@ -448,8 +441,7 @@
 
 	<script>
 		$( document ).ready(function(){
-			var h = String(window.screen.height).concat("px");
-			$("#background_div").css('height', h);
+			$(window).scrollTop(0);
 			if ((screen.height-100) < $(window).innerHeight()){
 				$(".section").css("min-height", String($(window).innerHeight()).concat("px"));
 			} else {
@@ -558,10 +550,10 @@
 		$("#n1").on(
 			{
 				mouseenter: function () {
-					$(this).html("PROJECTS &mdash;");
+					$(this).html("&mdash; RESUME");
 				},
 				mouseleave: function () {
-					$(this).html("&mdash; PROJECTS");
+					$(this).html("RESUME &mdash;");
 				}
 			}
 		);
@@ -578,10 +570,10 @@
 		$("#n3").on(
 			{
 				mouseenter: function () {
-					$(this).html("ABOUT &mdash;");
+					$(this).html("&mdash; HOME");
 				},
 				mouseleave: function () {
-					$(this).html("&mdash; ABOUT");
+					$(this).html("HOME &mdash;");
 				}
 			}
 		);
@@ -598,10 +590,10 @@
 		$("#n5").on(
 			{
 				mouseenter: function () {
-					$(this).html("EXTRAS &mdash;");
+					$(this).html("&mdash; PROJECTS");
 				},
 				mouseleave: function () {
-					$(this).html("&mdash; EXTRAS");
+					$(this).html("PROJECTS &mdash;");
 				}
 			}
 		);
@@ -618,10 +610,10 @@
 		$("#n7").on(
 			{
 				mouseenter: function () {
-					$(this).html("RESUME &mdash;");
+					$(this).html("&mdash; ABOUT");
 				},
 				mouseleave: function () {
-					$(this).html("&mdash; RESUME");
+					$(this).html("ABOUT &mdash;");
 				}
 			}
 		);

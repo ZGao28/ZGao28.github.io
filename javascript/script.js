@@ -54,107 +54,11 @@ function resize(){
 
 var state = 0;
 var in_transition = false;
-var normal_scroll = true;
-var oldy;
 
 
 function scrollfunc(s, b){
-    if (b == true){
-      normal_scroll = false;
-    }
-    if (state == 0){
-      if (oldy != $("#name")[0].getBoundingClientRect().bottom){
-        oldy = $("#name")[0].getBoundingClientRect().bottom;
-      } else{
-        normal_scroll = false;
-      }
-    } else if (state==1){
-      if (oldy != $("#project_heading")[0].getBoundingClientRect().bottom){
-        oldy = $("#project_heading")[0].getBoundingClientRect().bottom;
-      } else{
-        normal_scroll = false;
-      }
-    } else if (state==2){
-      if (oldy != $("#about_heading")[0].getBoundingClientRect().bottom){
-        oldy = $("#about_heading")[0].getBoundingClientRect().bottom;
-      } else{
-        normal_scroll = false;
-      }
-    } else if (state==3){
-      if (oldy != $("#blog_heading")[0].getBoundingClientRect().bottom){
-        oldy = $("#blog_heading")[0].getBoundingClientRect().bottom;
-      } else{
-        normal_scroll = false;
-      }
-    } else if (state==4){
-      if (oldy != $("#resume_heading")[0].getBoundingClientRect().bottom){
-        oldy = $("#resume_heading")[0].getBoundingClientRect().bottom;
-      } else{
-        normal_scroll = false;
-      }
-    }
-    if (in_transition == false && normal_scroll==false && $(".modal").css("display")=="none") {
-      if (s == -1) {
-        if (state == 0) {
-          in_transition = true;
-          state++;
-          $("#home_page").css("display", "none");
-          $("#project_page").css("display", "block");
-          $("#menu_icon").attr("src", "./src/menu_icon_black.png");
-          $("#home_icon").attr("src", "./src/logo_black.png");
-          loadprojects();
-        } else if (state == 1) {
-          state++;
-          in_transition = true;
-          $("#project_page").css("display", "none");
-          $("#about_page").css("display", "block");
-          loadabout();
-        } else if (state == 2) {
-          state++;
-          in_transition = true;
-          $("#about_page").css("display", "none");
-          $("#blog_page").css("display", "block");
-          loadblog();
-        } else if (state == 3) {
-          state++;
-          in_transition = true;
-          $("#blog_page").css("display", "none");
-          $("#resume_page").css("display", "block");
-          loadresume();
-          $("#menu_icon").attr("src", "./src/menu_icon_white.png");
-          $("#home_icon").attr("src", "./src/logo_white.png");
-        }
-      } else if (s == -2) {
-        if (state == 1) {
-          in_transition = true;
-          state--;
-          $("#home_page").css("display", "block");
-          $("#project_page").css("display", "none");
-          loadhome();
-          $("#menu_icon").attr("src", "./src/menu_icon_white.png");
-          $("#home_icon").attr("src", "./src/logo_white.png");
-        } else if (state == 2) {
-          state--;
-          in_transition = true;
-          $("#about_page").css("display", "none");
-          $("#project_page").css("display", "block");
-          loadprojects();
-        } else if (state == 3) {
-          state--;
-          in_transition = true;
-          $("#blog_page").css("display", "none");
-          $("#about_page").css("display", "block");
-          loadabout();
-        } else if (state == 4) {
-          state--;
-          in_transition = true;
-          $("#resume_page").css("display", "none");
-          $("#blog_page").css("display", "block");
-          loadblog();
-          $("#menu_icon").attr("src", "./src/menu_icon_black.png");
-          $("#home_icon").attr("src", "./src/logo_black.png");
-        }
-      } else if (s == 0) {
+    if (in_transition == false && $(".modal").css("display")=="none") {
+      if (s == 0) {
         $("#home_page").css("display", "block");
         $("#about_page").css("display", "none");
         $("#blog_page").css("display", "none");
@@ -212,141 +116,459 @@ function scrollfunc(s, b){
         $("#menu_icon").attr("src", "./src/close_gif.gif");
         extendMenu();
         loadresume();
-        $("#menu_icon").attr("src", "./src/menu_icon_white.png");
-        $("#home_icon").attr("src", "./src/logo_white.png");
+        $("#menu_icon").attr("src", "./src/menu_icon_black.png");
+        $("#home_icon").attr("src", "./src/logo_black.png");
       }
       var pause = setTimeout(function() {
         in_transition = false;
-        normal_scroll = true;
       }, 250);
     }
 }
 
+var backgroundState = 1;
 
-function loadhome(){
+function loadhome() {
   $(window).scrollTop(0);
+  $("#home_page").css("overflow", "hidden");
   $("#name").css("opacity", "0");
   $("#name").css("margin-top", "80px");
   $("#welcome").css("opacity", "0");
   $("#welcome").css("letterSpacing", "0px");
-  $( "#name" ).animate({
-    opacity: 1, 
-    marginTop: 180,
-    }, 1000, function() {
-    // Animation complete.
-    $( "#welcome" ).animate({
-      opacity: 1,
-      letterSpacing: '20px',
-    }, 800, function() {
-      resize();
-    // Animation complete.
-      $( ".n" ).animate({
+
+  if (backgroundState != 0) {
+    $("#background_div").animate(
+      {
+        height: window.screen.height
+      },
+      1200
+    );
+    $("#background_div2").animate(
+      {
+        height: 0
+      },
+      1200,
+      function() {
+        $("#name").animate(
+          {
+            opacity: 1,
+            marginTop: 180
+          },
+          1000,
+          function() {
+            // Animation complete.
+            $("#welcome").animate(
+              {
+                opacity: 1,
+                letterSpacing: "20px"
+              },
+              800,
+              function() {
+                resize();
+                $("#home_page").css("overflow", "auto");
+                backgroundState = 0;
+                // Animation complete.
+                $(".n").animate(
+                  {
+                    opacity: 1
+                  },
+                  2000
+                );
+                $(".nn").animate(
+                  {
+                    opacity: 1
+                  },
+                  2000
+                );
+                $("#menu_icon").animate(
+                  {
+                    opacity: 1
+                  },
+                  2000
+                );
+                $("#home_icon").animate(
+                  {
+                    opacity: 1
+                  },
+                  2000,
+                );
+              }
+            );
+          }
+        );
+      }
+    );
+  } else {
+    $("#name").animate(
+      {
         opacity: 1,
-      }, 2000);
-      $( ".nn" ).animate({
-        opacity: 1,
-      }, 2000);
-      $( "#menu_icon" ).animate({
-        opacity: 1,
-      }, 2000);
-      $( "#home_icon" ).animate({
-        opacity: 1,
-      }, 2000);
-      $( ".chevron_container" ).animate({
-        opacity: 1,
-      }, 2000);
-    });
-    }
-  );
+        marginTop: 180
+      },
+      1000,
+      function() {
+        // Animation complete.
+        $("#welcome").animate(
+          {
+            opacity: 1,
+            letterSpacing: "20px"
+          },
+          800,
+          function() {
+            resize();
+            // Animation complete.
+            $(".n").animate(
+              {
+                opacity: 1
+              },
+              2000
+            );
+            $(".nn").animate(
+              {
+                opacity: 1
+              },
+              2000
+            );
+            $("#menu_icon").animate(
+              {
+                opacity: 1
+              },
+              2000
+            );
+            $("#home_icon").animate(
+              {
+                opacity: 1
+              },
+              2000
+            );
+            $(".chevron_container").animate(
+              {
+                opacity: 1
+              },
+              2000,
+              function() {
+                $("#home_page").css("overflow", "auto");
+              }
+            );
+          }
+        );
+      }
+    );
+  }
 }
 
-function loadprojects(){
+function loadprojects() {
   $(window).scrollTop(0);
-  $( "#project_heading" ).css("opacity", "0");
-  $( "#project_heading" ).css("padding-top", "0px");
-  $( "#project_intro").css("opacity", "0");
-  $( ".page_content").css("opacity", "0");
-  $( "#project_heading" ).animate({
-    opacity: 1,
-    paddingTop: 60,
-    }, 1000, function() {
-    // Animation complete.
-    resize();
-    $( "#project_intro" ).animate({
-      opacity: 1,
-    }, 300, function() {
-    // Animation complete.
-      $( ".page_content" ).animate({
+  $("#project_page").css("overflow", "hidden");
+  $("#project_heading").css("opacity", "0");
+  $("#project_heading").css("padding-top", "0px");
+  $("#project_intro").css("opacity", "0");
+  $(".page_content").css("opacity", "0");
+
+  if (backgroundState != 1) {
+    $("#background_div").animate(
+      {
+        height: 0
+      },
+      1200
+    );
+    $("#background_div2").animate(
+      {
+        height: window.screen.height
+      },
+      1200,
+      function() {
+        $("#project_heading").animate(
+          {
+            opacity: 1,
+            paddingTop: 60
+          },
+          1000,
+          function() {
+            // Animation complete.
+            resize();
+            $("#project_intro").animate(
+              {
+                opacity: 1
+              },
+              300,
+              function() {
+                // Animation complete.
+                $(".page_content").animate(
+                  {
+                    opacity: 1
+                  },
+                  500,
+                  function() {
+                    $("#project_page").css("overflow", "auto");
+                    backgroundState = 1;
+                  }
+                );
+              }
+            );
+          }
+        );
+      }
+    );
+  } else {
+    $("#project_heading").animate(
+      {
         opacity: 1,
-      }, 500);
-    });
-    }
-  );
+        paddingTop: 60
+      },
+      1000,
+      function() {
+        // Animation complete.
+        resize();
+        $("#project_intro").animate(
+          {
+            opacity: 1
+          },
+          300,
+          function() {
+            // Animation complete.
+            $(".page_content").animate(
+              {
+                opacity: 1
+              },
+              500,
+              function() {
+                $("#project_page").css("overflow", "auto");
+              }
+            );
+          }
+        );
+      }
+    );
+  }
 }
 
-function loadabout(){
+function loadabout() {
   $(window).scrollTop(0);
-  $( "#about_heading" ).css("opacity", "0");
-  $( "#about_heading" ).css("padding-top", "0px");
-  $( "#about_paragraph").css("opacity", "0");
-  $( ".rotating_table").css("opacity", "0");
-  $( "#about_heading" ).animate({
-    opacity: 1,
-    paddingTop: 60,
-    }, 1000, function() {
-    // Animation complete.
-    resize();
-    $( "#about_paragraph" ).animate({
-      opacity: 1,
-    }, 300, function() {
-    // Animation complete.
-      $( ".rotating_table" ).animate({
+  $("#about_page").css("overflow", "hidden");
+  $("#about_heading").css("opacity", "0");
+  $("#about_heading").css("padding-top", "0px");
+  $("#about_paragraph").css("opacity", "0");
+  $(".rotating_table").css("opacity", "0");
+  if (backgroundState != 1) {
+    $("#background_div").animate(
+      {
+        height: 0
+      },
+      1200
+    );
+    $("#background_div2").animate(
+      {
+        height: window.screen.height
+      },
+      1200,
+      function() {
+        $("#about_heading").animate(
+          {
+            opacity: 1,
+            paddingTop: 60
+          },
+          1000,
+          function() {
+            // Animation complete.
+            resize();
+            $("#about_paragraph").animate(
+              {
+                opacity: 1
+              },
+              300,
+              function() {
+                // Animation complete.
+                $(".rotating_table").animate(
+                  {
+                    opacity: 1
+                  },
+                  500,
+                  function() {
+                    $("#about_page").css("overflow", "auto");
+                    backgroundState = 1;
+                  }
+                );
+              }
+            );
+          }
+        );
+      }
+    );
+  } else {
+    $("#about_heading").animate(
+      {
         opacity: 1,
-      }, 500);
-    });
-    }
-  );
+        paddingTop: 60
+      },
+      1000,
+      function() {
+        // Animation complete.
+        resize();
+        $("#about_paragraph").animate(
+          {
+            opacity: 1
+          },
+          300,
+          function() {
+            // Animation complete.
+            $(".rotating_table").animate(
+              {
+                opacity: 1
+              },
+              500,
+              function() {
+                $("#about_page").css("overflow", "auto");
+              }
+            );
+          }
+        );
+      }
+    );
+  }
 }
 
-function loadblog(){
+function loadblog() {
   $(window).scrollTop(0);
-  $( "#blog_heading" ).css("opacity", "0");
-  $( "#blog_heading" ).css("padding-top", "0px");
-  $( ".extra_wrapper").css("opacity", "0");
-  $( "#blog_heading" ).animate({
-    opacity: 1,
-    paddingTop: 60,
-    }, 1000, function() {
-    // Animation complete.
-    resize();
-    $( ".extra_wrapper" ).animate({
-      opacity: 1,
-    }, 800);
-    }
-  );
-  
+  $("#blog_page").css("overflow", "hidden");
+  $("#blog_heading").css("opacity", "0");
+  $("#blog_heading").css("padding-top", "0px");
+  $(".extra_wrapper").css("opacity", "0");
+  if (backgroundState != 1) {
+    $("#background_div").animate(
+      {
+        height: 0
+      },
+      1200
+    );
+    $("#background_div2").animate(
+      {
+        height: window.screen.height
+      },
+      1200,
+      function() {
+        $("#blog_heading").animate(
+          {
+            opacity: 1,
+            paddingTop: 60
+          },
+          1000,
+          function() {
+            // Animation complete.
+            resize();
+            $(".extra_wrapper").animate(
+              {
+                opacity: 1
+              },
+              800,
+              function() {
+                $("#blog_page").css("overflow", "auto");
+                backgroundState = 1;
+              }
+            );
+          }
+        );
+      }
+    );
+  } else {
+    $("#blog_heading").animate(
+      {
+        opacity: 1,
+        paddingTop: 60
+      },
+      1000,
+      function() {
+        // Animation complete.
+        resize();
+        $(".extra_wrapper").animate(
+          {
+            opacity: 1
+          },
+          800,
+          function() {
+            $("#blog_page").css("overflow", "auto");
+          }
+        );
+      }
+    );
+  }
 }
 
-function loadresume(){
+function loadresume() {
   $(window).scrollTop(0);
-  $( "#resume_heading" ).css("opacity", "0");
-  $( "#resume_heading" ).css("padding-top", "0px");
-  $( "#resume_box").css("opacity", "0");
-  $( "#thanks").css("opacity", "0");
-  $( "#resume_heading" ).animate({
-    opacity: 1,
-    paddingTop: 60,
-    }, 1000, function() {
-    resize();
-    // Animation complete.
-    $( "#resume_box" ).animate({
-      opacity: 1,
-    }, 300);
-    $( "#thanks" ).animate({
-      opacity: 1,
-    }, 500);
-    }
-  );
+  $("#resume_page").css("overflow", "hidden");
+  $("#resume_heading").css("opacity", "0");
+  $("#resume_heading").css("padding-top", "0px");
+  $("#resume_box").css("opacity", "0");
+  $("#thanks").css("opacity", "0");
+  if (backgroundState != 1) {
+    $("#background_div").animate(
+      {
+        height: 0
+      },
+      1200
+    );
+    $("#background_div2").animate(
+      {
+        height: window.screen.height
+      },
+      1200,
+      function() {
+        $("#resume_heading").animate(
+          {
+            opacity: 1,
+            paddingTop: 60
+          },
+          1000,
+          function() {
+            resize();
+            // Animation complete.
+            $("#resume_box").animate(
+              {
+                opacity: 1
+              },
+              300
+            );
+            $("#thanks").animate(
+              {
+                opacity: 1
+              },
+              500,
+              function() {
+                $("#resume_page").css("overflow", "auto");
+                backgroundState = 1;
+              }
+            );
+          }
+        );
+      }
+    );
+  } else {
+    $("#resume_heading").animate(
+      {
+        opacity: 1,
+        paddingTop: 60
+      },
+      1000,
+      function() {
+        resize();
+        // Animation complete.
+        $("#resume_box").animate(
+          {
+            opacity: 1
+          },
+          300
+        );
+        $("#thanks").animate(
+          {
+            opacity: 1
+          },
+          500,
+          function() {
+            $("#resume_page").css("overflow", "auto");
+          }
+        );
+      }
+    );
+  }
 }
 
 function closemodal(){
@@ -368,7 +590,7 @@ function openmodal(s) {
     {
       height: "100%"
     },
-    500
+    1000
   );
   if (s == 0) {
     $(".modal_image").attr("src", "./src/tutorzone_logo.png");
