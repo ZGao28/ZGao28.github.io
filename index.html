@@ -22,6 +22,11 @@
 	<div id="background_div2">	
 	</div>
 -->
+<div style="background-color: black" id="bug-fix">
+		<h1 style="color: white; font-family: 'Montserrat'; font-size: 30px; text-align: center; padding-top: 300px;" id="bug">
+			CURRENTLY FIXING BUGS - PLEASE CHECK BACK IN A BIT!
+		</h1>
+	</div>
     <div id="nav_bar">
 		<h3 id="title_text">
 			ZIGAO.IO
@@ -449,7 +454,8 @@
 	<script>
 		$( document ).ready(function(){
 			var h = String(window.screen.height).concat("px");
-			$("#background_div").css('height', h);
+			//$("#background_div").css('height', h);
+			$("#bug-fix").css('height', h);
 			if ((screen.height-100) < $(window).innerHeight()){
 				$(".section").css("min-height", String($(window).innerHeight()).concat("px"));
 			} else {
