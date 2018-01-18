@@ -30,7 +30,7 @@ function extendMenu(){
 function resize(){
     //alert(window.innerWidth);
     var h = String(window.screen.height).concat("px");
-    $(".word").css("left", String(((window.innerWidth-$(".word").width())/2)-20).concat("px"));
+    $(".word").css("left", String(((window.innerWidth-$(".word").width())/2)+15).concat("px"));
     $("#background_div").css('height', h);
     if (window.innerWidth <= 750){
         $("#welcome").text("Welcome To My Website");
@@ -137,6 +137,7 @@ function loadhome() {
   $(".social_media_white").css("width", "0px");
   $(".circle").css("opacity", "0");
   $(".circle").css("background-color", "white");
+  $("#progress_bar").css("width", "0%");
   if (backgroundState != 0) {
     $("#background_div").animate(
       {
@@ -150,6 +151,7 @@ function loadhome() {
       },
       1200,
       function() {
+        resize();
         backgroundState = 0;
         $("#name").animate(
           {
@@ -304,6 +306,9 @@ function loadprojects() {
       1200,
       function() {
         backgroundState = 1;
+        $("#progress_bar").animate({
+          width: '25%'
+        }, 1200);
         $("#project_heading").animate(
           {
             opacity: 1,
@@ -351,6 +356,9 @@ function loadprojects() {
       1000,
       function() {
         // Animation complete.
+        $("#progress_bar").animate({
+          width: '25%'
+        }, 1200);
         resize();
         $("#project_intro").animate(
           {
@@ -387,8 +395,7 @@ function loadabout() {
   $("#about_page").css("overflow", "hidden");
   $("#about_heading").css("opacity", "0");
   $("#about_heading").css("padding-top", "0px");
-  $("#about_paragraph").css("opacity", "0");
-  $(".rotating_table").css("opacity", "0");
+  $("#about_content").css("opacity", "0");
   $(".nf").css("opacity", "0");
   $(".circle").css("opacity", "0");
   $(".circle").css("background-color", "#507DBC");
@@ -406,6 +413,9 @@ function loadabout() {
       1200,
       function() {
         backgroundState = 1;
+        $("#progress_bar").animate({
+          width: '50%'
+        }, 1200);
         $("#about_heading").animate(
           {
             opacity: 1,
@@ -416,9 +426,10 @@ function loadabout() {
             $(".circle").animate({
               opacity: 1
             }, 1000);
+            
             // Animation complete.
             resize();
-            $("#about_paragraph").animate(
+            $("#about_content").animate(
               {
                 opacity: 1
               },
@@ -428,33 +439,29 @@ function loadabout() {
                   {
                     opacity: 1
                   }, 1000);
-                // Animation complete.
-                $(".rotating_table").animate(
-                  {
-                    opacity: 1
-                  },
-                  500,
-                  function() {
-                    $("#about_page").css("overflow", "auto");
-                  }
+                  $("#about_page").css("overflow", "auto");
+                }
                 );
               }
             );
           }
         );
-      }
-    );
   } else {
+    $("#progress_bar").animate({
+      width: '50%'
+    }, 1200);
     $("#about_heading").animate(
       {
         opacity: 1,
         paddingTop: 60
       },
       1000,
+      
       function() {
+        
         // Animation complete.
         resize();
-        $("#about_paragraph").animate(
+        $("#about_content").animate(
           {
             opacity: 1
           },
@@ -468,15 +475,9 @@ function loadabout() {
                 opacity: 1
               }, 1000);
             // Animation complete.
-            $(".rotating_table").animate(
-              {
-                opacity: 1
-              },
-              500,
-              function() {
-                $("#about_page").css("overflow", "auto");
-              }
-            );
+      
+            $("#about_page").css("overflow", "auto");
+          
           }
         );
       }
@@ -506,6 +507,9 @@ function loadblog() {
       },
       1200,
       function() {
+        $("#progress_bar").animate({
+          width: '75%'
+        }, 1200);
         backgroundState = 1; 
         $("#blog_heading").animate(
           {
@@ -537,6 +541,9 @@ function loadblog() {
       }
     );
   } else {
+    $("#progress_bar").animate({
+      width: '75%'
+    }, 1200);
     $("#blog_heading").animate(
       {
         opacity: 1,
@@ -589,6 +596,9 @@ function loadresume() {
       },
       1200,
       function() {
+        $("#progress_bar").animate({
+          width: '100%'
+        }, 1200);
         backgroundState = 1;
         $("#resume_heading").animate(
           {
@@ -622,6 +632,9 @@ function loadresume() {
       }
     );
   } else {
+    $("#progress_bar").animate({
+      width: '100%'
+    }, 1200);
     $("#resume_heading").animate(
       {
         opacity: 1,
@@ -816,7 +829,7 @@ function openmodal(s) {
       "Java, Android Studio, HTML/CSS, jQuery, Other Stuff"
     );
     $("#team_des").html(
-      "Zi Gao <br><br>Justin Wong<br><br>Solomon Davidson<br><br>Cindy Huang<br><br>Mark Frame"
+      "Zi Gao <br><br>Justin Wong<br><br>Solomon Davidson<br><br>Cindy Huang<br><br>Marc Frame"
     );
     $("#status_des").html("Always Updating - All Projects Mentioned Are Completed");
   }
@@ -956,5 +969,82 @@ function initCircles(){
   }, 10);
 }
 
+var aboutstate = 0;
+function updateabout(s){
+  if (aboutstate==2 && s ==1){
+    aboutstate = 0;
+  } else if  (aboutstate!=2 && s==1){
+    aboutstate++;
+  }
+  if (aboutstate==0 && s ==0){
+    aboutstate = 2;
+  } else if  (aboutstate!=0 && s==0){
+    aboutstate--;
+  }
+  if (aboutstate==0){
+    $("#about_paragraph").css("display", "block");
+    $("#rotating_table").css("display", "none");
+    $("#rotating_table_2").css("display", "none");
+  } else if (aboutstate==1){
+    $("#about_paragraph").css("display", "none");
+    $("#rotating_table").css("display", "table");
+    $("#rotating_table_2").css("display", "none");
+  } else {
+    $("#about_paragraph").css("display", "none");
+    $("#rotating_table").css("display", "none");
+    $("#rotating_table_2").css("display", "table");
+  }
+}
 
+/*
+function rotatecontent(){
+  if (aboutstate==1){
+    var ran = Math.random();
+    if (ran < 0.25){
+      $("#hob1").animate({
+        fontSize: 0
+      }, 500, function(){
+        $("#hob1").animate({
+          fontSize: 22
+      }, 500, function(){
+        if ($("#hob1").html()=="<i class='em em-iphone'></i></i>&nbsp; Tech Gadgets &nbsp;<i class='em em-iphone'></i></i>"){
+          $("#hob1").html("<i class='em em-brain'></i></i>&nbsp; Artificial Intelligence &nbsp;<i class='em em-brain'></i></i>");
+        } else {
+          $("#hob1").html("<i class='em em-iphone'></i></i>&nbsp; Tech Gadgets &nbsp;<i class='em em-iphone'></i></i>");
+        }
+      });
+      });
+    } else if (ran < 0.5){
+      $("#hob2").animate({
+        fontSize: 0
+      }, 500, function(){
+        $("#hob2").animate({
+          fontSize: 22
+      }, 500, function(){
+        if ($("#hob2").html()=="<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>"){
+          $("#hob2").html("<i class='em em-eye'></i></i>&nbsp; Artificial Intelligence &nbsp;<i class='em em-eye'></i></i>");
+        } else {
+          $("#hob2").html("<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>");
+        }
+      });
+      });
+    } else if (ran < 0.75){
+      $("#hob2").animate({
+        fontSize: 0
+      }, 500, function(){
+        $("#hob2").animate({
+          fontSize: 22
+      }, 500, function(){
+        if ($("#hob2").html()=="<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>"){
+          $("#hob2").html("<i class='em em-eye'></i></i>&nbsp; Artificial Intelligence &nbsp;<i class='em em-eye'></i></i>");
+        } else {
+          $("#hob2").html("<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>");
+        }
+      });
+      });
+    } else {
 
+    }
+  }
+}
+*/

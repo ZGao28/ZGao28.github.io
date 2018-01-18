@@ -16,7 +16,8 @@
 </head>
 
 <body onresize="resize()">	
-	
+	<div id="progress_bar">
+	</div>
 	<div id="background_div">	
 	</div>
 	<div id="background_div2">	
@@ -96,8 +97,10 @@
 		</h2>
 		<h1 id="name">
 			<div id="name_container">
-				<span class="word"> &#39640; &#23376; &#28145; </span>
+				<span class="word">&#950;&#951;&#915;&#945;&#937;</span>
 				<span class="word"> ZiGao </span>
+				<span class="word"> &#39640; &#23376; &#28145; </span>
+				<span class="word">&#12472; &#12460;&#12458;</span>
 			</div>
 			<div id="name_container_2">
 				<span class="bigletter">Z</span>I<span class="bigletter">G</span>AO
@@ -303,82 +306,82 @@
 		<h1 id="about_heading">
 			ABOUT
 		</h1>
-			<!--
-			<div class="rotating_table" id="liked_things">
-				<h3 class="hobby_title">
-					Stuff I Like
-				</h3>
-				<div class="hobby_container">
-					<h6 class="hobby">
-						<i class="em em-iphone"></i></i>&nbsp; Tech Gadgets
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby">
-						<i class="em em-musical_keyboard"></i>&nbsp; Classical Music
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby">
-						<i class="em em-sushi"></i>&nbsp; All Food
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby">
-						<i class="em em-tv"></i>&nbsp; Anime Weeb
-					</h6>
-				</div>
-			</div>
-		-->
+		<div id="about_content">
+			<span onclick="updateabout(0)" class="chevron_green left" id="about_left"></span>
 			<p id="about_paragraph">
-				Hey there <i class="em em-wave"></i> ! 
-				My name is Zi, and I am currently a first year Software Engineering student at the University of Ottawa.
+				Hey there
+				<i class="em em-wave"></i> ! My name is Zi, and I am currently a first year Software Engineering student at the University of Ottawa.
+				<br>
+				<br> I have a passion for technology and entrepreneurship, and I love to explore unique ideas. By constantly learning new technologies
+				and working on different projects, I aim to solve difficult problems and improve the lives of people around the
+				<i class="em em-earth_americas"></i> . As of now I mostly do backend development, algorithm design, and machine learning, but I also like doing UI and
+				UX design as a hobby! I am always excited to build products with elegant and engaging user experiences.
+				<br>
+				<br> If you want to
+				<i class="em em-speech_balloon"></i> a business, startup, or general project idea, or if you have any inquiries about my qualifications and past work,
+				feel free to connect with me! I am always willing to meet over a cup of
+				<i class="em em-coffee"></i> !
 				<br>
 				<br>
-				I have a passion for technology and entrepreneurship, and I love to explore unique ideas. 
-				By constantly learning new technologies and working on different projects, 
-				I aim to solve difficult problems and improve the lives of people around the <i class="em em-earth_americas"></i> . 
-				As of now I mostly do backend development, algorithm design, and machine learning, but I also like doing
-				UI and UX design as a hobby! I am always excited to build products with elegant and engaging user experiences. 
+				<b>My favourite quote:</b>
 				<br>
 				<br>
-				If you want to <i class="em em-speech_balloon"></i> a business, startup, or general project idea, 
-				or if you have any inquiries about my qualifications and past work, feel free to connect with me! 
-				I am always willing to meet over a cup of <i class="em em-coffee"></i> !
-				<br>
-				<br><b>My favourite quote:</b>
-				<br>
-				<br> <i>"Those who are crazy enough to think that they can change the world are the ones who do."</i>
+				<i>"Those who are crazy enough to think that they can change the world are the ones who do."</i>
 				<br>
 				<br> - Steve Jobs
 			</p>
-			<!--
-			<div class="rotating_table" id="do_things">
+			<div id="rotating_table">
 				<h3 class="hobby_title">
-					Things I Do
+				   &nbsp; Stuff I Like
 				</h3>
 				<div class="hobby_container">
-					<h6 class="hobby">
-					<i class="em em-coffee"></i>&nbsp; Consume Coffee
+					<h6 class="hobby" id="hob1">
+						<i class='em em-iphone'></i></i>&nbsp; Tech Gadgets &nbsp;<i class='em em-iphone'></i></i>
 					</h6>
 				</div>
 				<div class="hobby_container">
-					<h6 class="hobby">
-					<i class="em em-keyboard"></i></i> &nbsp;Program Code
+					<h6 class="hobby" id="hob2">
+						<i class="em em-musical_keyboard"></i>&nbsp; Classical Music &nbsp;<i class="em em-musical_keyboard"></i>
 					</h6>
 				</div>
 				<div class="hobby_container">
-					<h6 class="hobby">
-					<i class="em em-straight_ruler"></i>&nbsp; Design Websites
+					<h6 class="hobby" id="hob3">
+						<i class="em em-sushi"></i>&nbsp; All Types Of Food &nbsp;<i class="em em-sushi"></i>
 					</h6>
 				</div>
 				<div class="hobby_container">
-					<h6 class="hobby">
-					<i class="em em-lower_left_fountain_pen"></i>&nbsp; Write Creative Pieces
+					<h6 class="hobby" id="hob4">
+						<i class="em em-tv"></i>&nbsp; Anime Connoisseur &nbsp;<i class="em em-tv"></i>
 					</h6>
 				</div>
 			</div>
-		-->
+			<div id="rotating_table_2">
+				<h3 class="hobby_title">
+					&nbsp; Things I Do
+				</h3>
+				<div class="hobby_container">
+					<h6 class="hobby" id="hob5">
+					<i class="em em-coffee"></i>&nbsp; Consume Coffee&nbsp; <i class="em em-coffee"></i>
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<h6 class="hobby" id="hob6">
+					<i class="em em-keyboard"></i></i> &nbsp;Program Code&nbsp; <i class="em em-keyboard"></i></i>
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<h6 class="hobby" id="hob7">
+					<i class="em em-straight_ruler"></i>&nbsp; Design Websites &nbsp;<i class="em em-straight_ruler"></i>
+					</h6>
+				</div>
+				<div class="hobby_container">
+					<h6 class="hobby" id="hob8">
+					<i class="em em-lower_left_fountain_pen"></i>&nbsp; Write Creative Pieces&nbsp; <i class="em em-lower_left_fountain_pen"></i>
+					</h6>
+				</div>
+			</div>
+			<span onclick="updateabout(1)" class="chevron_green right" id="about_right"></span>
+		</div>
 		<h3 onclick="scrollfunc(1, true)" style="padding-top: 60px" class="nf nf1 nfw">
 			<i class="em em-arrow_up"></i> PROJECTS <i class="em em-arrow_up"></i>
 		</h3>
@@ -542,7 +545,7 @@
 		}
 
 		changeWord();
-		setInterval(changeWord, 4000);
+		setInterval(changeWord, 6000);
 	</script>
 	<script>
 		$( document ).ready(function(){
