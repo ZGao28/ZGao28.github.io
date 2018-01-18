@@ -30,7 +30,7 @@ function extendMenu(){
 function resize(){
     //alert(window.innerWidth);
     var h = String(window.screen.height).concat("px");
-    $(".word").css("left", String(((window.innerWidth-$(".word").width())/2)+20).concat("px"));
+    $(".word").css("left", String(((window.innerWidth-$(".word").width())/2)+12).concat("px"));
     $("#background_div").css('height', h);
     if (window.innerWidth <= 750){
         $("#welcome").text("Welcome To My Website");
