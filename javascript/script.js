@@ -153,6 +153,7 @@ function loadhome() {
       function() {
         resize();
         backgroundState = 0;
+        resize();
         $("#name").animate(
           {
             opacity: 1,
