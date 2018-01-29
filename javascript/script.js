@@ -737,14 +737,14 @@ function openmodal(s) {
       "Zi Gao <br><br>Cindy Huang"
     );
     $("#status_des").html("Completed! - Code and Design Docs can be Found at <a href='https://github.com/ZGao28/zigao_io'>This Repo</a>");
-  } else if (s == 3) {
+  } else if (s == 5) {
     $(".modal_image").attr("src", "./src/readr_logo.png");
     $(".modal_name").text("ReadR");
     $(".summary").text(
       "A Neural Network That Reads Things"
     );
     $("#about_des").html(
-      "Since everyone is getting on the machine learning hype train I thought I would too. My goal with this project is to build from scratch using TensorFlow, a neural network that can read text in multiple languages. I hope for it to also be able to read graphs, equations, even emojis. The final product will include an interface where the user can upload or take a picture of text, and ReadR will convert that picture into selectable text. An additional thing I want to eventually add is for ReadR to actually read aloud the text! <br><br> Originally I came up with the idea of this side project in Fall 2017 and started playing around with things then. I have since realized that some features of this project are currently way above my skill level so I've put this project on hold for now. Currently it is able to decipher numbers well and characters occasionally. I am definitely coming back to this project soon, and I am currently taking machine learning courses on Coursera. While there are probably many versions of my project already out there and many APIs I could use, I'm doing everything from scratch myself as this project mostly for learning as AI and neural nets have always been a subject of fascination for me."
+      "Since everyone is getting on the machine learning hype train I thought I would too. My goal with this project is to build from scratch (without any APIs) using TensorFlow, a neural network that can read text in multiple languages. I hope for it to also be able to read graphs, equations, even emojis. The final product will include an interface where the user can upload or take a picture of text, and ReadR will convert that picture into selectable text. An additional thing I want to eventually add is for ReadR to actually read aloud the text!<br><br> Originally I came up with the idea of this side project in Fall 2017 and started playing around with things then. I really wanted to do everything from scratch - code, train, and implement my own neural network models instead of just relying on OCR and Translate apis. However, I have since realized that some features of this project are currently way above my skill level so I've put this project on hold for now. Currently it is able to decipher numbers well and characters occasionally. I am definitely coming back to this project soon, and I am currently taking machine learning courses on Coursera. This project mostly for learning as AI and neural nets have always been a subject of fascination for me."
     );
     $("#tech_des").html(
       "Python, TensorFlow"
@@ -769,22 +769,22 @@ function openmodal(s) {
       "Zi Gao"
     );
     $("#status_des").html("Completed! - Code can be Found at <a href='https://github.com/ZGao28/Virtual-Fighterz'>This Repo</a>");
-  } else if (s == 5) {
-    $(".modal_image").attr("src", "./src/soccerbuds_logo.png");
-    $(".modal_name").text("Soccer Buds");
+  } else if (s == 3) {
+    $(".modal_image").attr("src", "./src/foodie_logo.png");
+    $(".modal_name").text("Foodie");
     $(".summary").text(
-      "A Not For Profit Youth Soccer Camp!"
+      "A Convenient Menu Translater!"
     );
     $("#about_des").html(
-      "One of my friends really likes playing soccer and also really likes giving back to the community. He told me he was starting a non-profit soccer camp to improve the community and brighten the lives of children who may not be able to afford a real soccer camp. As soon as I heard I jumped onboard, and with my poor foot-eye coordination, I was moved off field and instead tasked with making a website for kids to sign up and learn more about the camp."
+      "Ever been in a fancy restaurant where you don't understand anything on the menu? What the heck is 'Granchio Imbottita with Gamberetti' anyways? Foodie is my team's solution to that, and we built it in under 24 hours at Hack Concordia! It is a mobile web-app that allows you to take a picture of the menu item, then uses optical character recognition (OCR) to parse the text in the image to actual text, which is then translated using the Google Translate API, and returned back through a word register filter that translates everything into laymans terms. E.g. 'Risotto' will be translated into 'Creamy Italian Rice Dish'. Images of the food is also displayed using a Google Custom Search API. A more in depth description with images of the demo can be found <a href='https://devpost.com/software/foodie-i2xvnk'>here</a>."
     );
     $("#tech_des").html(
-      "Web Stack: HTML/CSS, jQuery, PHP"
+      "AWS Rekognition API, Google Cloud Translate API, Google Custom Search API, Flask (Python), jQuery, HTML/CSS"
     );
     $("#team_des").html(
-      "Zi Gao <br><br> Simon Gaudert"
+      "Zi Gao <br><br>Owen Anderson <br><br>Marc Frame<br><br>Anthony Aoun"
     );
-    $("#status_des").html("Completed! - Just waiting on a couple of team pictures - Website will be up soon at <a href='https://soccerbudsorleans.com'>Soccerbudsorleans.com</a>");
+    $("#status_des").html("Completed! <a href='https://marcframe.pythonanywhere.com'>Foodie Website</a> ; <a href='https://github.com/shimmy568/howdyConUHacks'>Github Repo</a>");
   } else if (s == 6) {
     $(".modal_image").attr("src", "./src/arduino_logo.png");
     $(".modal_name").text("Arduino Projects");
@@ -824,7 +824,7 @@ function openmodal(s) {
       "Projects That I Worked on in my Free Time and From Hackathons"
     );
     $("#about_des").html(
-      "This is just place that contains a random mish mash of projects I've worked on but didn't get it's own page. I'm going to a lot of hackathons soon so this will be a place for those mini-projects and pitches.<br><br><br><br><br><br><br><i class='em em-hourglass'></i><br><br><b>Time Dash</b><br><br>This was probably the first real app that I made, and the only one to make it onto the Google Play Store thus far. It is a level based adventure platformer game, coded in Java using Android Studio. I brought together a small team of coder friends and we worked on it a few summers ago. The end product wasn't very high quality, but we learned a lot from all the mistakes and failures we went through. It was more to test the waters with native app development. The Repo is made public and can be found <a href='https://github.com/ZGao28/TimeDash'>Here</a>.<br><br><br><br><br><br><i class='em em-lower_left_paintbrush'></i><br><br><b>Zym-Strap</b><br><br>Zym-Strap is basically a super light weight boot-strap with custom themes for colours and the feel of the elements. My friend Marc and I worked on this together to get better with HTML/CSS and jQuery. Marc is currently working on a landing page website for Zym-Strap using Zym-Strap. You'll be able to download it there, but for now the code can be viewed in <a href='https://github.com/MarcDAFrame/ZYM-Strap'>this Repo</a>."
+      "This is just place that contains a random mish mash of projects I've worked on but didn't get it's own page. I'm going to a lot of hackathons soon so this will be a place for those mini-projects and pitches.<br><br><br><br><br><br><br><i class='em em-hourglass'></i><br><br><b>Time Dash</b><br><br>This was probably the first real app that I made, and the only one to make it onto the Google Play Store thus far. It is a level based adventure platformer game, coded in Java using Android Studio. I brought together a small team of coder friends and we worked on it a few summers ago. The end product wasn't very high quality, but we learned a lot from all the mistakes and failures we went through. It was more to test the waters with native app development. The Repo is made public and can be found <a href='https://github.com/ZGao28/TimeDash'>Here</a>.<br><br><br><br><br><br><i class='em em-lower_left_paintbrush'></i><br><br><b>Zym-Strap</b><br><br>Zym-Strap is basically a super light weight boot-strap with custom themes for colours and the feel of the elements. My friend Marc and I worked on this together to get better with HTML/CSS and jQuery. Marc is currently working on a landing page website for Zym-Strap using Zym-Strap. You'll be able to download it there, but for now the code can be viewed in <a href='https://github.com/MarcDAFrame/ZYM-Strap'>this Repo</a>.<br><br><br><br><br><br><i class='em em-soccer'></i><br><br><b>Soccer Buds</b><br><br>One of my friends really likes playing soccer and also really likes giving back to the community. He told me he was starting a non-profit soccer camp to improve the community and brighten the lives of children who may not be able to afford a real soccer camp. As soon as I heard I jumped onboard, and with my poor foot-eye coordination, I was moved off field and instead tasked with making a website for kids to sign up and learn more about the camp. Repo can be viewed <a href='https://github.com/SoccerBuds/soccerbudswebsite'>here</a>."
     );
     $("#tech_des").html(
       "Java, Android Studio, HTML/CSS, jQuery, Other Stuff"
@@ -869,15 +869,15 @@ function updatecarousel(direction){
     $("#p2").css("color", "rgb(40, 20, 80)");
     $("#p3").css("color", "rgb(40, 20, 80)");
   } else if (carouselState==1){
-    $("#project_pic_1").attr("src", "./src/readr_logo.png");
+    $("#project_pic_3").attr("src", "./src/readr_logo.png");
     $("#project_pic_2").attr("src", "./src/virtual_logo.png");
-    $("#project_pic_3").attr("src", "./src/soccerbuds_logo.png");
+    $("#project_pic_1").attr("src", "./src/foodie_logo.png");
     $("#project_pic_1").attr("onclick", "openmodal(3)");
     $("#project_pic_2").attr("onclick", "openmodal(4)");
     $("#project_pic_3").attr("onclick", "openmodal(5)");
-    $("#project_name_1").text("READR");
+    $("#project_name_3").text("READR");
     $("#project_name_2").text("V.FIGHTERZ");
-    $("#project_name_3").text("SOCCERBUDS");
+    $("#project_name_1").text("FOODIE");
     $("#p2").css("color", "#507DBC");
     $("#p3").css("color", "rgb(40, 20, 80)");
     $("#p1").css("color", "rgb(40, 20, 80)");
