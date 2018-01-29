@@ -139,11 +139,11 @@ body, html{
 
 
 #project_section:hover{
-    background-color: #91cdb4;
+    background-color: rgb(210, 220, 255);
     border-radius: 5px;
 }
 #blog_section:hover{
-    background-color: rgb(255, 215, 195);
+    background-color: rgb(210, 220, 255);
     border-radius: 5px;
 }
 #resume_section:hover{
@@ -151,11 +151,11 @@ body, html{
     border-radius: 5px;
 }
 #home_section:hover{
-    background-color: rgb(50, 55, 135);
+    background-color: rgb(210, 220, 255);
     border-radius: 5px;
 }
 #about_section:hover{
-    background-color:  rgb(225, 90, 100);
+    background-color:  rgb(210, 220, 255);
     border-radius: 5px;
 }
 
