@@ -7,6 +7,7 @@ function extendMenu(){
         $("#title_text").css("display", "block")
         $(".chevron_green").css("display", "none");
         $(".chevron_container").css("display", "none");
+        $(".social_media").css("display", "inline");
     } else if ($("#menu_icon").attr("src") == './src/close_gif.gif'){
         if (state < 2){
             $("#menu_icon").attr("src", "./src/menu_gif_white.gif");
@@ -20,6 +21,7 @@ function extendMenu(){
         $("#title_text").css("color", "rgb(255, 253, 255)");
         $("#title_text").css("display", "none")
         $(".chevron_container").css("display", "block");
+        $(".social_media").css("display", "none");
         setTimeout(function(){
             $(".chevron_green").css("display", "inline-block");
         }, 1000);
