@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	  <title>Zi Gao Notes</title>
+    <link rel="icon" href="../src/logo_black.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./notes_style.css" rel="stylesheet">
+  </head>
+
+  <body onscroll="scrollfunc()" onresize="resizefunc()">
+    <header id="headerBar">
+      <div class="_centering">
+        <img class="invis" id="menu_icon" onClick="openNav()" src="../src/menu_icon_black.png">
+        <h3 onclick="javascript:location.href='./notes.html'" id="homeTab" class="navTab">
+          HOME
+          </h3>
+        <h3 onclick="javascript:location.href='./programming_notes.html'" id="programmingTab" class="navTab">
+          PROGRAMMING
+        </h3>
+        <h3 onclick="javascript:location.href='./math_notes.html'" id="mathTab" class="navTab">
+          MATHEMATICS
+        </h3>
+        <h3 onclick="javascript:location.href='./science_notes.html'" id="scienceTab" class="navTab">
+          SCIENCE
+        </h3>
+        <h3 onclick="javascript:location.href='http://zigao.io'" id="mainTab" class="navTab">
+          MAIN SITE
+        </h3>
+        <h3 onclick="javascript:location.href='../blog_page.html'" id="blogTab" class="navTab">
+          BLOG
+        </h3>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center" style="background-color: rgb(248, 247, 250)">
+        <div class="container" >
+          <img id="main_img" src="../src/logo_black.png" onclick="javascript:location.href='http:zigao.io'">
+          <h1 class="jumbotron-heading" style="font-size: 80px; font-family: 'Montserrat', sans-serif; margin-top: 20px">Notes</h1>
+          <p class="lead text-muted" style="padding-bottom: 50px">Disclaimer: I am by no means an 'expert' in any of the topics covered. <br> <br>These notes are actually a chance for me to review some fundamentals and build a strong foundation - I hope it can benefit other people too! Site is still under development, and new content is always being added so check back regularly!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="../src/code_logo.png" alt="Card image cap">
+                  <h4 class="course_heading">
+                    PROGRAMMING
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-text" id="descrip_1">Programming notes covering the basics and then some!</p>
+                  </div>
+                  <a href="./programming_notes.html" class="btn btn-info course_button" role="button">VIEW NOTES</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="../src/math_logo.png" alt="Card image cap">
+                  <h4 class="course_heading">
+                    MATHEMATICS
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-text" id="descrip_2">Mathematics notes covering mostly university courses! </p>
+                  </div>
+                  <a href="./math_notes.html" class="btn btn-info course_button" role="button">VIEW NOTES</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="../src/science_logo.png" alt="Card image cap">
+                  <h4 class="course_heading">
+                      SCIENCES
+                    </h4>
+                  <div class="card-body">
+                    <p class="card-text" id="descrip_3">Science notes for physics, chemistry and biology!</p>
+                  </div>
+                  <a href="./science_notes.html" class="btn btn-info course_button" role="button">VIEW NOTES</a>
+                </div>
+              </div>
+            </div>
+      </section>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+      $("#menu_icon").on(
+			{
+				mouseenter: function () {
+					if ($(this).attr("src") == './close_icon_black.png'){
+						$(this).attr("src", "../src/close_gif.gif");
+					} else {
+						$(this).attr("src", "../src/menu_gif.gif");
+					}
+				},
+				mouseleave: function () {
+					if ($(this).attr("src") == '../src/close_gif.gif'){
+						$(this).attr("src", "../src/close_icon_black.png");
+					} else {
+						$(this).attr("src", "../src/menu_icon_black.png");
+					}
+				}
+			}
+		  );
+    </script>
+    <script src="./notes_script.js"></script>
+  </body>
+</html>
