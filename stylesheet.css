@@ -417,6 +417,7 @@ body, html{
 
 .project:hover{
     opacity: 1;
+    cursor: pointer;
 }
 
 
@@ -495,6 +496,7 @@ body, html{
 
 .chevron_green:hover::before{
     color: #507DBC;
+    cursor: pointer;
 }
 
 .bull{
@@ -640,7 +642,7 @@ body, html{
 
 
 #n5, #n6{
-    color: rgb(75, 10, 15);
+    color: rgb(20, 10, 50); 
     margin-top: 605px;
 }
 
