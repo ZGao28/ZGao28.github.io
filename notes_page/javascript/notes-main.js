@@ -16,8 +16,8 @@ function scrollfunc(){
     var science = document.getElementById("scienceTab");
     var main = document.getElementById("mainTab");
     var blog = document.getElementById("blogTab");
-    if ($("#menu_icon").attr("src") == "./menu_gif.gif"){
-      $("#menu_icon").attr("src", "./close_gif.gif");
+    if ($("#menu_icon").attr("src") == "./src/menu_gif.gif"){
+      $("#menu_icon").attr("src", "./src/close_gif.gif");
         home.className = "dropdownBtn";
         programming.className = "dropdownBtn";
         math.className = "dropdownBtn";
@@ -25,7 +25,7 @@ function scrollfunc(){
         main.className = "dropdownBtn";
         blog.className = "dropdownBtn";
     } else {
-      $("#menu_icon").attr("src", "./menu_gif.gif");
+      $("#menu_icon").attr("src", "./src/menu_gif.gif");
         home.className = "invis";
         programming.className = "invis";
         math.className = "invis";
@@ -48,7 +48,7 @@ function scrollfunc(){
       science.className = "navTab";
       main.className = "navTab";
       blog.className = "navTab";
-      $("#menu_icon").attr("src", "./menu_icon_black.png");
+      $("#menu_icon").attr("src", "./src/menu_icon_black.png");
     } else {
       home.className = "invis";
       programming.className = "invis";

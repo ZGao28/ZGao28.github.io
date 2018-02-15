@@ -1,0 +1,107 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Programming Notes</title>
+    <link rel="icon" href="../src/logo_black.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/notes-pages.css" rel="stylesheet">
+    <script src="../javascript/notes-pages.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body onresize="resizefunc()">
+    <img id="menu_icon" onClick="extendMenu()" src="../src/menu_icon_black.png">
+    <nav class="side-menu">
+        <img onclick="extendMenu" src="../src/logo_black.png" class="home_img">
+        <h3>Programming Basics</h3>
+        <ul class="basics">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Variables</a></li>
+          <li><a href="#">Operators</a></li>
+          <li><a href="#">Control Flow</a></li>
+          <li><a href="#">Functions</a></li>
+          <li><a href="#">Scope</a></li>
+        </ul>
+
+        <h3>Object Oriented Programming</h3>
+        <ul class="oop">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a class="active" href="#">Objects</a></li>
+          <li><a href="#">Inheritance</a></li>
+          <li><a href="#">Polymorphism</a></li>
+        </ul>
+    
+        <h3>Data Structures</h3>
+        <ul class="datastructures">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Arrays &amp; Linked Lists</a></li>
+          <li><a href="#">Stacks &amp; Queues</a></li>
+          <li><a href="#">Trees</a></li>
+          <li><a href="#">Graphs</a></li>
+          <li><a href="#">Hashes</a></li>
+        </ul>
+
+        <h3>Algorithms</h3>
+        <ul class="datastructures">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Run-time Complexity</a></li>
+          <li><a href="#">Recursion</a></li>
+          <li><a href="#">Sorting</a></li>
+          <li><a href="#">Graph Taversal</a></li>
+          <li><a href="#">Dynamic Programming</a></li>
+        </ul>
+
+        <h3>Languages &amp; Frameworks</h3>
+        <ul class="datastructures">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Scripting Languages</a></li>
+          <li><a href="#">Compiled Languages</a></li>
+          <li><a href="#">Popular Frameworks</a></li>
+          <li><a href="#">Databases</a></li>
+        </ul>
+
+        <h3>Movie Recommender</h3>
+        <ul class="datastructures">
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Set Up</a></li>
+          <li><a href="#">Front End</a></li>
+          <li><a href="#">Back End</a></li>
+          <li><a href="#">Deployment</a></li>
+          <li><a href="#">Final Thoughts</a></li>
+        </ul>
+      </nav>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
+      <script>
+          $( document ).ready(function(){
+            resizefunc();
+            loadNotes();
+          });
+          $("#menu_icon").on(
+          {
+            mouseenter: function () {
+              if ($(this).attr("src") == '../src/close_icon_black.png'){
+                $(this).attr("src", "../src/close_gif.gif");
+              } else {
+                $(this).attr("src", "../src/menu_gif.gif");
+              }
+            },
+            mouseleave: function () {
+              if ($(this).attr("src") == '../src/close_gif.gif'){
+                $(this).attr("src", "../src/close_icon_black.png");
+              } else {
+                $(this).attr("src", "../src/menu_icon_black.png");
+              }
+            }
+          }
+          );
+      </script>
+  </body>
+
+  </html>
