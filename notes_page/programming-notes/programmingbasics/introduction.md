@@ -1,7 +1,7 @@
 # Programming Basics
 ===================================
 
-## Introduction
+### Introduction
 Hello there, and welcome to programming basics! In this section we will cover the basic foundational knowledge that is imperative for all programmers to know. These building blocks are required for all kinds of applications and is what makes up basically any program that you would use in the real world.
 
 ### Why Learn Programming?
