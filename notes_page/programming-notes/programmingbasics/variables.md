@@ -23,12 +23,12 @@ programming language. They are what builds up more complex data types and data s
 In programming, Boolean values are basically variables that store either 'True' or 'False' values. They cannot be used to store anything
 else, only true/false values, and occupy very little space (uses up the smallest amount of memory).
 
-Example in Java:
+*Example in Java:*
 ```
 boolean you_Are_Viewing_a_WebPage = true;
 ```
 
-Example in Python:
+*Example in Python:*
 ```
 you_Are_Viewing_a_WebPage = True
 ```
@@ -40,14 +40,14 @@ still does, but Python just assigns it when the program is run. This can be prob
 #### Characters 
 Characters are, as the name implies, characters. They store singular letters or symbols. 
 
-Example in Java:
+*Example in Java:*
 ```
 char letter_c_lower_case = 'c';
 char letter_C_upper_Case = 'C';
 char some_symbol = '+';
 ```
 
-Example in Python:
+*Example in Python:*
 ```
 letter_c_lower_case = 'c'
 letter_C_upper_case = 'C'
@@ -64,7 +64,7 @@ Integers store whole value positive and negative numbers. No decimals allowed. T
 basically denote how much memory to use for storing the numerical value. Generally, Bytes are the smallest, shorts are slightly larger,
 ints are large enough to store basically all you need, and longs are for super large numbers.
 
-Example in Java:
+*Example in Java:*
 ```
 byte some_Number = 2;
 short some_larger_Number = 13;
@@ -72,7 +72,7 @@ int some_even_larger_number = 1230;
 long some_super_large_number = 123013592;
 ```
 
-Example in Python:
+*Example in Python:*
 ```
 some_Number = 2;
 some_larger_Number = 13;
@@ -84,12 +84,12 @@ Again, notice that Python doesn't have a difference in dataTypes.
 
 Floats store basically the rest of the number spectrum, namely decimal values.
 
-Example in Java:
+*Example in Java:*
 ```
 float decimal_number = 2.10239239;
 ```
 
-Example in Python:
+*Example in Python:*
 ```
 decimal_number = 2.10239239;
 ```
@@ -98,12 +98,12 @@ decimal_number = 2.10239239;
 Ok, so strings are technically not a primitive data type, but they are so often used that I felt like I should include it in here.
 A string is basically a bunch of characters *stringed up together*. Basically a sentence or a phrase.
 
-Example in Java:
+*Example in Java:*
 ```
 String hello = 'Hello world!';
 ```
 
-Example in Python:
+*Example in Python:*
 ```
 hello = 'Hellow World!';
 ```
