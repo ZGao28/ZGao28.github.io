@@ -15,11 +15,11 @@ Where dataType is the data type that you want to store, the variable name is the
 the actual data you want to store. For most programming languages, the variable name can be anything, as long as it doesn't start with 
 a number or symbol.
 
-### Primitive Data Types
+## Primitive Data Types
 Primitive Data Types are the data types that store the most basic elements - and they are the same and appear in basically every single
 programming language. They are what builds up more complex data types and data structures.
 
-#### Boolean 
+### Boolean 
 In programming, Boolean values are basically variables that store either 'True' or 'False' values. They cannot be used to store anything
 else, only true/false values, and occupy very little space (uses up the smallest amount of memory).
 
@@ -37,7 +37,7 @@ Note that in Python there is no dataType at the beginning. This is because Pytho
 enough to detect what type of value you are setting your variable to. This does not mean the variable doesn't belong to a data type - it
 still does, but Python just assigns it when the program is run. This can be problematic sometimes though, as you'll see later on.
 
-#### Characters 
+### Characters 
 Characters are, as the name implies, characters. They store singular letters or symbols. 
 
 *Example in Java:*
@@ -57,7 +57,7 @@ some_symbol = '+'
 Note that in with characters, the value is always in ' ' single quotes - double quotes " " also work. 
 Characters ALWAYS need to be in quotes.
 
-#### Integers and Floating Point Numbers
+### Integers and Floating Point Numbers
 Integers and floating point numbers (or floats, for short) are data types that store numbers. 
 
 Integers store whole value positive and negative numbers. No decimals allowed. There are many different subtypes of integers, that 
@@ -94,7 +94,7 @@ float decimal_number = 2.10239239;
 decimal_number = 2.10239239;
 ```
 
-#### Strings
+### Strings
 Ok, so strings are technically not a primitive data type, but they are so often used that I felt like I should include it in here.
 A string is basically a bunch of characters *stringed up together*. Basically a sentence or a phrase.
 
@@ -108,7 +108,7 @@ String hello = 'Hello world!';
 hello = 'Hellow World!';
 ```
 
-#### To Sum Up
+## To Sum Up
 Variables are used to store data, and these variables can then later be used to manipulate, update and display the data. We've covered the most simple data types, and in later notes we'll cover more advanced ones!
 
 
