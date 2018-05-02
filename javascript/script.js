@@ -167,7 +167,7 @@ function loadhome(start) {
         $("#name").animate(
           {
             opacity: 1,
-            marginTop: 150
+            marginTop: 150,
           },
           1000,
           function() {
