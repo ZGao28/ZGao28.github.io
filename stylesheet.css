@@ -186,7 +186,7 @@ body, html{
 
 .connect_bar_white{
     margin: auto;
-    display: block;
+    display: none;
     width: 550px; 
     margin-top: 30px;
 }

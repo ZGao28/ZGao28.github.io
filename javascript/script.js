@@ -161,6 +161,7 @@ function loadhome(start) {
         resize();
         $("body").css("background-color", "transparent");
         $("html").css("background-color", "transparent");
+        $(".connect_bar_white").css("display", "block");
         backgroundState = 0;
         resize();
         $("#name").animate(
