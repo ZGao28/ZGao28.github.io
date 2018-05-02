@@ -70,7 +70,7 @@ function scrollfunc(s, b){
         state = 0;
         $("#menu_icon").attr("src", "./src/close_gif.gif");
         extendMenu();
-        loadhome();
+        loadhome(0);
         $("#menu_icon").attr("src", "./src/menu_icon_white.png");
           $("#home_icon").attr("src", "./src/logo_white.png");
       } else if (s == 1) {
@@ -130,7 +130,7 @@ function scrollfunc(s, b){
 
 var backgroundState = 1;
 
-function loadhome() {
+function loadhome(start) {
   $("#name").css("opacity", "0");
   $("#name").css("margin-top", "80px");
   $("#welcome").css("opacity", "0");
@@ -140,12 +140,17 @@ function loadhome() {
   $(".circle").css("opacity", "0");
   $(".circle").css("background-color", "white");
   $("#progress_bar").css("width", "0%");
+  let animation_duration = 0;
+  if (start == 0) {
+    animation_duration = 1200;
+  }
   if (backgroundState != 0) {
+    
     $("#background_div").animate(
       {
         height: window.screen.height
       },
-      1200
+      animation_duration
     );
     $("#background_div2").animate(
       {
@@ -154,6 +159,8 @@ function loadhome() {
       1200,
       function() {
         resize();
+        $("body").css("background-color", "transparent");
+        $("html").css("background-color", "transparent");
         backgroundState = 0;
         resize();
         $("#name").animate(
