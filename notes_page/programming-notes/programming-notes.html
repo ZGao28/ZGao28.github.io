@@ -13,6 +13,7 @@
     <link href="../css/notes-pages.css" rel="stylesheet">
     <script src="../javascript/notes-pages.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/showdownjs/showdown/706813d9/dist/showdown.js"></script>
   </head>
 
   <body onresize="resizefunc()">
@@ -21,12 +22,12 @@
         <img onclick="extendMenu" src="../src/logo_black.png" class="home_img">
         <h3>Programming Basics</h3>
         <ul class="basics">
-          <li><a href="#">Introduction</a></li>
-          <li><a href="#">Variables</a></li>
-          <li><a href="#">Operators</a></li>
-          <li><a href="#">Control Flow</a></li>
-          <li><a href="#">Functions</a></li>
-          <li><a href="#">Scope</a></li>
+          <li><a href="#programming-basics-introduction" onclick="loadNotes('programmingbasics/introduction.md')">Introduction</a></li>
+          <li><a href="#programming-basics-variables" onclick="loadNotes('programmingbasics/variables.md')">Variables</a></li>
+          <li><a href="#programming-basics-operators" onclick="loadNotes('programmingbasics/operators.md')">Operators</a></li>
+          <li><a href="#programming-basics-control_flow" onclick="loadNotes('programmingbasics/control_flow.md')">Control Flow</a></li>
+          <li><a href="#">Functions &amp; Scope</a></li>
+          <li><a href="#">Memory &amp; Exception Handling</a></li>
         </ul>
 
         <h3>Object Oriented Programming</h3>
@@ -77,11 +78,13 @@
           <li><a href="#">Final Thoughts</a></li>
         </ul>
       </nav>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
+      <div class="notes-section">
+
+      </div>
       <script>
           $( document ).ready(function(){
             resizefunc();
-            loadNotes();
+            loadNotes("programmingbasics/introduction.md");
           });
           $("#menu_icon").on(
           {
