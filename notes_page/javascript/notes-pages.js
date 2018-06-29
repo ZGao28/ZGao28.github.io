@@ -19,15 +19,25 @@ function extendMenu(){
     }
 }
 
-function loadNotes(){
-    let url = "https://raw.githubusercontent.com/ZGao28/ZGao28.github.io/master/README.md";
 
-    $.ajax({
+async function loadNotes(extension){
+    let url = "https://raw.githubusercontent.com/ZGao28/ZGao28.github.io/master/notes_page/programming-notes/"+extension;
+    let md = new showdown.Converter();
+    var notes = document.getElementsByClassName('notes-section')[0]; 
+    var mynotes = 'no notes';
+    await $.ajax({
         url: url,
-        success: function( data ){
-            console.log(data);
+        cache: false,
+        error: function () {
+            let result = md.makeHtml('# Something went wrong while loading the page. An issue message was sent, please check back later!');
+            notes.insertAdjacentHTML('afterbegin', result);
         },
-        
+        success: function( data ){
+            mynotes = data;
+        }
     });
-    
+
+    let result = md.makeHtml(mynotes);
+    $('.notes-section').empty();
+    notes.insertAdjacentHTML('afterbegin', result);
 }

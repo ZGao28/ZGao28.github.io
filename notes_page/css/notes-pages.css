@@ -24,7 +24,7 @@
     padding: 20px;
     height: 100%;
 }
- h3 {
+nav > h3 {
     margin: 0;
     padding: 0;
     text-align: left;
@@ -46,11 +46,11 @@
     transition: all 0.3s;
     font-family: 'Montserrat', sans-serif;
 }
-ul {
+nav > ul {
     padding: 0;
     margin: 0 0 25px;    
 }
-li {
+nav > ul > li {
     text-align: left;
     list-style: none;
     -ms-transform: translate3d(0,0,0);
@@ -65,7 +65,7 @@ li {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-a {
+nav > ul > li >  a {
       text-decoration: none;
       font-size: 15px;
       color: rgb(82, 86, 90);
@@ -73,11 +73,11 @@ a {
       font-family: 'Montserrat', sans-serif;
 }
 
-a:hover{
+nav > ul > li >  a:hover{
     color: rgb(100, 110, 185);
 }
 
-a:hover::before{
+nav > ul > li >  a:hover::before{
     content: "";
     position: absolute;
     background: rgb(100, 110, 185);
@@ -114,3 +114,60 @@ a:hover::before{
     top: 10px;
     z-index: 1000;
 }
+
+
+
+.notes-section{
+    margin-top: 70px;
+    margin-left: 260px;
+    -webkit-transition-duration: 1.5s; /* Safari */
+    transition-duration: 1.5s;
+    padding-left: 50px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 800px){
+    .notes-section{
+        margin-left: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+div > h1, h2, h3, h4, h5, h6, p{
+    font-family: 'Raleway', sans-serif;
+}
+
+h2, h3, h4, h5, h6{
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+
+code{
+    background-color: rgb(235, 235, 250);
+    width: 93%;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    font-size: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+
