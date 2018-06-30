@@ -1,7 +1,7 @@
 # Variables
 
 The concept of variables is one of the most important in programming. They are used to store all the information and data in a program, 
-and is present in almost every kind of application.
+and are present in almost every kind of application.
 
 ## Data Types
 There are many many different data types, used for storing different kinds of dataThese are all variables, and the general way to create
@@ -74,10 +74,10 @@ long some_super_large_number = 123013592;
 
 *Example in Python:*
 ```
-some_Number = 2;
-some_larger_Number = 13;
-some_even_larger_number = 1230;
-some_super_large_number = 123013592;
+some_Number = 2
+some_larger_Number = 13
+some_even_larger_number = 1230
+some_super_large_number = 123013592
 ```
 
 Again, notice that Python doesn't have a difference in dataTypes.
@@ -91,7 +91,7 @@ float decimal_number = 2.10239239;
 
 *Example in Python:*
 ```
-decimal_number = 2.10239239;
+decimal_number = 2.10239239
 ```
 
 ### Strings
@@ -100,12 +100,14 @@ A string is basically a bunch of characters *stringed up together*. Basically a 
 
 *Example in Java:*
 ```
-String hello = 'Hello world!';
+String hello = "Hello world!";
+
+/* Notice that Strings in Java are with double quotes ", not single quotes '. You cannot use them interchangeably or the program will not compile! */ 
 ```
 
 *Example in Python:*
 ```
-hello = 'Hellow World!';
+hello = 'Hello World!'
 ```
 
 ## To Sum Up
