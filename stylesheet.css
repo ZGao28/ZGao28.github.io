@@ -88,6 +88,7 @@ body, html{
 
 #home_icon:hover{
     transform: rotate(-45deg);
+    cursor: pointer;
 }
 
 
@@ -211,11 +212,13 @@ body, html{
 .social_media:hover{
     opacity: 1;
     border-bottom: 2px solid black;
+    cursor: pointer;
 }
 
 .social_media_white:hover{
     opacity: 1;
     border-bottom: 2px solid white;
+    cursor: pointer;
 }
 
 #connect_text{
