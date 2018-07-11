@@ -134,7 +134,6 @@ function loadhome(start) {
   $("#name").css("opacity", "0");
   $("#name").css("margin-top", "80px");
   $("#welcome").css("opacity", "0");
-  $("#welcome").css("letterSpacing", "0px");
   $(".nf").css("opacity", "0");
   $(".social_media_white").css("width", "0px");
   $(".circle").css("opacity", "0");
@@ -180,7 +179,6 @@ function loadhome(start) {
             $("#welcome").animate(
               {
                 opacity: 1,
-                letterSpacing: "20px"
               },
               800,
               function() {
@@ -240,7 +238,6 @@ function loadhome(start) {
         $("#welcome").animate(
           {
             opacity: 1,
-            letterSpacing: "20px"
           },
           800,
           function() {
