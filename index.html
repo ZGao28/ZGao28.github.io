@@ -307,7 +307,6 @@
 			ABOUT
 		</h1>
 		<div id="about_content">
-			<span onclick="updateabout(0)" class="chevron_green left" id="about_left"></span>
 			<p id="about_paragraph">
 				Hey there
 				<i class="em em-wave"></i> ! My name is Zi, and I am currently a first year Software Engineering student at the University of Ottawa.
@@ -315,11 +314,11 @@
 				<br> I have a passion for technology and entrepreneurship, and I love to explore unique ideas. By constantly learning new technologies
 				and working on different projects, I aim to solve difficult problems and improve the lives of people around the
 				<i class="em em-earth_americas"></i> . As of now I am interested in backend/infrastructure development, virtual reality, and machine learning, but I also like doing UI and
-				UX design as a hobby! I am always excited to build products with elegant and engaging user experiences.
+				UX design as a hobby!
 				<br>
 				<br> If you want to
-				<i class="em em-speech_balloon"></i> a business, startup, or general project idea, or if you have any inquiries about my qualifications and past work,
-				feel free to connect with me! I am always willing to meet over a cup of
+				<i class="em em-speech_balloon"></i> a business, or startup idea, or if you have any inquiries about my qualifications and past work,
+				feel free to contact me! I am always willing to meet over a cup of
 				<i class="em em-coffee"></i> !
 				<br>
 				<br>
@@ -330,57 +329,6 @@
 				<br>
 				<br> - Steve Jobs
 			</p>
-			<div id="rotating_table">
-				<h3 class="hobby_title">
-				   &nbsp; Stuff I Like
-				</h3>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob1">
-						<i class='em em-iphone'></i></i>&nbsp; Tech Gadgets &nbsp;<i class='em em-iphone'></i></i>
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob2">
-						<i class="em em-musical_keyboard"></i>&nbsp; Classical Music &nbsp;<i class="em em-musical_keyboard"></i>
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob3">
-						<i class="em em-sushi"></i>&nbsp; All Types Of Food &nbsp;<i class="em em-sushi"></i>
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob4">
-						<i class="em em-tv"></i>&nbsp; Anime Connoisseur &nbsp;<i class="em em-tv"></i>
-					</h6>
-				</div>
-			</div>
-			<div id="rotating_table_2">
-				<h3 class="hobby_title">
-					&nbsp; Things I Do
-				</h3>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob5">
-					<i class="em em-coffee"></i>&nbsp; Consume Coffee&nbsp; <i class="em em-coffee"></i>
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob6">
-					<i class="em em-keyboard"></i></i> &nbsp;Program Code&nbsp; <i class="em em-keyboard"></i></i>
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob7">
-					<i class="em em-straight_ruler"></i>&nbsp; Design Websites &nbsp;<i class="em em-straight_ruler"></i>
-					</h6>
-				</div>
-				<div class="hobby_container">
-					<h6 class="hobby" id="hob8">
-					<i class="em em-lower_left_fountain_pen"></i>&nbsp; Chess&nbsp; <i class="em em-lower_left_fountain_pen"></i>
-					</h6>
-				</div>
-			</div>
-			<span onclick="updateabout(1)" class="chevron_green right" id="about_right"></span>
 		</div>
 		<h3 onclick="scrollfunc(1, true)" style="padding-top: 60px" class="nf nf1 nfw">
 			<i class="em em-arrow_up"></i> PROJECTS <i class="em em-arrow_up"></i>
@@ -610,7 +558,7 @@
 		$("#n1").on(
 			{
 				mouseenter: function () {
-					$(this).html("RESUME &mdash;");
+					$(this).html("RESUME -");
 				},
 				mouseleave: function () {
 					$(this).html("&lt; RESUME");
@@ -620,7 +568,7 @@
 		$("#n2").on(
 			{
 				mouseenter: function () {
-					$(this).html("PROJECTS &mdash;");
+					$(this).html("PROJECTS -");
 				},
 				mouseleave: function () {
 					$(this).html("&lt; PROJECTS");
@@ -630,7 +578,7 @@
 		$("#n3").on(
 			{
 				mouseenter: function () {
-					$(this).html("&mdash; HOME");
+					$(this).html("- HOME");
 				},
 				mouseleave: function () {
 					$(this).html("HOME >");
@@ -640,7 +588,7 @@
 		$("#n4").on(
 			{
 				mouseenter: function () {
-					$(this).html("ABOUT &mdash;");
+					$(this).html("ABOUT -");
 				},
 				mouseleave: function () {
 					$(this).html("&lt; ABOUT");
@@ -650,7 +598,7 @@
 		$("#n5").on(
 			{
 				mouseenter: function () {
-					$(this).html("&mdash; PROJECTS");
+					$(this).html("- PROJECTS");
 				},
 				mouseleave: function () {
 					$(this).html("PROJECTS >");
@@ -660,7 +608,7 @@
 		$("#n6").on(
 			{
 				mouseenter: function () {
-					$(this).html("EXTRAS &mdash;");
+					$(this).html("EXTRAS -");
 				},
 				mouseleave: function () {
 					$(this).html("&lt; EXTRAS");
@@ -670,7 +618,7 @@
 		$("#n7").on(
 			{
 				mouseenter: function () {
-					$(this).html("&mdash; ABOUT");
+					$(this).html("- ABOUT");
 				},
 				mouseleave: function () {
 					$(this).html("ABOUT >");
@@ -680,7 +628,7 @@
 		$("#n8").on(
 			{
 				mouseenter: function () {
-					$(this).html("RESUME &mdash;");
+					$(this).html("RESUME -");
 				},
 				mouseleave: function () {
 					$(this).html("&lt; RESUME");

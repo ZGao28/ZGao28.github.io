@@ -589,59 +589,15 @@ body, html{
     color: #507DBC; 
 }
 
-#rotating_table{
-    width: 50%;
-    display: none;
-    margin: auto;
-}
-
-#rotating_table_2{
-    width: 50%;
-    display: none;
-    margin: auto;
-}
-
-
 #about_paragraph{
-    width: 50%;
+    width: 60%;
     font-family: "Montserrat", sans-serif;
-    font-size: 16.5px;
-    letter-spacing: 2px;
+    font-size: 16px;
+    letter-spacing: 1px;
     color: rgb(20, 10, 50);   
-    text-align: center;
     display: block;
+    text-align: center;
     margin: auto;
-}
-
-.hobby_title{
-    text-align: center;
-    margin-top: 0px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 40px;
-    letter-spacing: 8px;
-    padding-bottom: 30px;
-    padding-right: 40px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    color: rgb(30, 20, 80);   
-}
-
-
-.hobby{
-    margin-top: 6px;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    font-size: 22px;
-    letter-spacing: 8px;
-    padding-bottom: 0px;
-    padding-top: 10px;
-    font-weight: 500;
-    margin-bottom: 0px;
-    color: rgb(30, 20, 80);   
-}
-
-.hobby_container{
-    padding: 15px 20px;
 }
 
 
@@ -693,19 +649,6 @@ body, html{
 .em-arrow_down{
     font-size: 15px;
 }
-
-#about_left{
-    position: absolute;
-    left: 12.5%;
-    top: 35%;
-}
-
-#about_right{
-    position: absolute;
-    right: 12.5%;
-    top: 35%;
-}
-
 
 
 /* Blog Stuff */
@@ -948,19 +891,6 @@ body, html{
 
 
 
-
-
-
-@media screen and (max-width: 1395px) {
-    .hobby_title{
-        font-size: 18px;
-    }
-    .hobby{
-        font-size: 15px;
-    }
-}
-
-
 /* responsiveness stuff*/
 @media screen and (max-width: 1295px) {
     .selection{
@@ -975,12 +905,6 @@ body, html{
     }
     .chevron_green::before{
         top: 40px;
-    }
-    .hobby_title{
-        font-size: 15px;
-    }
-    .hobby{
-        font-size: 13px;
     }
 }
 
@@ -1034,18 +958,8 @@ body, html{
         letter-spacing: 15px;
     }
 
-    .rotating_table{
-        display: none;
-    }
-
     #about_paragraph{
         width: 70%;
-    }
-    #about_left{
-        left: 6%;
-    }
-    #about_right{
-        right: 6%;
     }
     #about_heading{
         padding-top: 80px;
@@ -1102,12 +1016,6 @@ body, html{
     #home_icon{
         right: 5px;
     }
-    #about_left{
-        left: 2%;
-    }
-    #about_right{
-        right: 2%;
-    }
     .connect_bar{
         padding-top: 20px;
         margin-top: 0px;
@@ -1121,15 +1029,6 @@ body, html{
     }
     .bigletter{
         font-size: 105px;
-    }
-
-    .hobby_title{
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
-    .hobby{
-        font-size: 12px;
-        letter-spacing: 1px;
     }
 }
 

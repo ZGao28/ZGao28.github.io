@@ -192,25 +192,25 @@ function loadhome(start) {
                   {
                     opacity: 1
                   },
-                  2000
+                  1000
                 );
                 $(".nn").animate(
                   {
                     opacity: 1
                   },
-                  2000
+                  1000
                 );
                 $("#menu_icon").animate(
                   {
                     opacity: 1
                   },
-                  2000
+                  500
                 );
                 $("#home_icon").animate(
                   {
                     opacity: 1
                   },
-                  2000,
+                  500,
                 );
                 $(".nf").animate(
                   {
@@ -465,9 +465,7 @@ function loadabout() {
         paddingTop: 60
       },
       1000,
-      
       function() {
-        
         // Animation complete.
         resize();
         $("#about_content").animate(
@@ -519,7 +517,7 @@ function loadblog() {
         $("#progress_bar").animate({
           width: '75%'
         }, 1200);
-        backgroundState = 1; 
+        backgroundState = 1;
         $("#blog_heading").animate(
           {
             opacity: 1,
@@ -549,7 +547,7 @@ function loadblog() {
         );
       }
     );
-  } else {
+  } else { 
     $("#progress_bar").animate({
       width: '75%'
     }, 1200);
@@ -978,82 +976,3 @@ function initCircles(){
   }, 10);
 }
 
-var aboutstate = 0;
-function updateabout(s){
-  if (aboutstate==2 && s ==1){
-    aboutstate = 0;
-  } else if  (aboutstate!=2 && s==1){
-    aboutstate++;
-  }
-  if (aboutstate==0 && s ==0){
-    aboutstate = 2;
-  } else if  (aboutstate!=0 && s==0){
-    aboutstate--;
-  }
-  if (aboutstate==0){
-    $("#about_paragraph").css("display", "block");
-    $("#rotating_table").css("display", "none");
-    $("#rotating_table_2").css("display", "none");
-  } else if (aboutstate==1){
-    $("#about_paragraph").css("display", "none");
-    $("#rotating_table").css("display", "table");
-    $("#rotating_table_2").css("display", "none");
-  } else {
-    $("#about_paragraph").css("display", "none");
-    $("#rotating_table").css("display", "none");
-    $("#rotating_table_2").css("display", "table");
-  }
-}
-
-/*
-function rotatecontent(){
-  if (aboutstate==1){
-    var ran = Math.random();
-    if (ran < 0.25){
-      $("#hob1").animate({
-        fontSize: 0
-      }, 500, function(){
-        $("#hob1").animate({
-          fontSize: 22
-      }, 500, function(){
-        if ($("#hob1").html()=="<i class='em em-iphone'></i></i>&nbsp; Tech Gadgets &nbsp;<i class='em em-iphone'></i></i>"){
-          $("#hob1").html("<i class='em em-brain'></i></i>&nbsp; Artificial Intelligence &nbsp;<i class='em em-brain'></i></i>");
-        } else {
-          $("#hob1").html("<i class='em em-iphone'></i></i>&nbsp; Tech Gadgets &nbsp;<i class='em em-iphone'></i></i>");
-        }
-      });
-      });
-    } else if (ran < 0.5){
-      $("#hob2").animate({
-        fontSize: 0
-      }, 500, function(){
-        $("#hob2").animate({
-          fontSize: 22
-      }, 500, function(){
-        if ($("#hob2").html()=="<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>"){
-          $("#hob2").html("<i class='em em-eye'></i></i>&nbsp; Artificial Intelligence &nbsp;<i class='em em-eye'></i></i>");
-        } else {
-          $("#hob2").html("<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>");
-        }
-      });
-      });
-    } else if (ran < 0.75){
-      $("#hob2").animate({
-        fontSize: 0
-      }, 500, function(){
-        $("#hob2").animate({
-          fontSize: 22
-      }, 500, function(){
-        if ($("#hob2").html()=="<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>"){
-          $("#hob2").html("<i class='em em-eye'></i></i>&nbsp; Artificial Intelligence &nbsp;<i class='em em-eye'></i></i>");
-        } else {
-          $("#hob2").html("<i class='em em-musical_keyboard'></i></i>&nbsp; Classical Music &nbsp;<i class='em em-musical_keyboard'></i></i>");
-        }
-      });
-      });
-    } else {
-
-    }
-  }
-}
-*/
