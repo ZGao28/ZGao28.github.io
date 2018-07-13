@@ -135,7 +135,8 @@ function loadhome(start) {
   $("#name").css("margin-top", "80px");
   $("#welcome").css("opacity", "0");
   $(".nf").css("opacity", "0");
-  $(".social_media_white").css("width", "0px");
+  $(".social_media_white").css("width", "30px");
+  $(".social_media_white").css("opacity", "0");
   $(".circle").css("opacity", "0");
   $(".circle").css("background-color", "white");
   $("#progress_bar").css("width", "0%");
@@ -173,7 +174,7 @@ function loadhome(start) {
             // Animation complete.
             $(".social_media_white").animate(
               {
-                width: 30
+                opacity: 1
               }, 800
             );
             $("#welcome").animate(
@@ -231,7 +232,7 @@ function loadhome(start) {
       function() {
         $(".social_media_white").animate(
           {
-            width: 30
+            opacity: 1,
           }, 800
         );
         // Animation complete.
