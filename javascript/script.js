@@ -590,6 +590,7 @@ function loadresume() {
   $("#thanks").css("opacity", "0");
   $(".circle").css("opacity", "0");
   $(".circle").css("background-color", "rgb(30, 20, 80)");
+  $("#download-btn").css("opacity", "0");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -625,6 +626,12 @@ function loadresume() {
               },
               300
             );
+            $("#download-btn").animate(
+               {
+                 opacity: 1
+               },
+               300
+            ); 
             $("#thanks").animate(
               {
                 opacity: 1
