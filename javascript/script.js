@@ -591,6 +591,7 @@ function loadresume() {
   $(".circle").css("opacity", "0");
   $(".circle").css("background-color", "rgb(30, 20, 80)");
   $("#download-btn").css("opacity", "0");
+  $("#download-btn").css("display", "none");
   if (backgroundState != 1) {
     $("#background_div").animate(
       {
@@ -626,6 +627,7 @@ function loadresume() {
               },
               300
             );
+            $("#download-btn").css("display", "block");
             $("#download-btn").animate(
                {
                  opacity: 1
@@ -661,6 +663,13 @@ function loadresume() {
         $(".circle").animate({
           opacity: 1
         }, 1000);
+        $("#download-btn").css("display", "block");
+          $("#download-btn").animate(
+             {
+               opacity: 1
+             },
+             300
+         ); 
         $("#resume_box").animate(
           {
             opacity: 1
