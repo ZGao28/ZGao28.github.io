@@ -8,6 +8,9 @@ function extendMenu(){
         $(".chevron_green").css("display", "none");
         $(".chevron_container").css("display", "none");
         $(".social_media").css("display", "inline");
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0;
+        $("html").css("overflow-y", "hidden");
     } else if ($("#menu_icon").attr("src") == './src/close_gif.gif'){
         if (state < 2){
             $("#menu_icon").attr("src", "./src/menu_gif_white.gif");
@@ -22,6 +25,7 @@ function extendMenu(){
         $("#title_text").css("display", "none")
         $(".chevron_container").css("display", "block");
         $(".social_media").css("display", "none");
+        $("html").css("overflow-y", "auto");
         setTimeout(function(){
             $(".chevron_green").css("display", "inline-block");
         }, 1000);
