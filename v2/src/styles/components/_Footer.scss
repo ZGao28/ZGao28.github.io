@@ -1,0 +1,41 @@
+@import '../base';
+
+$icon-height: 30px;
+$icon-margin: 20px;
+
+.Footer{
+    position: fixed;
+    bottom: 0px;
+    
+}
+
+.Footer_icon {
+    height: $icon-height;
+    margin: $icon-margin;
+    max-height: 50px;
+    opacity: 0.4;
+}
+
+.Footer_icon:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#email_icon{
+    height: $icon-height - 5px;
+    margin-right: $icon-margin - 3px;
+}
+
+.Footer_icon_container {
+    display: table;
+    margin: auto;
+}
+
+.Footer_logo_text{
+    font-family: $theme_font;
+    color: $color_change;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}

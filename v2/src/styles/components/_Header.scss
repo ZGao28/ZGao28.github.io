@@ -1,0 +1,36 @@
+@import '../base';
+
+.Header{
+    color: $color_change;
+    position: fixed;
+    width: 100%;
+}
+
+.Header > header > h1 {
+    //font-family: $logo_font;
+    font-size: 80px;
+    letter-spacing: 8px;
+    margin: 50px;
+}
+
+.Header_logo_g {
+    display: inline-block;
+    transform: rotate(-25deg);
+}
+
+.Header > header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header_logo {
+    fill: $color_change;
+    margin: 50px;
+}
+
+.Header_logo:hover {
+    cursor: pointer;
+    display: inline-block;
+    transform: rotate(-90deg);
+}

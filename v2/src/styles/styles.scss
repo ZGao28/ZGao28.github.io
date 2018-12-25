@@ -1,2 +1,14 @@
-@import './base/settings';
-@import './base/base';
+@import './base';
+@import './components/Header';
+@import './components/Footer';
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+// global classes
+
+.width-100 {
+    width: 100%;
+}
