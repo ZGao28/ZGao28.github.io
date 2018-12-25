@@ -6,15 +6,15 @@
     background: $color_change;
     margin: 30px;
     transform: rotate(45deg);
-    transition-duration: 0.8s;
+    transition-duration: 0.5s;
 }
 
 .LeftSider_nav_square:hover {
     cursor: pointer;
     background: rgb(100, 150, 220);
-    height: 17px;
-    width: 17px;
-    transform: translateX(-5px);
+    height: 15px;
+    width: 15px;
+    transform: translateX(-4px);
 }
 
 .LeftSider{
@@ -24,3 +24,9 @@
     transform: translateY(-50%);
 }
 
+.selected > .LeftSider_nav_square {
+    background: rgb(100, 150, 220);
+    height: 15px;
+    width: 15px;
+    transform: translateX(-4px) rotate(45deg);
+}

@@ -52,7 +52,6 @@ export default class AppRouter extends React.Component {
                     </Switch>
                     <Footer/>
                     <LeftSider changePage={this.changePage}/>
-                    <RightSider pageState={this.state.pageState}/>
                 </div>
             </BrowserRouter>
         );

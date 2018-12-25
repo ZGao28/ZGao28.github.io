@@ -5,12 +5,12 @@ export default class LeftSider extends React.Component {
         return (
             <div className='LeftSider'>
                 <div className='side_container'>
-                    <NavLink to='/'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('home')}}></div></NavLink>
-                    <NavLink to='/projects'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('projects')}}></div></NavLink>
-                    <NavLink to='/about'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('about')}}></div></NavLink>
-                    <NavLink to='/skills'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('skills')}}></div></NavLink>
-                    <NavLink to='/content'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('content')}}></div></NavLink>
-                    <NavLink to='/resume'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('resume')}}></div></NavLink>
+                    <NavLink activeClassName='selected' to='/' exact={true}><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('home')}}></div></NavLink>
+                    <NavLink activeClassName='selected' to='/projects'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('projects')}}></div></NavLink>
+                    <NavLink activeClassName='selected' to='/about'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('about')}}></div></NavLink>
+                    <NavLink activeClassName='selected' to='/skills'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('skills')}}></div></NavLink>
+                    <NavLink activeClassName='selected' to='/content'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('content')}}></div></NavLink>
+                    <NavLink activeClassName='selected' to='/resume'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('resume')}}></div></NavLink>
                 </div>
             </div>
         );
