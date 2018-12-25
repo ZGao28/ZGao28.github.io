@@ -1,7 +1,8 @@
 import React from 'react';
 
-const RightSider = () => (
-    <div>
+const RightSider = (props) => (
+    <div className='RightSider'>
+        {props.pageState.toUpperCase()}
     </div>
 );
 
