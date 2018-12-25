@@ -3,7 +3,7 @@
 .LeftSider_nav_square {
     height: 7px;
     width: 7px;
-    background: $color_change;
+    background: $color_base_grey;
     margin: 30px;
     transform: rotate(45deg);
     transition-duration: 0.5s;
@@ -11,9 +11,10 @@
 
 .LeftSider_nav_square:hover {
     cursor: pointer;
-    background: rgb(100, 150, 220);
-    height: 15px;
-    width: 15px;
+    border: 5px solid $color_change;
+    background: white;
+    height: 4px;
+    width: 4px;
     transform: translateX(-4px);
 }
 
@@ -25,8 +26,7 @@
 }
 
 .selected > .LeftSider_nav_square {
-    background: rgb(100, 150, 220);
-    height: 15px;
-    width: 15px;
-    transform: translateX(-4px) rotate(45deg);
+    border: 5px solid $color_change;
+    background: white;
+    transform: translateX(-5px) rotate(45deg);
 }
