@@ -1,0 +1,26 @@
+@import '../base';
+
+.LeftSider_nav_square {
+    height: 7px;
+    width: 7px;
+    background: $color_change;
+    margin: 30px;
+    transform: rotate(45deg);
+    transition-duration: 0.8s;
+}
+
+.LeftSider_nav_square:hover {
+    cursor: pointer;
+    background: rgb(100, 150, 220);
+    height: 17px;
+    width: 17px;
+    transform: translateX(-5px);
+}
+
+.LeftSider{
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+

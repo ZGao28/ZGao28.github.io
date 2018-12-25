@@ -1,8 +1,15 @@
 import React from 'react';
 
 const LeftSider = () => (
-    <div>
-       
+    <div className='LeftSider'>
+        <div className='side_container'>
+            <div className='LeftSider_nav_square'></div>
+            <div className='LeftSider_nav_square'></div>
+            <div className='LeftSider_nav_square'></div>
+            <div className='LeftSider_nav_square'></div>
+            <div className='LeftSider_nav_square'></div>
+            <div className='LeftSider_nav_square'></div>
+        </div>
     </div>
 );
 

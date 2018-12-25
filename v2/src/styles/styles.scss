@@ -1,10 +1,12 @@
 @import './base';
 @import './components/Header';
 @import './components/Footer';
+@import './components/LeftSider';
 
 html, body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 // global classes
