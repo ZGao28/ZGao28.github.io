@@ -40,7 +40,7 @@ export default class AppRouter extends React.Component {
         return ( 
             <BrowserRouter>
                 <div>
-                    <Header/>
+                    <Header changePage={this.changePage}/>
                     <Switch>
                         <Route path="/" component={HomePage} exact={true} />
                         <Route path="/projects" component={ProjectsPage} exact={true}/>
@@ -52,6 +52,7 @@ export default class AppRouter extends React.Component {
                     </Switch>
                     <Footer/>
                     <LeftSider changePage={this.changePage}/>
+                    <RightSider pageState={this.state.pageState}/>
                 </div>
             </BrowserRouter>
         );

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const goToLink = (link) => {
-    console.log(link);
     location.href = link;
 }
 

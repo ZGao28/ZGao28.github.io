@@ -4,16 +4,14 @@
     color: $color_change;
     position: fixed;
     width: 100%;
-    display: flex;
-
 }
 
 .Header_logo_container {
     position: fixed;
-    height: 60px;
-    width: 60px;
-    right: 0px;
-    margin: 50px 80px;
+    height: 45px;
+    width: 45px;
+    left: 0px;
+    margin: 50px 60px;
 }
 
 
@@ -28,4 +26,67 @@
     cursor: pointer;
     display: inline-block;
     transform: rotate(-45deg);
+}
+
+/* btn */
+.Header_menu {
+	position: fixed;
+    display:  inline-block;
+    right: 0px;
+	width: 25px;
+	height: 25px;
+	margin: 50px 75px;
+}
+.Header_menu span {
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+}
+.Header_menu span:before, .Header_menu span:after {
+	position: absolute;
+	content: '';
+}
+.Header_menu span, .Header_menu span:before, .Header_menu span:after {
+	width: 30px;
+	height: 4px;
+	background-color: $color_change;
+	display: block;
+}
+.Header_menu span:before {
+	margin-top: -10px;
+}
+.Header_menu span:after {
+	margin-top: 10px;
+}
+
+/* example 6 */
+.Header_menu span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.Header_menu:hover span {
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.Header_menu span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+	-webkit-transform-origin: 100% 100%; transform-origin: 100% 100%;
+}
+.Header_menu:hover span:before {
+	margin-top: 0;
+	-webkit-transform: rotate(22.5deg) skewX(22.5deg); transform: rotate(22.5deg) skewX(22.5deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.Header_menu span:after {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+	-webkit-transform-origin: 100% 0%; transform-origin: 100% 0%;
+}
+.Header_menu:hover span:after {
+	margin-top: 0;
+	-webkit-transform: rotate(-22.5deg) skewX(-22.5deg); transform: rotate(-22.5deg) skewX(-22.5deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
 }

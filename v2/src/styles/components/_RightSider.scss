@@ -1,14 +1,14 @@
 @import '../base';
 
 .RightSider{
-    display: inline-block;
+    width: 0;
+    word-wrap: break-word;
     position: fixed;
-    margin: 0px;
-    font-size: 20px;
-    font-family: $theme_font;
-    letter-spacing: 5px;
-    top: 48%;
-    left: 0px;
     color: $color_change;
-    transform: rotate(-90deg) translateY(-50%);
+    font-family: $theme_font;
+    right: 0px;
+    top: 50%;
+    margin-right: 100px;
+    font-size: 30px;
+    transform: translateY(-50%);
 }
