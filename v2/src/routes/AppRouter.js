@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LeftSider from '../components/LeftSider';
@@ -11,18 +11,24 @@ import SkillsPage from './SkillsPage';
 import ContentPage from './ContentPage';
 import ResumePage from './ResumePage';
 import NotFoundPage from './NotFoundPage';
-
+import MenuSlider from '../components/MenuSlider';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 export default class AppRouter extends React.Component { 
     constructor(props){
         super(props);
         this.changePage = this.changePage.bind(this);
+        this.openMenu = this.openMenu.bind(this);
         this.state = {
-            pageState: 'home'
+            pageState: 'home',
+            menuOpen: false
         }
     }
     changePage(newPage){
         this.setState(()=>({pageState: newPage}));
+    }
+    openMenu(){
+        this.setState((prevState)=>({menuOpen: !prevState.menuOpen}));
     }
     componentDidMount(){
         const p = window.location.pathname;
@@ -40,7 +46,7 @@ export default class AppRouter extends React.Component {
         return ( 
             <BrowserRouter>
                 <div>
-                    <Header changePage={this.changePage}/>
+                    <Header openMenu={this.openMenu} changePage={this.changePage}/>
                     <Switch>
                         <Route path="/" component={HomePage} exact={true} />
                         <Route path="/projects" component={ProjectsPage} exact={true}/>
@@ -53,6 +59,13 @@ export default class AppRouter extends React.Component {
                     <Footer/>
                     <LeftSider changePage={this.changePage}/>
                     <RightSider pageState={this.state.pageState}/>
+                    <CSSTransitionGroup
+                        transitionName="example"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={500}
+                    >
+                        {this.state.menuOpen && <MenuSlider key='menu_component' closeMenu={this.openMenu} changePage={this.changePage}/>}
+                    </CSSTransitionGroup>
                 </div>
             </BrowserRouter>
         );

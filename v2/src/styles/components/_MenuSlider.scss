@@ -1,0 +1,107 @@
+@import '../base';
+
+.MenuSlider{
+    position: fixed;
+    background: $color_change;
+    height: 100%;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: $theme_font;
+    justify-content: center;
+    text-align: center;
+}
+
+.MenuSlider_menu_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MenuSlider_nav{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 40px;
+    font-size: 30px;
+}
+
+.MenuSlider_less_padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.MenuSlider_nav > div:before,
+.MenuSlider_nav > div:after {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.MenuSlider_nav > div:before {
+  right: 0;
+  top: 0;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  -webkit-transform: translate(-100%, 50%);
+  transform: translate(-100%, 50%);
+}
+.MenuSlider_nav > div:after {
+  left: 0;
+  bottom: 0;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  -webkit-transform: translate(100%, -50%);
+  transform: translate(100%, -50%);
+}
+.MenuSlider_nav > div:hover:before,
+.selected_menu > div:before,
+.MenuSlider_nav > div:hover:after,
+.selected_menu > div:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+.MenuSlider_header {
+    font-size: 25px;
+    color: white;
+    margin: 30px;
+}
+
+.MenuSlider_logo {
+    fill: white;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.MenuSlider_logo:hover {
+    cursor: pointer;
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+.example-enter {
+    right: -400px;
+}
+  
+.example-enter.example-enter-active {
+    right: 0px;
+    transition: right 500ms cubic-bezier(.02, .01, .47, 1); 
+}
+
+  
+
+.example-leave {
+    right: 0px;
+}
+  
+.example-leave.example-leave-active {
+    right: -400px;
+    transition: right 500ms cubic-bezier(.02, .01, .47, 1); 
+}

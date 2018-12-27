@@ -13,7 +13,15 @@ const Header = (props) => (
                 </svg>
             </div>
         </Link>
-        <a href="#" className="Header_menu"><span></span></a>
+        <h1 className='Header_text'>
+            A poRtfolio site by
+            <br>
+            </br>
+            <span className='Header_name_text'>
+                <b>Z</b>i<b>G</b>Ao 
+            </span>
+        </h1>
+        <a onClick={props.openMenu} className="Header_menu"><span></span></a>
     </div>
 );
 
