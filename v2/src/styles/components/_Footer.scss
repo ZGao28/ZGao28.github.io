@@ -1,23 +1,21 @@
 @import '../base';
 
-$icon-height: 28px;
-$icon-margin: 20px;
 
 .Footer{
     position: fixed;
-    bottom: 0px;
-    
+    bottom: 0px;    
 }
 
 .Footer_icon {
-    height: $icon-height;
-    margin: $icon-margin;
+    height: 20px;
+    margin: 15px;
     max-height: 50px;
-    opacity: 0.6;
+    opacity: 0.4;
+    margin-bottom: 5px;
 }
 
 .Footer_icon:hover {
-    opacity: 0.9;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -32,7 +30,19 @@ $icon-margin: 20px;
     color: $color_base_grey;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 2000px){
+    .Footer_icon{
+        height: 30px;
+        margin: 20px;
+        margin-bottom: 10px;
+    }
+    .Footer_logo_text {
+        font-size: 15px;
+    }
 }

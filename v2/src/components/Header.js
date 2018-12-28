@@ -14,7 +14,7 @@ const Header = (props) => (
             </div>
         </Link>
         <h1 className='Header_text'>
-            A poRtfolio site by
+            A poRtfolio site by&nbsp;
             <br>
             </br>
             <span className='Header_name_text'>

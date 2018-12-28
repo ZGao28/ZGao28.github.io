@@ -1,6 +1,6 @@
 @import '../base';
 
-.Header{
+.Header {
     color: $color_change;
     position: fixed;
 	width: 100%;
@@ -9,10 +9,10 @@
 }
 
 .Header_logo_container {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     left: 0px;
-    margin: 50px 60px;
+    margin: 50px 63px;
 }
 
 
@@ -32,8 +32,8 @@
 /* btn */
 .Header_menu {
     display:  inline-block;
-	width: 25px;
-	height: 25px;
+	width: 27px;
+	height: 27px;
 	margin: 50px 75px;
 	cursor: pointer;
 }
@@ -48,16 +48,16 @@
 	content: '';
 }
 .Header_menu span, .Header_menu span:before, .Header_menu span:after {
-	width: 30px;
+	width: 27px;
 	height: 4px;
 	background-color: $color_change;
 	display: block;
 }
 .Header_menu span:before {
-	margin-top: -10px;
+	margin-top: -9px;
 }
 .Header_menu span:after {
-	margin-top: 10px;
+	margin-top: 9px;
 }
 
 
@@ -95,7 +95,7 @@
 .Header_text {
 	font-family: $theme_font;
 	text-align: center;
-	font-size: 12px;
+	font-size: 10px;
 	padding: 0px;
 	margin: 50px 0px;
 }
@@ -104,4 +104,46 @@
 	font-size: 30px;
 	font-weight: bold;
 	letter-spacing: 10px;
+}
+
+
+@media screen and (min-width: 2000px){
+    .Header_logo_container {
+        height: 55px;
+		width: 55px;
+		margin: 50px 57px;
+	}
+	.Header_menu span, .Header_menu span:before, .Header_menu span:after {
+		width: 35px;
+		height: 5px;
+	}
+	.Header_menu span:before {
+		margin-top: -13px;
+	}
+	.Header_menu span:after {
+		margin-top: 13px;
+	}
+
+	.Header_menu {
+		width: 35px;
+		height: 35px;
+		margin: 50px 70px;
+	}
+	.Header_name_text {
+		font-size: 40px;
+	}
+
+	.Header_text {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+    .Header_text, .Header_name_text, .Header_logo_container {
+        display: none;
+	}
+	.Header_menu {
+		margin: auto;
+		margin-top: 50px;
+	}
 }

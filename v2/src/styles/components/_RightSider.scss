@@ -9,6 +9,25 @@
     right: 0px;
     top: 50%;
     margin-right: 100px;
-    font-size: 30px;
+    font-size: 25px;
     transform: translateY(-50%);
+}
+
+
+@media screen and (min-width: 2000px){
+    .RightSider{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .RightSider {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 700px){
+    .RightSider{
+        display: none;
+    }
 }
