@@ -5,11 +5,13 @@
     background: $color_change;
     height: 100%;
     right: 0px;
+    top: 0px;
     display: flex;
     flex-direction: column;
     font-family: $theme_font;
     justify-content: center;
     text-align: center;
+    z-index: 100;
 }
 
 .MenuSlider_menu_container {

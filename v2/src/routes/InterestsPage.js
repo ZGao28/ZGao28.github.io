@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ResumePage = () => (
+const InterestsPage = () => (
     <div>
         
     </div>
 );
 
-export default ResumePage;
+export default InterestsPage;

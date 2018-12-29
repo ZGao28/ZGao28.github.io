@@ -19,8 +19,14 @@ const MenuSlider = (props) => (
             <NavLink className='MenuSlider_nav' activeClassName='selected_menu' to='/about'>
                 <div onClick={()=>{props.changePage('about'); props.closeMenu();}}>ABOUT</div>
             </NavLink>
+            <NavLink className='MenuSlider_nav' activeClassName='selected_menu' to='/experience'>
+                <div onClick={()=>{props.changePage('experience'); props.closeMenu();}}>EXPERIENCE</div>
+            </NavLink>
             <NavLink className='MenuSlider_nav' activeClassName='selected_menu' to='/skills'>
                 <div onClick={()=>{props.changePage('skills'); props.closeMenu();}}>SKILLS</div>
+            </NavLink>
+            <NavLink className='MenuSlider_nav' activeClassName='selected_menu' to='/interests'>
+                <div onClick={()=>{props.changePage('interests'); props.closeMenu();}}>INTERESTS</div>
             </NavLink>
             <NavLink className='MenuSlider_nav' activeClassName='selected_menu' to='/content'>
                 <div onClick={()=>{props.changePage('content'); props.closeMenu();}}>CONTENT</div>

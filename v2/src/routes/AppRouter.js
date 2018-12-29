@@ -7,9 +7,10 @@ import RightSider from '../components/RightSider';
 import HomePage from './HomePage';
 import ProjectsPage from './ProjectsPage';
 import AboutPage from './AboutPage';
+import ExperiencePage from './ExperiencePage';
 import SkillsPage from './SkillsPage';
+import InterestsPage from './InterestsPage';
 import ContentPage from './ContentPage';
-import ResumePage from './ResumePage';
 import NotFoundPage from './NotFoundPage';
 import MenuSlider from '../components/MenuSlider';
 import { CSSTransitionGroup } from 'react-transition-group';
@@ -51,9 +52,10 @@ export default class AppRouter extends React.Component {
                         <Route path="/" component={HomePage} exact={true} />
                         <Route path="/projects" component={ProjectsPage} exact={true}/>
                         <Route path="/about" component={AboutPage} exact={true}/>
+                        <Route path="/experience" component={ExperiencePage} exact={true}/>
                         <Route path="/skills" component={SkillsPage} exact={true}/>
+                        <Route path="/interests" component={InterestsPage} exact={true}/>
                         <Route path="/content" component={ContentPage} exact={true}/>
-                        <Route path="/resume" component={ResumePage} exact={true}/>
                         <Route component={NotFoundPage}/>
                     </Switch>
                     <Footer/>
