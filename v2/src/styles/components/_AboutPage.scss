@@ -1,0 +1,46 @@
+@import '../base';
+
+
+.AboutPage {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AboutPage_paragraph {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: $color_base_grey;
+    font-family: $theme_text_font;
+}
+
+.AboutPage_hey {
+    font-family: $theme_font;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 1000px){
+    .AboutPage_hey {
+        font-size: 20px;
+    }
+    .AboutPage_paragraph {
+        font-size: 14px;
+    }
+    .AboutPage_paragraph {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .AboutPage_hey {
+        font-size: 30px;
+    }
+    .AboutPage_paragraph {
+        font-size: 20px;
+    }
+}
+
