@@ -46,3 +46,9 @@
         font-size: 15px;
     }
 }
+
+@media screen and (max-height: 600px) {
+    .Footer_logo_text {
+        display: none;
+    }
+}

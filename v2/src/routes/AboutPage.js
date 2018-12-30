@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutPage = () => (
-	<div className='center-div AboutPage'>
+	<div className='AboutPage center-div-special'>
         <p className="AboutPage_paragraph">
 			<h2 className='AboutPage_hey'>
 				to learn and to create - that is my raison d'etre 	

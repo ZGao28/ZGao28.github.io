@@ -5,6 +5,7 @@
 @import './components/RightSider';
 @import './components/_MenuSlider';
 @import './components/AboutPage';
+@import './components/ContentPage';
 
 html, body {
     width: 100%;
@@ -24,12 +25,23 @@ html, body {
     width: 65%;
     height: 65%;
     margin: auto;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+}
+
+.center-div-special {
+    display: flex;
+    position: fixed;
+    width: 65%;
+    height: 65%;
+    margin: auto;
     top: 45%;
     right: 50%;
     transform: translateX(50%) translateY(-50%);
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1050px){
     .center-div {
         width: 80%;
         height: 80%;
