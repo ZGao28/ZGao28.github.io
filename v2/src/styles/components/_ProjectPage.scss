@@ -6,23 +6,45 @@
     
 }
 
-
 .Project_row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 30%;
+    height: 31%;
+}
+
+.Project_row > div {
+    cursor: pointer;
+    border-radius: 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Project_short_div {
-    width: 30%;
+    width: 32%;
     height: 100%;
-    border: 1px solid black;
 }
 
 .Project_long_div {
-    width: 65%;
+    width: 66%;
     height: 100%;
-    border: 1px solid black;
+}
+
+.Project_row > div > h1 {
+    font-family: $theme_font;
+    color: white;
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.Project_row > div > h2 {
+    font-family: $theme_font;
+    color: white;
+    margin-left: 40px;
 }

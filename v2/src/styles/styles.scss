@@ -42,6 +42,17 @@ html, body {
     transform: translateX(50%) translateY(-50%);
 }
 
+.center-div-special-2{
+    display: flex;
+    position: fixed;
+    width: 55%;
+    height: 55%;
+    margin: auto;
+    top: 47%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+}
+
 @media screen and (max-width: 1050px){
     .center-div {
         width: 80%;
