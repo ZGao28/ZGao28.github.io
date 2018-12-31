@@ -47,8 +47,11 @@
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-width: 1050px) {
     .Footer_logo_text {
         display: none;
+    }
+    .Footer_icon_container {
+        margin-bottom: 20px;
     }
 }

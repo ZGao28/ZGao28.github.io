@@ -46,7 +46,7 @@ export default class ContentPage extends React.Component {
                         bloG_
                     </h1>
                     <p>
-                        I like to write stuff sometimes. I like to talk about scientific findings, life insights, and cool personal experiences. 
+                        I like to write stuff. I talk about scientific findings, life insights, and cool personal experiences. 
                         You can also find my cooking recipes and show reviews here.
                     </p>
                 </div>

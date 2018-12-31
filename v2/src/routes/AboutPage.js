@@ -4,7 +4,7 @@ const AboutPage = () => (
 	<div className='AboutPage center-div-special'>
         <p className="AboutPage_paragraph">
 			<h2 className='AboutPage_hey'>
-				to learn and to create - that is my raison d'etre 	
+				to learn and to create - that is my <b className='special_about_text'>raison d'etre</b> 	
 			</h2>
 			<br/>
 			Hey there <i className='em em-wave'></i> my name is Zi, and I am currently a second year Software Engineering student at the University of Ottawa.  
