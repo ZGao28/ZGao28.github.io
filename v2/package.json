@@ -1,8 +1,8 @@
 {
-  "name": "expensify",
+  "name": "ZiGao.io",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Zi Gao",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
