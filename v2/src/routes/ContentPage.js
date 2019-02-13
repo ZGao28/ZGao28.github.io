@@ -68,7 +68,7 @@ export default class ContentPage extends React.Component {
                     </h1>
                     <p>
                         Check out my programming videos! I cover topics like data structures and algorithms, 
-                        interview problems, and full project tutorials. 
+                        interview problems, and end to end project tutorials. 
                     </p>
                 </div>
                 <div className='ContentPage_fifth'
