@@ -10,7 +10,6 @@ export default class LeftSider extends React.Component {
                     <NavLink activeClassName='selected' to='/about'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('about')}}></div></NavLink>
                     <NavLink activeClassName='selected' to='/experience'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('experience')}}></div></NavLink>
                     <NavLink activeClassName='selected' to='/skills'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('skills')}}></div></NavLink>
-                    <NavLink activeClassName='selected' to='/interests'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('interests')}}></div></NavLink>
                     <NavLink activeClassName='selected' to='/content'><div className='LeftSider_nav_square' onClick={()=>{this.props.changePage('content')}}></div></NavLink>    
                 </div>
             </div>
