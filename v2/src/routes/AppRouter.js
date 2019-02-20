@@ -9,7 +9,6 @@ import ProjectsPage from './ProjectsPage';
 import AboutPage from './AboutPage';
 import ExperiencePage from './ExperiencePage';
 import SkillsPage from './SkillsPage';
-import InterestsPage from './InterestsPage';
 import ContentPage from './ContentPage';
 import NotFoundPage from './NotFoundPage';
 import MenuSlider from '../components/MenuSlider';
@@ -22,18 +21,16 @@ export default class AppRouter extends React.Component {
         this.openMenu = this.openMenu.bind(this);
         this.state = {
             pageState: 'home',
-            menuOpen: false
+            menuOpen: false,
+            pageStateNumber: 0,
+            pageStates: ['home', 'projects', 'about', 'experience', 'skills', 'content'],
+            scrollOffset: 0,
         }
-    }
-    changePage(newPage){
-        this.setState(()=>({pageState: newPage}));
-    }
-    openMenu(){
-        this.setState((prevState)=>({menuOpen: !prevState.menuOpen}));
+        this.handleScroll = this.handleScroll.bind(this);
     }
     componentDidMount(){
         const p = window.location.pathname;
-        if (p === '/content' || p === '/about' || p === '/projects' || p === '/skills' || p === '/resume' || p === '/'){
+        if (p === '/content' || p === '/about' || p === '/projects' || p=== '/experience' || p === '/skills' || p === '/resume' || p === '/'){
             if (p === '/'){
                 this.setState({pageState: 'home'});
             } else {
@@ -43,9 +40,23 @@ export default class AppRouter extends React.Component {
             this.setState({pageState: '404'});
         }
     }
+    changePage(newPage){
+        this.setState(()=>({pageState: newPage}));
+    }
+    openMenu(){
+        this.setState((prevState)=>({menuOpen: !prevState.menuOpen}));
+    }
+    handleScroll(){
+        this.setState((prevState)=>{
+            return {
+                pageStateNumber: (prevState.pageStateNumber--)%6,
+                pageState: prevState.pageStates[(prevState.pageStateNumber--)%6],
+            }
+        });
+    }
     render() {
         return ( 
-            <BrowserRouter>
+            <BrowserRouter onWheel={this.handleScroll}>
                 <div>
                     <Header openMenu={this.openMenu} changePage={this.changePage}/>
                     <Switch>
@@ -54,7 +65,6 @@ export default class AppRouter extends React.Component {
                         <Route path="/about" component={AboutPage} exact={true}/>
                         <Route path="/experience" component={ExperiencePage} exact={true}/>
                         <Route path="/skills" component={SkillsPage} exact={true}/>
-                        <Route path="/interests" component={InterestsPage} exact={true}/>
                         <Route path="/content" component={ContentPage} exact={true}/>
                         <Route component={NotFoundPage}/>
                     </Switch>
